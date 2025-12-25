@@ -326,33 +326,21 @@ function updateMetaTags(lang) {
     document.title = title;
     
     // Update meta description
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-        metaDesc.setAttribute('content', metaDescriptions[lang] || metaDescriptions.ko);
-    }
-    
-    // Update OG title
-    const ogTitle = document.querySelector('meta[property="og:title"]');
-    if (ogTitle) {
-        ogTitle.setAttribute('content', ogTitles[lang] || ogTitles.ko);
-    }
-    
-    // Update meta description
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-        metaDesc.setAttribute('content', description);
+    const metaDescElement = document.querySelector('meta[name="description"]');
+    if (metaDescElement) {
+        metaDescElement.setAttribute('content', description);
     }
     
     // Update meta keywords
-    const metaKeywords = document.querySelector('meta[name="keywords"]');
-    if (metaKeywords) {
-        metaKeywords.setAttribute('content', keywords);
+    const metaKeywordsElement = document.querySelector('meta[name="keywords"]');
+    if (metaKeywordsElement) {
+        metaKeywordsElement.setAttribute('content', keywords);
     }
     
     // Update OG title
-    const ogTitle = document.querySelector('meta[property="og:title"]');
-    if (ogTitle) {
-        ogTitle.setAttribute('content', title);
+    const ogTitleElement = document.querySelector('meta[property="og:title"]');
+    if (ogTitleElement) {
+        ogTitleElement.setAttribute('content', title);
     }
     
     // Update OG description
