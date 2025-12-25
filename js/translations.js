@@ -992,6 +992,16 @@ function changeLanguage(lang) {
     if (typeof window.updateMetaTags === 'function') {
         window.updateMetaTags(lang);
     }
+    
+    // Google Maps 언어 업데이트
+    const mapIframe = document.querySelector('.map-wrapper iframe');
+    if (mapIframe) {
+        const currentSrc = mapIframe.getAttribute('src');
+        const newSrc = currentSrc.replace(/hl=[a-z]{2}/, `hl=${lang}`);
+        if (currentSrc !== newSrc) {
+            mapIframe.setAttribute('src', newSrc);
+        }
+    }
 }
 
 // 페이지 로드시 초기화
