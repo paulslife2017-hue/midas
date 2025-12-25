@@ -2,13 +2,17 @@
 const translations = {
     ko: {
         clinic_name: '연세미다스치과',
-        nav_home: '치과소개',
+        nav_home: '홈',
+        nav_doctor: '원장님',
+        nav_services: '진료',
+        nav_gallery: '갤러리',
+        nav_contact: '예약',
+        nav_about: '소개',
         nav_whitening: '치아미백',
         nav_minish: '미니쉬',
         nav_prosthetics: '심미보철',
         nav_implant: '임플란트',
         nav_equipment: '진료장비',
-        nav_contact: '오시는 길',
         
         hero_badge: 'Since 2024',
         hero_title: '당신의 소중한 미소를 위한<br><span class="highlight">최고의 선택</span>',
@@ -153,13 +157,17 @@ const translations = {
     
     en: {
         clinic_name: 'Yonsei Midas Dental',
-        nav_home: 'About',
+        nav_home: 'Home',
+        nav_doctor: 'Doctor',
+        nav_services: 'Services',
+        nav_gallery: 'Gallery',
+        nav_contact: 'Book',
+        nav_about: 'About',
         nav_whitening: 'Whitening',
         nav_minish: 'Minish',
         nav_prosthetics: 'Prosthetics',
         nav_implant: 'Implant',
         nav_equipment: 'Equipment',
-        nav_contact: 'Location',
         
         hero_badge: 'Since 2024',
         hero_title: 'Your Best Choice<br><span class="highlight">for a Precious Smile</span>',
@@ -304,13 +312,17 @@ const translations = {
     
     ja: {
         clinic_name: '延世ミダス歯科医院',
-        nav_home: '歯科紹介',
-        nav_whitening: '歯のホワイトニング',
+        nav_home: 'ホーム',
+        nav_doctor: '院長',
+        nav_services: '診療',
+        nav_gallery: 'ギャラリー',
+        nav_contact: '予約',
+        nav_about: '紹介',
+        nav_whitening: 'ホワイトニング',
         nav_minish: 'ミニッシュ',
         nav_prosthetics: '審美補綴',
         nav_implant: 'インプラント',
         nav_equipment: '診療設備',
-        nav_contact: 'アクセス',
         
         hero_badge: 'Since 2024',
         hero_title: 'あなたの大切な笑顔のための<br><span class="highlight">最高の選択</span>',
@@ -455,13 +467,17 @@ const translations = {
     
     zh: {
         clinic_name: '延世弥达斯牙科医院',
-        nav_home: '牙科介绍',
+        nav_home: '首页',
+        nav_doctor: '院长',
+        nav_services: '诊疗',
+        nav_gallery: '图库',
+        nav_contact: '预约',
+        nav_about: '介绍',
         nav_whitening: '牙齿美白',
         nav_minish: '迷你贴面',
         nav_prosthetics: '美学修复',
         nav_implant: '种植牙',
         nav_equipment: '诊疗设备',
-        nav_contact: '就诊路线',
         
         hero_badge: 'Since 2024',
         hero_title: '为了您珍贵的微笑<br><span class="highlight">最佳的选择</span>',
