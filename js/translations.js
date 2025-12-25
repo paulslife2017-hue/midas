@@ -175,6 +175,19 @@ const translations = {
         gallery_title: 'Before & After',
         gallery_subtitle: '환자분들의 아름다운 변화를 확인하세요',
         
+        // Equipment
+        equipment_tag: 'Equipment',
+        equipment_title: '진료 장비',
+        equipment_subtitle: '최첨단 장비로 정확하고 안전한 진료를 제공합니다',
+        equip1_title: '3D CT 촬영 장비',
+        equip1_desc: '정밀한 3차원 영상으로 정확한 진단과 안전한 임플란트 시술을 가능하게 합니다.',
+        equip2_title: '디지털 스캐너',
+        equip2_desc: '불편한 인상 채득 없이 정확하고 빠르게 구강 스캔이 가능합니다.',
+        equip3_title: 'CAD/CAM 시스템',
+        equip3_desc: '컴퓨터 설계/제작 시스템으로 정밀한 보철물을 당일 제작할 수 있습니다.',
+        equip4_title: '멸균 소독 시스템',
+        equip4_desc: '철저한 감염 관리를 위한 최신 멸균 및 소독 시스템을 갖추고 있습니다.',
+        
         doctor_tag: 'Medical Staff',
         doctor_title: '대표원장 소개',
         doctor_name: '최은영 대표원장',
@@ -206,8 +219,11 @@ const translations = {
         
         map_placeholder: '지도 영역',
         
-        address_line1: '인천광역시 중구 공항문화로 127 (운서동)',
+        address_line1: '인천광역시 중구 공항문화로 127',
         address_line2: '인스파이어호텔 썬타워 3층',
+        address_line3: '(강남역 2번 출구 도보 5분)',
+        phone_text: '예약 문의',
+        call_button: '전화 걸기',
         directions: '길찾기',
         footer_address1: '인천광역시 중구 공항문화로 127',
         footer_address2: '인스파이어호텔 썬타워 3층',
@@ -395,6 +411,19 @@ const translations = {
         gallery_title: 'Before & After',
         gallery_subtitle: 'See the beautiful transformations of our patients',
         
+        // Equipment
+        equipment_tag: 'Equipment',
+        equipment_title: 'Dental Equipment',
+        equipment_subtitle: 'Accurate and safe treatment with state-of-the-art equipment',
+        equip1_title: '3D CT Imaging',
+        equip1_desc: 'Precise 3D imaging enables accurate diagnosis and safe implant procedures.',
+        equip2_title: 'Digital Scanner',
+        equip2_desc: 'Fast and accurate oral scanning without uncomfortable impressions.',
+        equip3_title: 'CAD/CAM System',
+        equip3_desc: 'Computer-aided design/manufacturing for same-day precision prosthetics.',
+        equip4_title: 'Sterilization System',
+        equip4_desc: 'Latest sterilization and disinfection systems for thorough infection control.',
+        
         doctor_tag: 'Medical Staff',
         doctor_title: 'Our Chief Director',
         doctor_name: 'Dr. Eun-young Choi, Chief Director',
@@ -428,6 +457,9 @@ const translations = {
         
         address_line1: '127 Gonghang Munhwa-ro, Jung-gu, Incheon',
         address_line2: 'Inspire Hotel Sun Tower 3F',
+        address_line3: '(5 min walk from Gangnam Station Exit 2)',
+        phone_text: 'Reservation Inquiry',
+        call_button: 'Call Now',
         directions: 'Directions',
         footer_address1: '127 Gonghang Munhwa-ro, Jung-gu, Incheon',
         footer_address2: 'Inspire Hotel Sun Tower 3F',
@@ -615,6 +647,19 @@ const translations = {
         gallery_title: 'Before & After',
         gallery_subtitle: '患者様の美しい変化をご確認ください',
         
+        // Equipment
+        equipment_tag: 'Equipment',
+        equipment_title: '診療設備',
+        equipment_subtitle: '最先端設備で正確で安全な診療を提供します',
+        equip1_title: '3D CT撮影装置',
+        equip1_desc: '精密な3次元映像で正確な診断と安全なインプラント施術を可能にします。',
+        equip2_title: 'デジタルスキャナー',
+        equip2_desc: '不快な印象採得なしで正確かつ迅速に口腔スキャンが可能です。',
+        equip3_title: 'CAD/CAMシステム',
+        equip3_desc: 'コンピュータ設計/製作システムで精密な補綴物を当日製作できます。',
+        equip4_title: '滅菌消毒システム',
+        equip4_desc: '徹底した感染管理のための最新滅菌および消毒システムを備えています。',
+        
         doctor_tag: 'Medical Staff',
         doctor_title: '代表院長のご紹介',
         doctor_name: 'チェ・ウンヨン 代表院長',
@@ -648,6 +693,9 @@ const translations = {
         
         address_line1: '仁川広域市 中区 公港文化路 127 (雲西洞)',
         address_line2: 'インスパイアホテル サンタワー 3階',
+        address_line3: '(江南駅2番出口から徒歩5分)',
+        phone_text: '予約お問い合わせ',
+        call_button: 'お電話',
         directions: '道順案内',
         footer_address1: '仁川広域市 中区 公港文化路 127',
         footer_address2: 'インスパイアホテル サンタワー 3階',
@@ -835,6 +883,19 @@ const translations = {
         gallery_title: 'Before & After',
         gallery_subtitle: '查看患者们的美丽蜕变',
         
+        // Equipment
+        equipment_tag: 'Equipment',
+        equipment_title: '诊疗设备',
+        equipment_subtitle: '采用最尖端设备提供精准安全的诊疗',
+        equip1_title: '3D CT拍摄设备',
+        equip1_desc: '精密的3D影像实现准确诊断和安全的种植牙手术。',
+        equip2_title: '数字扫描仪',
+        equip2_desc: '无需不适的印模采集，可快速准确进行口腔扫描。',
+        equip3_title: 'CAD/CAM系统',
+        equip3_desc: '计算机辅助设计/制造系统可当天制作精密修复体。',
+        equip4_title: '消毒灭菌系统',
+        equip4_desc: '配备最新消毒灭菌系统，确保彻底的感染控制。',
+        
         doctor_tag: 'Medical Staff',
         doctor_title: '代表院长介绍',
         doctor_name: '崔恩英 代表院长',
@@ -868,6 +929,9 @@ const translations = {
         
         address_line1: '仁川广域市 中区 公港文化路 127 (云西洞)',
         address_line2: '韵斯派尔酒店 太阳塔 3层',
+        address_line3: '(江南站2号出口步行5分钟)',
+        phone_text: '预约咨询',
+        call_button: '拨打电话',
         directions: '导航',
         footer_address1: '仁川广域市 中区 公港文化路 127',
         footer_address2: '韵斯派尔酒店 太阳塔 3层',
