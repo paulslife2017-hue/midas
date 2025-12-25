@@ -147,6 +147,12 @@ const translations = {
         
         map_placeholder: '지도 영역',
         
+        address_line1: '인천광역시 중구 공항문화로 127 (운서동)',
+        address_line2: '인스파이어호텔 썬타워 3층',
+        directions: '길찾기',
+        footer_address1: '인천광역시 중구 공항문화로 127',
+        footer_address2: '인스파이어호텔 썬타워 3층',
+        
         footer_desc: '정직과 신뢰를 바탕으로<br>최상의 치과 진료 서비스를 제공합니다',
         footer_nav: '바로가기',
         footer_info: '정보',
@@ -301,6 +307,12 @@ const translations = {
         hours_closed: 'Closed on Sundays & Holidays',
         
         map_placeholder: 'Map Area',
+        
+        address_line1: '127 Gonghang Munhwa-ro, Jung-gu, Incheon',
+        address_line2: 'Inspire Hotel Sun Tower 3F',
+        directions: 'Directions',
+        footer_address1: '127 Gonghang Munhwa-ro, Jung-gu, Incheon',
+        footer_address2: 'Inspire Hotel Sun Tower 3F',
         
         footer_desc: 'Based on integrity and trust<br>Providing the best dental care services',
         footer_nav: 'Quick Links',
@@ -457,6 +469,12 @@ const translations = {
         
         map_placeholder: '地図エリア',
         
+        address_line1: '仁川広域市 中区 公港文化路 127 (雲西洞)',
+        address_line2: 'インスパイアホテル サンタワー 3階',
+        directions: '道順案内',
+        footer_address1: '仁川広域市 中区 公港文化路 127',
+        footer_address2: 'インスパイアホテル サンタワー 3階',
+        
         footer_desc: '正直と信頼を基盤に<br>最上の歯科診療サービスを提供します',
         footer_nav: 'クイックリンク',
         footer_info: '情報',
@@ -611,6 +629,12 @@ const translations = {
         hours_closed: '周日及公休日休诊',
         
         map_placeholder: '地图区域',
+        
+        address_line1: '仁川广域市 中区 公港文化路 127 (云西洞)',
+        address_line2: '韵斯派尔酒店 太阳塔 3层',
+        directions: '导航',
+        footer_address1: '仁川广域市 中区 公港文化路 127',
+        footer_address2: '韵斯派尔酒店 太阳塔 3层',
         
         footer_desc: '基于诚实与信赖<br>提供最优质的牙科诊疗服务',
         footer_nav: '快速链接',
