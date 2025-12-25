@@ -1,6 +1,11 @@
 // 다국어 번역 데이터
 const translations = {
     ko: {
+        // SEO Meta Data
+        meta_title: '인천 인스파이어 연세미다스치과 | 영종도 프리미엄 치과 | 인천공항 인근',
+        meta_description: '인천공항 인근 영종도 프리미엄 치과. 임플란트, 미백, 미니쉬 전문. 영어진료 가능. 인스파이어호텔 썬타워 3층',
+        meta_keywords: '인천치과, 영종도치과, 인스파이어치과, 인천임플란트, 인천치아미백, 영종도임플란트, 운서동치과, 인천공항치과, 영어진료치과, international dental clinic incheon',
+        
         clinic_name: '연세미다스치과',
         nav_home: '홈',
         nav_doctor: '원장님',
@@ -237,6 +242,11 @@ const translations = {
     },
     
     en: {
+        // SEO Meta Data
+        meta_title: 'Yonsei Midas Dental Clinic Incheon | Premium Dental Care near Incheon Airport | Inspire Resort',
+        meta_description: 'Premium dental clinic at Inspire Resort Incheon. Specializing in dental implants, teeth whitening, veneers. English, Japanese, Chinese available. International patients welcome.',
+        meta_keywords: 'incheon dental clinic, inspire resort dental, incheon airport dentist, yeongjong dental, implants incheon, teeth whitening korea, dental tourism korea, international dental clinic korea, premium dentist incheon',
+        
         clinic_name: 'Yonsei Midas Dental',
         nav_home: 'Home',
         nav_doctor: 'Doctor',
@@ -473,6 +483,11 @@ const translations = {
     },
     
     ja: {
+        // SEO Meta Data
+        meta_title: '仁川インスパイアリゾート 延世ミダス歯科 | 永宗島プレミアム歯科 | 仁川国際空港近く',
+        meta_description: '仁川空港近くの永宗島プレミアムデンタルクリニック。インプラント、ホワイトニング、ミニッシュ専門。日本語診療可能。インスパイアホテルサンタワー3階',
+        meta_keywords: '仁川歯科, 永宗島歯科, インスパイアリゾート歯科, 仁川インプラント, 韓国歯科, 仁川空港歯科, 日本語診療, 韓国デンタルツーリズム, 韓国審美歯科',
+        
         clinic_name: '延世ミダス歯科医院',
         nav_home: 'ホーム',
         nav_doctor: '院長',
@@ -709,6 +724,11 @@ const translations = {
     },
     
     zh: {
+        // SEO Meta Data
+        meta_title: '仁川韵斯派尔 延世弥达斯牙科 | 永宗岛高端牙科 | 仁川国际机场附近',
+        meta_description: '仁川机场附近永宗岛高端牙科诊所。种植牙、美白、贴面专科。中文诊疗。韵斯派尔酒店太阳塔3层',
+        meta_keywords: '仁川牙科, 永宗岛牙科, 韵斯派尔牙科, 仁川种植牙, 韩国牙科, 仁川机场牙科, 中文诊疗, 韩国牙科旅游, 韩国美容牙科',
+        
         clinic_name: '延世弥达斯牙科医院',
         nav_home: '首页',
         nav_doctor: '院长',
@@ -967,6 +987,11 @@ function changeLanguage(lang) {
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
     });
+    
+    // SEO 메타 태그 업데이트 (main.js의 함수 호출)
+    if (typeof window.updateMetaTags === 'function') {
+        window.updateMetaTags(lang);
+    }
 }
 
 // 페이지 로드시 초기화

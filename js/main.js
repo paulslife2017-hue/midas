@@ -312,3 +312,58 @@ function initAOS() {
         observer.observe(element);
     });
 }
+
+// 다국어 SEO 메타 태그 동적 업데이트
+function updateMetaTags(lang) {
+    if (!translations[lang]) return;
+    
+    // Use translation data for meta tags
+    const title = translations[lang].meta_title || translations.ko.meta_title;
+    const description = translations[lang].meta_description || translations.ko.meta_description;
+    const keywords = translations[lang].meta_keywords || translations.ko.meta_keywords;
+    
+    // Update document title
+    document.title = title;
+    
+    // Update meta description
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+        metaDesc.setAttribute('content', metaDescriptions[lang] || metaDescriptions.ko);
+    }
+    
+    // Update OG title
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) {
+        ogTitle.setAttribute('content', ogTitles[lang] || ogTitles.ko);
+    }
+    
+    // Update meta description
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+        metaDesc.setAttribute('content', description);
+    }
+    
+    // Update meta keywords
+    const metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (metaKeywords) {
+        metaKeywords.setAttribute('content', keywords);
+    }
+    
+    // Update OG title
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) {
+        ogTitle.setAttribute('content', title);
+    }
+    
+    // Update OG description
+    const ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) {
+        ogDesc.setAttribute('content', description);
+    }
+    
+    // Update html lang attribute
+    document.documentElement.setAttribute('lang', lang);
+}
+
+// Export for use in translations.js
+window.updateMetaTags = updateMetaTags;
