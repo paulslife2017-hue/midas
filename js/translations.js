@@ -39,6 +39,35 @@ const translations = {
         services_title: '진료 안내',
         services_subtitle: '전문적이고 체계적인 치료 프로그램을 제공합니다',
         
+        // Service Cards
+        implant_card_title: '임플란트',
+        implant_card_desc: '상실된 치아를 완벽하게 회복하는 최첨단 임플란트 시술',
+        implant_card_feat1: '3D CT 정밀 진단',
+        implant_card_feat2: '디지털 가이드 시스템',
+        implant_card_feat3: '원데이 즉시 임플란트',
+        implant_card_feat4: '자연치아 같은 심미성',
+        
+        whitening_card_title: '치아미백',
+        whitening_card_desc: '밝고 환한 미소를 위한 전문 치아미백 프로그램',
+        whitening_card_feat1: '치과 전문가 미백',
+        whitening_card_feat2: '홈 미백 키트 제공',
+        whitening_card_feat3: '단 1회 8단계 개선',
+        whitening_card_feat4: '안전한 FDA 승인 약제',
+        
+        minish_card_title: '미니쉬 베니어',
+        minish_card_desc: '초박형 세라믹으로 완벽한 미소 디자인',
+        minish_card_feat1: '최소 삭제량 0.3mm',
+        minish_card_feat2: '자연스러운 투명도',
+        minish_card_feat3: '맞춤형 색상 매칭',
+        minish_card_feat4: '반영구적 지속력',
+        
+        prosthetics_card_title: '심미보철',
+        prosthetics_card_desc: '자연치아와 구별 불가능한 고품격 세라믹 보철',
+        prosthetics_card_feat1: '100% 올세라믹 크라운',
+        prosthetics_card_feat2: '지르코니아 보철',
+        prosthetics_card_feat3: '금속 없는 심미성',
+        prosthetics_card_feat4: '생체 친화적 재료',
+        
         service1_title: '임플란트',
         service1_desc: '정밀한 진단과 안전한 시술로 자연치아와 같은 기능을 회복합니다',
         service1_feat1: '3D 디지털 임플란트',
@@ -199,6 +228,35 @@ const translations = {
         services_tag: 'Our Services',
         services_title: 'Our Services',
         services_subtitle: 'Professional and systematic treatment programs',
+        
+        // Service Cards
+        implant_card_title: 'Dental Implants',
+        implant_card_desc: 'State-of-the-art implant procedures to perfectly restore missing teeth',
+        implant_card_feat1: '3D CT Precision Diagnosis',
+        implant_card_feat2: 'Digital Guide System',
+        implant_card_feat3: 'Same-Day Immediate Implants',
+        implant_card_feat4: 'Natural-Looking Aesthetics',
+        
+        whitening_card_title: 'Teeth Whitening',
+        whitening_card_desc: 'Professional teeth whitening program for a bright and radiant smile',
+        whitening_card_feat1: 'Professional Dental Whitening',
+        whitening_card_feat2: 'Home Whitening Kit Provided',
+        whitening_card_feat3: '8-Shade Improvement in 1 Session',
+        whitening_card_feat4: 'Safe FDA-Approved Formula',
+        
+        minish_card_title: 'Minish Veneers',
+        minish_card_desc: 'Perfect smile design with ultra-thin ceramic',
+        minish_card_feat1: 'Minimal Removal 0.3mm',
+        minish_card_feat2: 'Natural Translucency',
+        minish_card_feat3: 'Custom Color Matching',
+        minish_card_feat4: 'Semi-Permanent Durability',
+        
+        prosthetics_card_title: 'Aesthetic Prosthetics',
+        prosthetics_card_desc: 'Premium ceramic prosthetics indistinguishable from natural teeth',
+        prosthetics_card_feat1: '100% All-Ceramic Crowns',
+        prosthetics_card_feat2: 'Zirconia Prosthetics',
+        prosthetics_card_feat3: 'Metal-Free Aesthetics',
+        prosthetics_card_feat4: 'Biocompatible Materials',
         
         service1_title: 'Dental Implants',
         service1_desc: 'Precise diagnosis and safe procedures to restore natural tooth function',
@@ -361,6 +419,35 @@ const translations = {
         services_title: '診療案内',
         services_subtitle: '専門的かつ体系的な治療プログラムを提供します',
         
+        // Service Cards
+        implant_card_title: 'インプラント',
+        implant_card_desc: '失った歯を完璧に回復する最先端インプラント手術',
+        implant_card_feat1: '3D CT精密診断',
+        implant_card_feat2: 'デジタルガイドシステム',
+        implant_card_feat3: 'ワンデイ即時インプラント',
+        implant_card_feat4: '自然歯のような審美性',
+        
+        whitening_card_title: 'ホワイトニング',
+        whitening_card_desc: '明るく輝く笑顔のための専門ホワイトニングプログラム',
+        whitening_card_feat1: '歯科専門家ホワイトニング',
+        whitening_card_feat2: 'ホームホワイトニングキット提供',
+        whitening_card_feat3: 'わずか1回で8段階改善',
+        whitening_card_feat4: '安全なFDA承認薬剤',
+        
+        minish_card_title: 'ミニッシュベニア',
+        minish_card_desc: '超薄型セラミックで完璧な笑顔デザイン',
+        minish_card_feat1: '最小削除量0.3mm',
+        minish_card_feat2: '自然な透明度',
+        minish_card_feat3: 'カスタムカラーマッチング',
+        minish_card_feat4: '半永久的な持続力',
+        
+        prosthetics_card_title: '審美補綴',
+        prosthetics_card_desc: '自然歯と区別できない高品格セラミック補綴',
+        prosthetics_card_feat1: '100%オールセラミッククラウン',
+        prosthetics_card_feat2: 'ジルコニア補綴',
+        prosthetics_card_feat3: '金属フリー審美性',
+        prosthetics_card_feat4: '生体親和性材料',
+        
         service1_title: 'インプラント',
         service1_desc: '精密な診断と安全な施術で自然歯と同じ機能を回復します',
         service1_feat1: '3Dデジタルインプラント',
@@ -521,6 +608,35 @@ const translations = {
         services_tag: 'Our Services',
         services_title: '诊疗指南',
         services_subtitle: '提供专业且系统的治疗方案',
+        
+        // Service Cards
+        implant_card_title: '种植牙',
+        implant_card_desc: '完美恢复缺失牙齿的最先进种植牙手术',
+        implant_card_feat1: '3D CT精密诊断',
+        implant_card_feat2: '数字导板系统',
+        implant_card_feat3: '即刻种植牙',
+        implant_card_feat4: '如自然牙般的美观',
+        
+        whitening_card_title: '牙齿美白',
+        whitening_card_desc: '专业牙齿美白方案，打造明亮灿烂的笑容',
+        whitening_card_feat1: '牙科专家美白',
+        whitening_card_feat2: '提供家用美白套装',
+        whitening_card_feat3: '仅需1次提升8个色阶',
+        whitening_card_feat4: '安全的FDA认证药剂',
+        
+        minish_card_title: '迷你贴面',
+        minish_card_desc: '超薄陶瓷打造完美笑容设计',
+        minish_card_feat1: '最小磨牙量0.3mm',
+        minish_card_feat2: '自然的透明度',
+        minish_card_feat3: '定制色彩匹配',
+        minish_card_feat4: '半永久持久性',
+        
+        prosthetics_card_title: '美学修复',
+        prosthetics_card_desc: '与自然牙无法区分的高品质陶瓷修复体',
+        prosthetics_card_feat1: '100%全瓷牙冠',
+        prosthetics_card_feat2: '氧化锆修复体',
+        prosthetics_card_feat3: '无金属美观性',
+        prosthetics_card_feat4: '生物相容性材料',
         
         service1_title: '种植牙',
         service1_desc: '通过精密诊断和安全手术恢复如天然牙齿般的功能',
