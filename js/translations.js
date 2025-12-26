@@ -195,6 +195,7 @@ const translations = {
         
         doctor_tag: 'Medical Staff',
         doctor_title: '대표원장 소개',
+        doctor_badge: '대표원장',
         doctor_name: '최은영 대표원장',
         doctor_specialty: '치과 전문의 / 교정 인정의',
         credentials_title: '주요 경력',
@@ -437,6 +438,7 @@ const translations = {
         
         doctor_tag: 'Medical Staff',
         doctor_title: 'Our Chief Director',
+        doctor_badge: 'Chief Director',
         doctor_name: 'Dr. Eun-young Choi, Chief Director',
         doctor_specialty: 'Dental Specialist / Board Certified Orthodontist',
         credentials_title: 'Credentials & Experience',
@@ -679,6 +681,7 @@ const translations = {
         
         doctor_tag: 'Medical Staff',
         doctor_title: '代表院長のご紹介',
+        doctor_badge: '代表院長',
         doctor_name: 'チェ・ウンヨン 代表院長',
         doctor_specialty: '歯科専門医 / 矯正認定医',
         credentials_title: '主な経歴',
@@ -921,6 +924,7 @@ const translations = {
         
         doctor_tag: 'Medical Staff',
         doctor_title: '代表院长介绍',
+        doctor_badge: '代表院长',
         doctor_name: '崔恩英 代表院长',
         doctor_specialty: '牙科专业医师 / 矫正认证医师',
         credentials_title: '主要经历',
