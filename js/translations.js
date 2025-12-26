@@ -343,8 +343,9 @@ const translations = {
         cta_feat4_title: '분할 결제 가능',
         cta_feat4_sub: 'Installments Available',
         
-        // Floating Button
+        // Floating Buttons
         floating_btn_text: '무료 예약 상담',
+        floating_instagram_text: 'Instagram 상담',
         
         // Treatment Guide Steps
         guide_step1_title: '예약 및 사전 상담 (출국 전)',
@@ -727,8 +728,9 @@ const translations = {
         cta_feat4_title: 'Installments OK',
         cta_feat4_sub: 'Installments Available',
         
-        // Floating Button
+        // Floating Buttons
         floating_btn_text: 'Free Consultation',
+        floating_instagram_text: 'Instagram Chat',
         
         // Treatment Guide Steps
         guide_step1_title: 'Reservation & Pre-Consultation (Before Departure)',
@@ -1111,8 +1113,9 @@ const translations = {
         cta_feat4_title: '分割支払いOK',
         cta_feat4_sub: 'Installments Available',
         
-        // Floating Button
+        // Floating Buttons
         floating_btn_text: '無料相談予約',
+        floating_instagram_text: 'Instagram相談',
         
         // Treatment Guide Steps
         guide_step1_title: '予約・事前相談（出国前）',
@@ -1495,8 +1498,9 @@ const translations = {
         cta_feat4_title: '分期付款',
         cta_feat4_sub: 'Installments Available',
         
-        // Floating Button
+        // Floating Buttons
         floating_btn_text: '免费预约咨询',
+        floating_instagram_text: 'Instagram咨询',
         
         // Treatment Guide Steps
         guide_step1_title: '预约和事前咨询（出国前）',

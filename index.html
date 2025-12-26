@@ -1499,8 +1499,16 @@
         }
     </script>
 
-    <!-- Floating Booking Button -->
-    <div id="floating-booking-btn" style="position: fixed; bottom: 30px; right: 30px; z-index: 9999;">
+    <!-- Floating Contact Buttons -->
+    <div id="floating-buttons-container" style="position: fixed; bottom: 30px; right: 30px; z-index: 9999; display: flex; flex-direction: column; gap: 15px; align-items: flex-end;">
+        
+        <!-- Instagram Button -->
+        <a href="https://ig.me/m/KBEAUTYSEOUL.CO.KR" target="_blank" rel="noopener noreferrer" id="floating-instagram-btn" style="display: flex; align-items: center; gap: 0.75rem; padding: 1rem 1.5rem; background: linear-gradient(135deg, #E1306C 0%, #C13584 50%, #833AB4 100%); color: white; text-decoration: none; border-radius: 50px; font-weight: 600; font-size: 1.1rem; box-shadow: 0 4px 20px rgba(225, 48, 108, 0.4); transition: all 0.3s ease; cursor: pointer;">
+            <span style="font-size: 1.5rem;">📷</span>
+            <span data-translate="floating_instagram_text">Instagram 상담</span>
+        </a>
+        
+        <!-- Booking Button -->
         <button id="floating-btn" style="display: flex; align-items: center; gap: 0.75rem; padding: 1rem 1.5rem; background: linear-gradient(135deg, #c9a961 0%, #b39448 100%); color: white; border: none; border-radius: 50px; font-weight: 600; font-size: 1.1rem; box-shadow: 0 4px 20px rgba(201, 169, 97, 0.4); transition: all 0.3s ease; animation: pulse 2s infinite; cursor: pointer;">
             <span style="font-size: 1.5rem;">📞</span>
             <span data-translate="floating_btn_text">무료 예약 상담</span>
@@ -1558,7 +1566,7 @@
     </div>
 
     <style>
-        /* Floating Button Animation */
+        /* Floating Buttons Animation */
         @keyframes pulse {
             0%, 100% {
                 transform: scale(1);
@@ -1570,22 +1578,29 @@
             }
         }
 
-        #floating-booking-btn a:hover {
+        #floating-btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 8px 30px rgba(201, 169, 97, 0.6);
         }
 
+        #floating-instagram-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(225, 48, 108, 0.6);
+        }
+
         /* Mobile Optimization */
         @media (max-width: 768px) {
-            #floating-booking-btn {
+            #floating-buttons-container {
                 bottom: 20px;
                 right: 20px;
+                gap: 10px;
             }
-            #floating-booking-btn a {
+            #floating-btn, #floating-instagram-btn {
                 padding: 0.875rem 1.25rem;
                 font-size: 1rem;
             }
-            #floating-booking-btn a span:last-child {
+            #floating-btn span:last-child,
+            #floating-instagram-btn span:last-child {
                 display: none;
             }
             #floating-booking-btn a span:first-child {
