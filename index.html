@@ -1499,8 +1499,13 @@
         }
     </script>
 
-    <!-- Floating Contact Buttons (2 Buttons - WhatsApp via GetButton Widget) -->
+    <!-- Floating Contact Buttons (3 Buttons with WhatsApp) -->
     <div id="floating-buttons-container" style="position: fixed; bottom: 25px; right: 25px; z-index: 9998; display: flex; flex-direction: column; gap: 12px; align-items: flex-end;">
+        
+        <!-- WhatsApp Button -->
+        <button id="floating-whatsapp-btn" style="display: flex; align-items: center; justify-content: center; width: 56px; height: 56px; background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); color: white; border: none; border-radius: 50%; font-size: 1.8rem; box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5); transition: all 0.3s ease; cursor: pointer;">
+            💬
+        </button>
         
         <!-- Instagram Button -->
         <a href="https://ig.me/m/KBEAUTYSEOUL.CO.KR" target="_blank" rel="noopener noreferrer" id="floating-instagram-btn" style="display: flex; align-items: center; justify-content: center; width: 56px; height: 56px; background: linear-gradient(135deg, #E1306C 0%, #C13584 50%, #833AB4 100%); color: white; text-decoration: none; border-radius: 50%; font-size: 1.8rem; box-shadow: 0 4px 20px rgba(225, 48, 108, 0.5); transition: all 0.3s ease; cursor: pointer;">
@@ -1512,6 +1517,43 @@
             📞
         </button>
         
+    </div>
+
+    <!-- WhatsApp Chat Popup -->
+    <div id="whatsapp-chat-popup" style="display: none; position: fixed; bottom: 100px; right: 25px; z-index: 9999; width: 350px; max-width: calc(100vw - 40px); background: white; border-radius: 16px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); overflow: hidden;">
+        <!-- Header -->
+        <div style="background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); padding: 20px; color: white; display: flex; align-items: center; justify-content: space-between;">
+            <div style="display: flex; align-items: center; gap: 12px;">
+                <div style="width: 48px; height: 48px; border-radius: 50%; background: white; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                    💬
+                </div>
+                <div>
+                    <div style="font-weight: 700; font-size: 1.1rem;">Yonsei Midas Dental</div>
+                    <div style="font-size: 0.85rem; opacity: 0.9;">연세미다스치과</div>
+                </div>
+            </div>
+            <button id="close-whatsapp-chat" style="background: none; border: none; color: white; font-size: 1.8rem; cursor: pointer; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; transition: transform 0.2s;">&times;</button>
+        </div>
+        
+        <!-- Chat Body -->
+        <div style="padding: 20px; background: #f0f0f0;">
+            <!-- Agent Message -->
+            <div style="margin-bottom: 16px;">
+                <div style="background: white; padding: 12px 16px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); max-width: 85%; display: inline-block;">
+                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 4px;">👋 How can I help you?</div>
+                    <div style="color: #333; font-size: 0.95rem;">안녕하세요! 무엇을 도와드릴까요?</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Input Area -->
+        <div style="padding: 16px; background: white; border-top: 1px solid #e0e0e0;">
+            <textarea id="whatsapp-message-input" placeholder="Write a message... | 메시지를 입력하세요..." style="width: 100%; border: 1px solid #ddd; border-radius: 24px; padding: 12px 16px; font-size: 0.95rem; resize: none; font-family: inherit; outline: none;" rows="2"></textarea>
+            <button id="send-whatsapp-message" style="margin-top: 12px; width: 100%; background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); color: white; border: none; padding: 14px; border-radius: 24px; font-weight: 600; font-size: 1rem; cursor: pointer; transition: all 0.3s ease; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                <span>Send Message</span>
+                <span style="font-size: 1.2rem;">➤</span>
+            </button>
+        </div>
     </div>
 
     <!-- Booking Modal -->
@@ -1582,6 +1624,11 @@
             box-shadow: 0 6px 28px rgba(37, 211, 102, 0.8);
         }
 
+        #floating-whatsapp-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 28px rgba(37, 211, 102, 0.8);
+        }
+
         #floating-booking-btn:hover {
             transform: scale(1.05);
             box-shadow: 0 6px 28px rgba(201, 169, 97, 0.8) !important;
@@ -1592,9 +1639,19 @@
             box-shadow: 0 6px 28px rgba(225, 48, 108, 0.8);
         }
 
+        #floating-whatsapp-btn:active,
         #floating-booking-btn:active,
         #floating-instagram-btn:active {
             transform: scale(0.95);
+        }
+
+        #send-whatsapp-message:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+        }
+
+        #close-whatsapp-chat:hover {
+            transform: scale(1.1);
         }
 
         /* Mobile Optimization */
@@ -1605,11 +1662,18 @@
                 gap: 10px !important;
             }
             
+            #floating-whatsapp-btn,
             #floating-booking-btn,
             #floating-instagram-btn {
                 width: 52px !important;
                 height: 52px !important;
                 font-size: 1.6rem !important;
+            }
+
+            #whatsapp-chat-popup {
+                bottom: 20px !important;
+                right: 15px !important;
+                width: calc(100vw - 30px) !important;
             }
         }
         
@@ -1637,6 +1701,52 @@
             const closeModalBtn = document.getElementById('close-modal');
             const navBookingBtn = document.getElementById('bookingBtn');
             const container = document.getElementById('floating-buttons-container');
+            
+            // WhatsApp Chat Popup Elements
+            const whatsappBtn = document.getElementById('floating-whatsapp-btn');
+            const whatsappPopup = document.getElementById('whatsapp-chat-popup');
+            const closeWhatsappBtn = document.getElementById('close-whatsapp-chat');
+            const sendWhatsappBtn = document.getElementById('send-whatsapp-message');
+            const messageInput = document.getElementById('whatsapp-message-input');
+
+            // Open WhatsApp chat popup
+            if (whatsappBtn) {
+                whatsappBtn.addEventListener('click', function() {
+                    whatsappPopup.style.display = 'block';
+                    messageInput.focus();
+                });
+            }
+
+            // Close WhatsApp chat popup
+            if (closeWhatsappBtn) {
+                closeWhatsappBtn.addEventListener('click', function() {
+                    whatsappPopup.style.display = 'none';
+                });
+            }
+
+            // Send WhatsApp message
+            if (sendWhatsappBtn) {
+                sendWhatsappBtn.addEventListener('click', function() {
+                    const message = messageInput.value.trim();
+                    if (message) {
+                        const phoneNumber = '821058947690';
+                        const encodedMessage = encodeURIComponent(message);
+                        window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
+                        whatsappPopup.style.display = 'none';
+                        messageInput.value = '';
+                    }
+                });
+            }
+
+            // Send on Enter key (Ctrl+Enter for new line)
+            if (messageInput) {
+                messageInput.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' && !e.ctrlKey && !e.shiftKey) {
+                        e.preventDefault();
+                        sendWhatsappBtn.click();
+                    }
+                });
+            }
 
             // Open modal from floating booking button
             if (bookingBtn) {
@@ -1734,22 +1844,7 @@
         });
     </script>
 
-    <!-- GetButton.io WhatsApp Widget -->
-    <script type="text/javascript">
-        (function () {
-            var options = {
-                whatsapp: "+821058947690", // WhatsApp number
-                call_to_action: "Message us", // Call to action
-                button_color: "#25D366", // Color of button
-                position: "right", // Position may be 'right' or 'left'
-                order: "whatsapp", // Order of buttons
-            };
-            var proto = 'https:', host = "getbutton.io", url = proto + '//static.' + host;
-            var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
-            s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
-            var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
-        })();
-    </script>
+
 </body>
 </html>
 ml>
