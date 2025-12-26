@@ -1499,20 +1499,30 @@
         }
     </script>
 
-    <!-- Floating Contact Buttons -->
-    <div id="floating-buttons-container" style="position: fixed; bottom: 40px; right: 40px; z-index: 9998; display: flex; flex-direction: column; gap: 12px; align-items: flex-end;">
+    <!-- Floating Contact Buttons (Collapsible) -->
+    <div id="floating-buttons-container" style="position: fixed; bottom: 25px; right: 25px; z-index: 9998;">
         
-        <!-- Instagram Button -->
-        <a href="https://ig.me/m/KBEAUTYSEOUL.CO.KR" target="_blank" rel="noopener noreferrer" id="floating-instagram-btn" style="display: flex; align-items: center; justify-content: center; gap: 10px; min-width: 60px; min-height: 60px; padding: 15px 20px; background: linear-gradient(135deg, #E1306C 0%, #C13584 50%, #833AB4 100%); color: white; text-decoration: none; border-radius: 30px; font-weight: 700; font-size: 0.95rem; box-shadow: 0 6px 24px rgba(225, 48, 108, 0.5); transition: all 0.3s ease; cursor: pointer;">
-            <span style="font-size: 1.8rem; line-height: 1;">📷</span>
-            <span class="btn-text" data-translate="floating_instagram_text">Instagram</span>
-        </a>
-        
-        <!-- Booking Button -->
-        <button id="floating-btn" style="display: flex; align-items: center; justify-content: center; gap: 10px; min-width: 60px; min-height: 60px; padding: 15px 20px; background: linear-gradient(135deg, #c9a961 0%, #b39448 100%); color: white; border: none; border-radius: 30px; font-weight: 700; font-size: 0.95rem; box-shadow: 0 6px 24px rgba(201, 169, 97, 0.5); transition: all 0.3s ease; animation: pulse 2s infinite; cursor: pointer;">
-            <span style="font-size: 1.8rem; line-height: 1;">📞</span>
-            <span class="btn-text" data-translate="floating_btn_text">예약상담</span>
+        <!-- Main Toggle Button (Always Visible) -->
+        <button id="floating-toggle-btn" style="width: 56px; height: 56px; border-radius: 50%; background: linear-gradient(135deg, #c9a961 0%, #b39448 100%); color: white; border: none; font-size: 1.8rem; box-shadow: 0 4px 20px rgba(201, 169, 97, 0.6); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; animation: pulse 2s infinite;">
+            <span id="toggle-icon">💬</span>
         </button>
+        
+        <!-- Expanded Buttons Menu (Hidden by default) -->
+        <div id="floating-menu" style="position: absolute; bottom: 70px; right: 0; display: none; flex-direction: column; gap: 10px; align-items: flex-end;">
+            
+            <!-- Instagram Button -->
+            <a href="https://ig.me/m/KBEAUTYSEOUL.CO.KR" target="_blank" rel="noopener noreferrer" class="floating-menu-item" style="display: flex; align-items: center; gap: 10px; padding: 12px 18px; background: linear-gradient(135deg, #E1306C 0%, #C13584 50%, #833AB4 100%); color: white; text-decoration: none; border-radius: 28px; font-weight: 600; font-size: 0.9rem; box-shadow: 0 4px 16px rgba(225, 48, 108, 0.4); transition: all 0.3s ease; opacity: 0; transform: translateY(10px);">
+                <span style="font-size: 1.5rem; line-height: 1;">📷</span>
+                <span data-translate="floating_instagram_text">Instagram</span>
+            </a>
+            
+            <!-- Booking Button -->
+            <button id="floating-booking-menu-btn" class="floating-menu-item" style="display: flex; align-items: center; gap: 10px; padding: 12px 18px; background: linear-gradient(135deg, #c9a961 0%, #b39448 100%); color: white; border: none; border-radius: 28px; font-weight: 600; font-size: 0.9rem; box-shadow: 0 4px 16px rgba(201, 169, 97, 0.4); transition: all 0.3s ease; cursor: pointer; opacity: 0; transform: translateY(10px);">
+                <span style="font-size: 1.5rem; line-height: 1;">📞</span>
+                <span data-translate="floating_btn_text">예약상담</span>
+            </button>
+            
+        </div>
     </div>
 
     <!-- Booking Modal -->
@@ -1570,22 +1580,26 @@
         @keyframes pulse {
             0%, 100% {
                 transform: scale(1);
-                box-shadow: 0 6px 24px rgba(201, 169, 97, 0.5);
+                box-shadow: 0 4px 20px rgba(201, 169, 97, 0.6);
             }
             50% {
-                transform: scale(1.08);
-                box-shadow: 0 8px 32px rgba(201, 169, 97, 0.7);
+                transform: scale(1.1);
+                box-shadow: 0 6px 28px rgba(201, 169, 97, 0.8);
             }
         }
 
-        #floating-btn:hover {
-            transform: translateY(-4px) scale(1.02);
-            box-shadow: 0 10px 36px rgba(201, 169, 97, 0.8) !important;
+        #floating-toggle-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 28px rgba(201, 169, 97, 0.8);
         }
 
-        #floating-instagram-btn:hover {
-            transform: translateY(-4px) scale(1.02);
-            box-shadow: 0 10px 36px rgba(225, 48, 108, 0.8) !important;
+        #floating-toggle-btn:active {
+            transform: scale(0.95);
+        }
+
+        .floating-menu-item:hover {
+            transform: translateY(-2px) translateX(-5px) !important;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3) !important;
         }
 
         /* Mobile Optimization */
@@ -1593,34 +1607,33 @@
             #floating-buttons-container {
                 bottom: 15px !important;
                 right: 15px !important;
-                gap: 8px !important;
             }
             
-            #floating-btn, #floating-instagram-btn {
-                min-width: 56px !important;
-                min-height: 56px !important;
-                padding: 12px !important;
-                border-radius: 28px !important;
+            #floating-toggle-btn {
+                width: 52px !important;
+                height: 52px !important;
+                font-size: 1.6rem !important;
+            }
+
+            .floating-menu-item {
+                padding: 10px 14px !important;
                 font-size: 0.85rem !important;
             }
-            
-            #floating-btn .btn-text,
-            #floating-instagram-btn .btn-text {
-                display: none !important;
+
+            .floating-menu-item span:first-child {
+                font-size: 1.3rem !important;
             }
-            
-            #floating-btn span:first-child,
-            #floating-instagram-btn span:first-child {
-                font-size: 1.6rem !important;
-                margin: 0 !important;
+
+            #floating-menu {
+                bottom: 65px !important;
             }
         }
         
         /* Tablet Optimization */
         @media (max-width: 1024px) and (min-width: 769px) {
             #floating-buttons-container {
-                bottom: 25px;
-                right: 25px;
+                bottom: 20px;
+                right: 20px;
             }
         }
 
@@ -1630,20 +1643,177 @@
             pointer-events: none;
             transition: opacity 0.3s ease;
         }
+
+        /* Smooth transitions for menu items */
+        .floating-menu-item {
+            will-change: opacity, transform;
+        }
     </style>
 
     <script>
-        // Hide floating button when near footer
-        window.addEventListener('scroll', function() {
-            var floatingBtn = document.getElementById('floating-booking-btn');
-            var footer = document.querySelector('.footer');
-            var footerTop = footer.offsetTop;
-            var scrollPosition = window.pageYOffset + window.innerHeight;
+        // Floating Menu Toggle Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleBtn = document.getElementById('floating-toggle-btn');
+            const menu = document.getElementById('floating-menu');
+            const menuItems = document.querySelectorAll('.floating-menu-item');
+            const toggleIcon = document.getElementById('toggle-icon');
+            const bookingMenuBtn = document.getElementById('floating-booking-menu-btn');
+            let isMenuOpen = false;
 
-            if (scrollPosition > footerTop - 100) {
-                floatingBtn.classList.add('hide-floating');
-            } else {
-                floatingBtn.classList.remove('hide-floating');
+            // Toggle menu open/close
+            toggleBtn.addEventListener('click', function() {
+                isMenuOpen = !isMenuOpen;
+                
+                if (isMenuOpen) {
+                    // Open menu
+                    menu.style.display = 'flex';
+                    toggleIcon.textContent = '✕';
+                    toggleBtn.style.animation = 'none';
+                    
+                    // Animate menu items
+                    menuItems.forEach((item, index) => {
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'translateY(0)';
+                        }, index * 100);
+                    });
+                } else {
+                    // Close menu
+                    menuItems.forEach(item => {
+                        item.style.opacity = '0';
+                        item.style.transform = 'translateY(10px)';
+                    });
+                    
+                    setTimeout(() => {
+                        menu.style.display = 'none';
+                        toggleIcon.textContent = '💬';
+                        toggleBtn.style.animation = 'pulse 2s infinite';
+                    }, 300);
+                }
+            });
+
+            // Booking button opens modal
+            bookingMenuBtn.addEventListener('click', function() {
+                document.getElementById('booking-modal').style.display = 'flex';
+                // Close menu after clicking
+                isMenuOpen = false;
+                menuItems.forEach(item => {
+                    item.style.opacity = '0';
+                    item.style.transform = 'translateY(10px)';
+                });
+                setTimeout(() => {
+                    menu.style.display = 'none';
+                    toggleIcon.textContent = '💬';
+                    toggleBtn.style.animation = 'pulse 2s infinite';
+                }, 300);
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function(event) {
+                const container = document.getElementById('floating-buttons-container');
+                if (isMenuOpen && !container.contains(event.target)) {
+                    isMenuOpen = false;
+                    menuItems.forEach(item => {
+                        item.style.opacity = '0';
+                        item.style.transform = 'translateY(10px)';
+                    });
+                    setTimeout(() => {
+                        menu.style.display = 'none';
+                        toggleIcon.textContent = '💬';
+                        toggleBtn.style.animation = 'pulse 2s infinite';
+                    }, 300);
+                }
+            });
+
+            // Hide floating button when near footer
+            window.addEventListener('scroll', function() {
+                const container = document.getElementById('floating-buttons-container');
+                const footer = document.querySelector('.footer');
+                if (footer) {
+                    const footerTop = footer.offsetTop;
+                    const scrollPosition = window.pageYOffset + window.innerHeight;
+
+                    if (scrollPosition > footerTop - 100) {
+                        container.classList.add('hide-floating');
+                    } else {
+                        container.classList.remove('hide-floating');
+                    }
+                }
+            });
+
+            // Modal functionality
+            const modal = document.getElementById('booking-modal');
+            const closeModalBtn = document.getElementById('close-modal');
+            const navBookingBtn = document.getElementById('bookingBtn');
+
+            // Open modal from navigation
+            if (navBookingBtn) {
+                navBookingBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    modal.style.display = 'flex';
+                });
+            }
+
+            // Close modal
+            if (closeModalBtn) {
+                closeModalBtn.addEventListener('click', function() {
+                    modal.style.display = 'none';
+                });
+            }
+
+            // Close modal when clicking outside
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+
+            // Handle form submission (Resend)
+            const form = document.getElementById('booking-form');
+            if (form) {
+                form.addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    
+                    const name = document.getElementById('name').value;
+                    const phone = document.getElementById('phone').value;
+                    const email = document.getElementById('email').value;
+                    const message = document.getElementById('message').value;
+                    const service = document.getElementById('service').value;
+
+                    try {
+                        const response = await fetch('https://api.resend.com/emails', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'Authorization': 'Bearer re_AGTtkCJF_EAtsBSro97QTWY3d9RDhDmRW'
+                            },
+                            body: JSON.stringify({
+                                from: 'Yonsei Midas Dental <onboarding@resend.dev>',
+                                to: ['paulslife2017@gmail.com'],
+                                subject: `새 예약 문의: ${name}`,
+                                html: `
+                                    <h2>새 예약 문의</h2>
+                                    <p><strong>이름:</strong> ${name}</p>
+                                    <p><strong>전화번호:</strong> ${phone}</p>
+                                    <p><strong>이메일:</strong> ${email}</p>
+                                    <p><strong>진료 항목:</strong> ${service}</p>
+                                    <p><strong>메시지:</strong> ${message}</p>
+                                `
+                            })
+                        });
+
+                        if (response.ok) {
+                            alert('예약 문의가 성공적으로 전송되었습니다!');
+                            modal.style.display = 'none';
+                            form.reset();
+                        } else {
+                            alert('전송 중 오류가 발생했습니다. 다시 시도해주세요.');
+                        }
+                    } catch (error) {
+                        console.error('Error:', error);
+                        alert('전송 중 오류가 발생했습니다. 다시 시도해주세요.');
+                    }
+                });
             }
         });
     </script>
