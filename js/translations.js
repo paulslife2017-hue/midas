@@ -274,7 +274,7 @@ const translations = {
         comp_row5_bridge: '자연스러움',
         comp_row5_denture: '인공적',
         comp_row6_title: '초기 비용',
-        comp_row6_implant: '₩1,500,000~',
+        comp_row6_implant: '₩1,400,000~',
         comp_row6_bridge: '₩1,000,000~',
         comp_row6_denture: '₩500,000~ ✓',
         comp_recommendation: '💡 전문의 추천: 장기적으로는 임플란트가 가장 경제적입니다',
@@ -300,7 +300,7 @@ const translations = {
         
         // Pricing Cards
         price_implant_title: '🦷 임플란트',
-        price_implant_cost: '₩1,500,000~',
+        price_implant_cost: '₩1,400,000~',
         price_implant_feat1: '✓ 한국산 프리미엄 임플란트',
         price_implant_feat2: '✓ 유럽산 (₩2,000,000~)',
         price_implant_feat3: '✓ 3D CT 스캔 포함',
@@ -309,7 +309,7 @@ const translations = {
         price_implant_cta: '자세히 보기 →',
         
         price_whitening_title: '✨ 치아 미백',
-        price_whitening_cost: '₩300,000~',
+        price_whitening_cost: '₩200,000~',
         price_whitening_feat1: '✓ 전문가 미백 (In-Office)',
         price_whitening_feat2: '✓ 홈 미백 키트',
         price_whitening_feat3: '✓ 8단계 이상 미백',
@@ -318,7 +318,7 @@ const translations = {
         price_whitening_cta: '예약 문의 →',
         
         price_veneer_title: '💎 미니쉬 베니어',
-        price_veneer_cost: '₩800,000~',
+        price_veneer_cost: '₩980,000~',
         price_veneer_feat1: '✓ 최소 삭제 (0.3mm)',
         price_veneer_feat2: '✓ 자연스러운 투명도',
         price_veneer_feat3: '✓ 맞춤형 색상',
@@ -659,7 +659,7 @@ const translations = {
         comp_row5_bridge: 'Natural',
         comp_row5_denture: 'Artificial',
         comp_row6_title: 'Initial Cost',
-        comp_row6_implant: '₩1,500,000~',
+        comp_row6_implant: '₩1,400,000~',
         comp_row6_bridge: '₩1,000,000~',
         comp_row6_denture: '₩500,000~ ✓',
         comp_recommendation: '💡 Expert Recommendation: Implants are most cost-effective long-term',
@@ -685,7 +685,7 @@ const translations = {
         
         // Pricing Cards
         price_implant_title: '🦷 Dental Implants',
-        price_implant_cost: '₩1,500,000~',
+        price_implant_cost: '₩1,400,000~',
         price_implant_feat1: '✓ Premium Korean implants',
         price_implant_feat2: '✓ European (₩2,000,000~)',
         price_implant_feat3: '✓ 3D CT scan included',
@@ -694,7 +694,7 @@ const translations = {
         price_implant_cta: 'Learn More →',
         
         price_whitening_title: '✨ Teeth Whitening',
-        price_whitening_cost: '₩300,000~',
+        price_whitening_cost: '₩200,000~',
         price_whitening_feat1: '✓ Professional in-office whitening',
         price_whitening_feat2: '✓ Take-home whitening kit',
         price_whitening_feat3: '✓ 8+ shades whiter',
@@ -703,7 +703,7 @@ const translations = {
         price_whitening_cta: 'Book Appointment →',
         
         price_veneer_title: '💎 Minish Veneers',
-        price_veneer_cost: '₩800,000~',
+        price_veneer_cost: '₩980,000~',
         price_veneer_feat1: '✓ Minimal removal (0.3mm)',
         price_veneer_feat2: '✓ Natural translucency',
         price_veneer_feat3: '✓ Custom color matching',
@@ -1044,7 +1044,7 @@ const translations = {
         comp_row5_bridge: '自然',
         comp_row5_denture: '人工的',
         comp_row6_title: '初期費用',
-        comp_row6_implant: '₩1,500,000~',
+        comp_row6_implant: '₩1,400,000~',
         comp_row6_bridge: '₩1,000,000~',
         comp_row6_denture: '₩500,000~ ✓',
         comp_recommendation: '💡 専門医推薦：長期的にはインプラントが最も経済的です',
@@ -1070,7 +1070,7 @@ const translations = {
         
         // Pricing Cards
         price_implant_title: '🦷 インプラント',
-        price_implant_cost: '₩1,500,000~',
+        price_implant_cost: '₩1,400,000~',
         price_implant_feat1: '✓ 韓国産プレミアムインプラント',
         price_implant_feat2: '✓ ヨーロッパ産 (₩2,000,000~)',
         price_implant_feat3: '✓ 3D CTスキャン含む',
@@ -1079,7 +1079,7 @@ const translations = {
         price_implant_cta: '詳細を見る →',
         
         price_whitening_title: '✨ 歯のホワイトニング',
-        price_whitening_cost: '₩300,000~',
+        price_whitening_cost: '₩200,000~',
         price_whitening_feat1: '✓ 専門家によるオフィスホワイトニング',
         price_whitening_feat2: '✓ ホームホワイトニングキット',
         price_whitening_feat3: '✓ 8段階以上の美白',
@@ -1088,7 +1088,7 @@ const translations = {
         price_whitening_cta: '予約問い合わせ →',
         
         price_veneer_title: '💎 ミニッシュベニア',
-        price_veneer_cost: '₩800,000~',
+        price_veneer_cost: '₩980,000~',
         price_veneer_feat1: '✓ 最小削除 (0.3mm)',
         price_veneer_feat2: '✓ 自然な透明度',
         price_veneer_feat3: '✓ カスタムカラー',
@@ -1429,7 +1429,7 @@ const translations = {
         comp_row5_bridge: '自然',
         comp_row5_denture: '人工',
         comp_row6_title: '初始费用',
-        comp_row6_implant: '₩1,500,000~',
+        comp_row6_implant: '₩1,400,000~',
         comp_row6_bridge: '₩1,000,000~',
         comp_row6_denture: '₩500,000~ ✓',
         comp_recommendation: '💡 专家推荐：从长远来看，种植牙最经济',
@@ -1455,7 +1455,7 @@ const translations = {
         
         // Pricing Cards
         price_implant_title: '🦷 种植牙',
-        price_implant_cost: '₩1,500,000~',
+        price_implant_cost: '₩1,400,000~',
         price_implant_feat1: '✓ 韩国高端种植体',
         price_implant_feat2: '✓ 欧洲产 (₩2,000,000~)',
         price_implant_feat3: '✓ 含3D CT扫描',
@@ -1464,7 +1464,7 @@ const translations = {
         price_implant_cta: '了解详情 →',
         
         price_whitening_title: '✨ 牙齿美白',
-        price_whitening_cost: '₩300,000~',
+        price_whitening_cost: '₩200,000~',
         price_whitening_feat1: '✓ 专业美白服务',
         price_whitening_feat2: '✓ 家用美白套装',
         price_whitening_feat3: '✓ 提升8个色阶',
@@ -1473,7 +1473,7 @@ const translations = {
         price_whitening_cta: '预约咨询 →',
         
         price_veneer_title: '💎 贴面',
-        price_veneer_cost: '₩800,000~',
+        price_veneer_cost: '₩980,000~',
         price_veneer_feat1: '✓ 最少磨除 (0.3mm)',
         price_veneer_feat2: '✓ 自然透明度',
         price_veneer_feat3: '✓ 定制颜色',
