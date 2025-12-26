@@ -13,7 +13,7 @@ Allow: /js/
 # Disallow: /admin/
 
 # Sitemap
-Sitemap: https://yonseimidasdental.com/sitemap.xml
+Sitemap: https://incheondentist.com/sitemap.xml
 
 # Crawl-delay
 Crawl-delay: 0
