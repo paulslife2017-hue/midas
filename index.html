@@ -1500,7 +1500,7 @@
     </script>
 
     <!-- Floating Contact Buttons (Collapsible) -->
-    <div id="floating-buttons-container" style="position: fixed; bottom: 25px; right: 25px; z-index: 9998;">
+    <div id="floating-buttons-container" style="position: fixed; bottom: 25px; left: 25px; z-index: 9998;">
         
         <!-- Main Toggle Button (Always Visible) -->
         <button id="floating-toggle-btn" style="width: 56px; height: 56px; border-radius: 50%; background: linear-gradient(135deg, #c9a961 0%, #b39448 100%); color: white; border: none; font-size: 1.8rem; box-shadow: 0 4px 20px rgba(201, 169, 97, 0.6); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; animation: pulse 2s infinite;">
@@ -1508,7 +1508,7 @@
         </button>
         
         <!-- Expanded Buttons Menu (Hidden by default) -->
-        <div id="floating-menu" style="position: absolute; bottom: 70px; right: 0; display: none; flex-direction: column; gap: 10px; align-items: flex-end;">
+        <div id="floating-menu" style="position: absolute; bottom: 70px; left: 0; display: none; flex-direction: column; gap: 10px; align-items: flex-start;">
             
             <!-- Instagram Button -->
             <a href="https://ig.me/m/KBEAUTYSEOUL.CO.KR" target="_blank" rel="noopener noreferrer" class="floating-menu-item" style="display: flex; align-items: center; gap: 10px; padding: 12px 18px; background: linear-gradient(135deg, #E1306C 0%, #C13584 50%, #833AB4 100%); color: white; text-decoration: none; border-radius: 28px; font-weight: 600; font-size: 0.9rem; box-shadow: 0 4px 16px rgba(225, 48, 108, 0.4); transition: all 0.3s ease; opacity: 0; transform: translateY(10px);">
@@ -1598,21 +1598,21 @@
         }
 
         .floating-menu-item:hover {
-            transform: translateY(-2px) translateX(-5px) !important;
+            transform: translateY(-2px) translateX(5px) !important;
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3) !important;
         }
 
         /* Mobile Optimization */
         @media (max-width: 768px) {
             #floating-buttons-container {
-                bottom: 15px !important;
-                right: 15px !important;
+                bottom: 80px !important;
+                left: 15px !important;
             }
             
             #floating-toggle-btn {
-                width: 52px !important;
-                height: 52px !important;
-                font-size: 1.6rem !important;
+                width: 50px !important;
+                height: 50px !important;
+                font-size: 1.5rem !important;
             }
 
             .floating-menu-item {
@@ -1625,15 +1625,17 @@
             }
 
             #floating-menu {
-                bottom: 65px !important;
+                bottom: 60px !important;
+                right: auto !important;
+                left: 0 !important;
             }
         }
         
         /* Tablet Optimization */
         @media (max-width: 1024px) and (min-width: 769px) {
             #floating-buttons-container {
-                bottom: 20px;
-                right: 20px;
+                bottom: 25px;
+                left: 20px;
             }
         }
 
