@@ -339,7 +339,44 @@ const translations = {
         cta_feat4_sub: 'Installments Available',
         
         // Floating Button
-        floating_btn_text: '무료 예약 상담'
+        floating_btn_text: '무료 예약 상담',
+        
+        // Treatment Guide Steps
+        guide_step1_title: '예약 및 사전 상담 (출국 전)',
+        guide_step1_1: '✓ <strong>온라인 예약:</strong> 웹사이트 또는 이메일로 예약',
+        guide_step1_2: '✓ <strong>X-ray 전송:</strong> 본국에서 촬영한 X-ray 사진 전송',
+        guide_step1_3: '✓ <strong>가상 상담:</strong> 화상 통화로 1차 상담 (무료)',
+        guide_step1_4: '✓ <strong>견적서 받기:</strong> 투명한 가격 + 치료 계획',
+        guide_step1_5: '✓ <strong>일정 조율:</strong> 방문 날짜 및 치료 기간 확정',
+        
+        guide_step2_title: '공항 도착 (Day 1)',
+        guide_step2_1: '✓ <strong>인천국제공항 도착</strong>',
+        guide_step2_2: '✓ <strong>픽업 서비스:</strong> 공항 → 클리닉 (15분, 무료)',
+        guide_step2_3: '✓ <strong>호텔 체크인 지원:</strong> 인스파이어 리조트 추천',
+        guide_step2_4: '✓ <strong>1차 진료 예약:</strong> 도착 당일 또는 다음 날',
+        guide_step2_tip: '<strong>💡 Tip:</strong> 인스파이어 리조트 내 숙박 시 클리닉까지 도보 5분!',
+        
+        guide_step3_title: '정밀 검사 및 상담 (Day 2-3)',
+        guide_step3_1: '✓ <strong>3D CT 촬영:</strong> 최첨단 장비로 정밀 진단',
+        guide_step3_2: '✓ <strong>전문의 상담:</strong> 영어/일본어/중국어 가능',
+        guide_step3_3: '✓ <strong>치료 계획 설명:</strong> 단계별 과정 상세 안내',
+        guide_step3_4: '✓ <strong>최종 견적 확정:</strong> 투명한 비용 안내',
+        guide_step3_5: '✓ <strong>동의서 작성:</strong> 모국어로 제공',
+        
+        guide_step4_title: '치료 시작 (Day 4-7)',
+        guide_step4_1: '✓ <strong>무통 마취:</strong> 최소 통증 보장',
+        guide_step4_2: '✓ <strong>시술 진행:</strong> 최첨단 장비 사용',
+        guide_step4_3: '✓ <strong>실시간 소통:</strong> 통역 직원 상주',
+        guide_step4_4: '✓ <strong>회복 모니터링:</strong> 매일 상태 체크',
+        guide_step4_5: '✓ <strong>약 처방:</strong> 복용법 상세 설명',
+        guide_step4_note: '<strong>📋 Note:</strong> 임플란트의 경우 1차 수술 후 회복 기간 필요',
+        
+        guide_step5_title: '사후 관리 및 귀국 (Day 7+)',
+        guide_step5_1: '✓ <strong>최종 검진:</strong> 치료 결과 확인',
+        guide_step5_2: '✓ <strong>관리 교육:</strong> 집에서의 관리 방법',
+        guide_step5_3: '✓ <strong>서류 발급:</strong> 치료 기록, 영수증 (보험 청구용)',
+        guide_step5_4: '✓ <strong>공항 이동:</strong> 클리닉 → 공항 (무료 셔틀)',
+        guide_step5_5: '✓ <strong>원격 상담:</strong> 귀국 후에도 24/7 지원'
     },
     
     en: {
@@ -681,7 +718,44 @@ const translations = {
         cta_feat4_sub: 'Installments Available',
         
         // Floating Button
-        floating_btn_text: 'Free Consultation'
+        floating_btn_text: 'Free Consultation',
+        
+        // Treatment Guide Steps
+        guide_step1_title: 'Reservation & Pre-Consultation (Before Departure)',
+        guide_step1_1: '✓ <strong>Online Booking:</strong> Book via website or email',
+        guide_step1_2: '✓ <strong>X-ray Transfer:</strong> Send X-ray images from your home country',
+        guide_step1_3: '✓ <strong>Virtual Consultation:</strong> Initial video consultation (Free)',
+        guide_step1_4: '✓ <strong>Get Quote:</strong> Transparent pricing + treatment plan',
+        guide_step1_5: '✓ <strong>Schedule Coordination:</strong> Confirm visit dates and treatment duration',
+        
+        guide_step2_title: 'Airport Arrival (Day 1)',
+        guide_step2_1: '✓ <strong>Arrive at Incheon International Airport</strong>',
+        guide_step2_2: '✓ <strong>Pickup Service:</strong> Airport → Clinic (15 min, Free)',
+        guide_step2_3: '✓ <strong>Hotel Check-in Support:</strong> Inspire Resort recommended',
+        guide_step2_4: '✓ <strong>First Appointment:</strong> Same day or next day',
+        guide_step2_tip: '<strong>💡 Tip:</strong> Only 5-min walk from Inspire Resort to clinic!',
+        
+        guide_step3_title: 'Detailed Examination & Consultation (Day 2-3)',
+        guide_step3_1: '✓ <strong>3D CT Scan:</strong> Precise diagnosis with advanced equipment',
+        guide_step3_2: '✓ <strong>Specialist Consultation:</strong> English/Japanese/Chinese available',
+        guide_step3_3: '✓ <strong>Treatment Plan Explanation:</strong> Detailed step-by-step guide',
+        guide_step3_4: '✓ <strong>Final Quote Confirmation:</strong> Transparent cost breakdown',
+        guide_step3_5: '✓ <strong>Consent Forms:</strong> Provided in your native language',
+        
+        guide_step4_title: 'Treatment Begins (Day 4-7)',
+        guide_step4_1: '✓ <strong>Painless Anesthesia:</strong> Minimal discomfort guaranteed',
+        guide_step4_2: '✓ <strong>Procedure:</strong> Using state-of-the-art equipment',
+        guide_step4_3: '✓ <strong>Real-time Communication:</strong> Interpreter on-site',
+        guide_step4_4: '✓ <strong>Recovery Monitoring:</strong> Daily status checks',
+        guide_step4_5: '✓ <strong>Medication:</strong> Detailed usage instructions',
+        guide_step4_note: '<strong>📋 Note:</strong> Implants require recovery period after first surgery',
+        
+        guide_step5_title: 'Aftercare & Return (Day 7+)',
+        guide_step5_1: '✓ <strong>Final Examination:</strong> Verify treatment results',
+        guide_step5_2: '✓ <strong>Care Instructions:</strong> Home care guidance',
+        guide_step5_3: '✓ <strong>Documentation:</strong> Treatment records, receipts (for insurance claims)',
+        guide_step5_4: '✓ <strong>Airport Transfer:</strong> Clinic → Airport (Free shuttle)',
+        guide_step5_5: '✓ <strong>Remote Consultation:</strong> 24/7 support after return'
     },
     
     ja: {
@@ -1023,7 +1097,44 @@ const translations = {
         cta_feat4_sub: 'Installments Available',
         
         // Floating Button
-        floating_btn_text: '無料相談予約'
+        floating_btn_text: '無料相談予約',
+        
+        // Treatment Guide Steps
+        guide_step1_title: '予約・事前相談（出国前）',
+        guide_step1_1: '✓ <strong>オンライン予約：</strong>ウェブサイトまたはメールで予約',
+        guide_step1_2: '✓ <strong>X-ray送信：</strong>本国で撮影したX-ray写真を送信',
+        guide_step1_3: '✓ <strong>オンライン相談：</strong>ビデオ通話で初回相談（無料）',
+        guide_step1_4: '✓ <strong>見積書受取：</strong>透明な価格＋治療計画',
+        guide_step1_5: '✓ <strong>スケジュール調整：</strong>訪問日と治療期間の確定',
+        
+        guide_step2_title: '空港到着（Day 1）',
+        guide_step2_1: '✓ <strong>仁川国際空港到着</strong>',
+        guide_step2_2: '✓ <strong>ピックアップサービス：</strong>空港→クリニック（15分、無料）',
+        guide_step2_3: '✓ <strong>ホテルチェックイン支援：</strong>インスパイアリゾート推奨',
+        guide_step2_4: '✓ <strong>初診予約：</strong>到着当日または翌日',
+        guide_step2_tip: '<strong>💡 Tip：</strong>インスパイアリゾート内宿泊時、クリニックまで徒歩5分！',
+        
+        guide_step3_title: '精密検査・相談（Day 2-3）',
+        guide_step3_1: '✓ <strong>3D CT撮影：</strong>最先端機器で精密診断',
+        guide_step3_2: '✓ <strong>専門医相談：</strong>英語/日本語/中国語対応',
+        guide_step3_3: '✓ <strong>治療計画説明：</strong>段階別の詳細案内',
+        guide_step3_4: '✓ <strong>最終見積確定：</strong>透明な費用案内',
+        guide_step3_5: '✓ <strong>同意書作成：</strong>母国語で提供',
+        
+        guide_step4_title: '治療開始（Day 4-7）',
+        guide_step4_1: '✓ <strong>無痛麻酔：</strong>最小限の痛みを保証',
+        guide_step4_2: '✓ <strong>施術進行：</strong>最先端機器使用',
+        guide_step4_3: '✓ <strong>リアルタイム対応：</strong>通訳スタッフ常駐',
+        guide_step4_4: '✓ <strong>回復モニタリング：</strong>毎日状態確認',
+        guide_step4_5: '✓ <strong>薬処方：</strong>服用方法の詳細説明',
+        guide_step4_note: '<strong>📋 Note：</strong>インプラントの場合、1次手術後の回復期間が必要',
+        
+        guide_step5_title: 'アフターケア・帰国（Day 7+）',
+        guide_step5_1: '✓ <strong>最終検診：</strong>治療結果の確認',
+        guide_step5_2: '✓ <strong>ケア指導：</strong>自宅での管理方法',
+        guide_step5_3: '✓ <strong>書類発行：</strong>治療記録、領収書（保険請求用）',
+        guide_step5_4: '✓ <strong>空港移動：</strong>クリニック→空港（無料シャトル）',
+        guide_step5_5: '✓ <strong>遠隔相談：</strong>帰国後も24/7サポート'
     },
     
     zh: {
@@ -1365,7 +1476,44 @@ const translations = {
         cta_feat4_sub: 'Installments Available',
         
         // Floating Button
-        floating_btn_text: '免费预约咨询'
+        floating_btn_text: '免费预约咨询',
+        
+        // Treatment Guide Steps
+        guide_step1_title: '预约和事前咨询（出国前）',
+        guide_step1_1: '✓ <strong>在线预约：</strong>通过网站或电子邮件预约',
+        guide_step1_2: '✓ <strong>发送X光片：</strong>发送在本国拍摄的X光片',
+        guide_step1_3: '✓ <strong>虚拟咨询：</strong>视频通话初次咨询（免费）',
+        guide_step1_4: '✓ <strong>获取报价：</strong>透明价格+治疗计划',
+        guide_step1_5: '✓ <strong>日程协调：</strong>确定访问日期和治疗期间',
+        
+        guide_step2_title: '机场抵达（第1天）',
+        guide_step2_1: '✓ <strong>抵达仁川国际机场</strong>',
+        guide_step2_2: '✓ <strong>接送服务：</strong>机场→诊所（15分钟，免费）',
+        guide_step2_3: '✓ <strong>酒店入住支持：</strong>推荐Inspire度假村',
+        guide_step2_4: '✓ <strong>首次诊疗预约：</strong>当天或次日',
+        guide_step2_tip: '<strong>💡 提示：</strong>住在Inspire度假村，步行5分钟到诊所！',
+        
+        guide_step3_title: '精密检查与咨询（第2-3天）',
+        guide_step3_1: '✓ <strong>3D CT扫描：</strong>最先进设备精确诊断',
+        guide_step3_2: '✓ <strong>专家咨询：</strong>英语/日语/中文可用',
+        guide_step3_3: '✓ <strong>治疗计划说明：</strong>详细的分步指南',
+        guide_step3_4: '✓ <strong>最终报价确认：</strong>透明的费用明细',
+        guide_step3_5: '✓ <strong>同意书签署：</strong>以母语提供',
+        
+        guide_step4_title: '开始治疗（第4-7天）',
+        guide_step4_1: '✓ <strong>无痛麻醉：</strong>保证最小不适',
+        guide_step4_2: '✓ <strong>手术进行：</strong>使用最先进设备',
+        guide_step4_3: '✓ <strong>实时沟通：</strong>现场翻译人员',
+        guide_step4_4: '✓ <strong>恢复监测：</strong>每日状态检查',
+        guide_step4_5: '✓ <strong>药物处方：</strong>详细使用说明',
+        guide_step4_note: '<strong>📋 注意：</strong>种植牙需要在第一次手术后恢复期',
+        
+        guide_step5_title: '术后护理与回国（第7天以上）',
+        guide_step5_1: '✓ <strong>最终检查：</strong>确认治疗结果',
+        guide_step5_2: '✓ <strong>护理指导：</strong>家庭护理方法',
+        guide_step5_3: '✓ <strong>文件发放：</strong>治疗记录、收据（用于保险索赔）',
+        guide_step5_4: '✓ <strong>机场接送：</strong>诊所→机场（免费班车）',
+        guide_step5_5: '✓ <strong>远程咨询：</strong>回国后24/7支持'
     }
 };
 
