@@ -1728,6 +1728,73 @@ section {
 }
 
 /* ===================================
+   Mobile Optimizations for Patient Stories
+   =================================== */
+@media (max-width: 768px) {
+    /* Patient Stories - Stack on mobile */
+    #patient-stories .story-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+    
+    /* International Guide Steps - Mobile layout */
+    #international-guide .guide-step {
+        display: block !important;
+        margin-bottom: 2rem !important;
+    }
+    
+    #international-guide .guide-step > div:first-child {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+    
+    #international-guide .guide-step > div:first-child > div:last-child {
+        display: none !important;
+    }
+    
+    /* Reduce padding on mobile */
+    #patient-stories > div > div:not(.section-header),
+    #international-guide > div > div:not(.section-header) {
+        padding: 2rem 1.5rem !important;
+    }
+    
+    /* Section headers */
+    .section-title {
+        font-size: 1.8rem !important;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem !important;
+    }
+    
+    /* Treatment comparison table - Horizontal scroll */
+    #comparison table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        min-width: 600px;
+    }
+    
+    #comparison table th,
+    #comparison table td {
+        font-size: 0.9rem !important;
+        padding: 1rem !important;
+    }
+    
+    /* Reviews grid - Single column on mobile */
+    #reviews > div > div:nth-child(2) {
+        grid-template-columns: 1fr !important;
+    }
+    
+    /* Cost comparison table in stories */
+    .story-grid table {
+        font-size: 0.9rem;
+    }
+}
+
+/* ===================================
    Print Styles
    =================================== */
 @media print {
