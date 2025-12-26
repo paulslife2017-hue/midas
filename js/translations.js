@@ -324,7 +324,22 @@ const translations = {
         price_veneer_cta: '무료 상담 →',
         
         pricing_payment_info: '💳 결제 방법: 현금, 카드, 분할 결제 가능',
-        pricing_insurance_note: '💡 Tip: 인스파이어 리조트 내 숙박 시 클리닉까지 도보 5분!'
+        pricing_insurance_note: '💡 Tip: 인스파이어 리조트 내 숙박 시 클리닉까지 도보 5분!',
+        
+        // CTA Section
+        cta_title: 'Book an Appointment with Incheon Dentist',
+        cta_subtitle: 'Incheon Dentist - 인천치과 전문 연세미다스치과<br>인천공항 10분 거리 | 인스파이어 리조트 내 위치',
+        cta_feat1_title: '당일 예약 가능',
+        cta_feat1_sub: 'Same-day appointments',
+        cta_feat2_title: '다국어 지원',
+        cta_feat2_sub: 'EN · JP · CN',
+        cta_feat3_title: '공항 10분',
+        cta_feat3_sub: '10 min from Airport',
+        cta_feat4_title: '분할 결제 가능',
+        cta_feat4_sub: 'Installments Available',
+        
+        // Floating Button
+        floating_btn_text: '무료 예약 상담'
     },
     
     en: {
@@ -651,7 +666,22 @@ const translations = {
         price_veneer_cta: 'Free Consultation →',
         
         pricing_payment_info: '💳 Payment: Cash, Card, Installments available',
-        pricing_insurance_note: '💡 Tip: Only 5-min walk from Inspire Resort!'
+        pricing_insurance_note: '💡 Tip: Only 5-min walk from Inspire Resort!',
+        
+        // CTA Section
+        cta_title: 'Book an Appointment with Incheon Dentist',
+        cta_subtitle: 'Incheon Dentist - Yonsei Midas Dental Clinic<br>10 min from Incheon Airport | Inside Inspire Resort',
+        cta_feat1_title: 'Same-day Booking',
+        cta_feat1_sub: 'Same-day appointments',
+        cta_feat2_title: 'Multilingual',
+        cta_feat2_sub: 'EN · JP · CN',
+        cta_feat3_title: '10 min Airport',
+        cta_feat3_sub: '10 min from Airport',
+        cta_feat4_title: 'Installments OK',
+        cta_feat4_sub: 'Installments Available',
+        
+        // Floating Button
+        floating_btn_text: 'Free Consultation'
     },
     
     ja: {
@@ -978,7 +1008,22 @@ const translations = {
         price_veneer_cta: '無料相談 →',
         
         pricing_payment_info: '💳 支払い方法：現金、カード、分割支払い可能',
-        pricing_insurance_note: '💡 Tip：インスパイアリゾート内宿泊時、徒歩5分！'
+        pricing_insurance_note: '💡 Tip：インスパイアリゾート内宿泊時、徒歩5分！',
+        
+        // CTA Section
+        cta_title: '仁川歯科で予約する',
+        cta_subtitle: '仁川歯科 - 延世ミダス歯科<br>仁川空港から10分 | インスパイアリゾート内',
+        cta_feat1_title: '当日予約可能',
+        cta_feat1_sub: 'Same-day appointments',
+        cta_feat2_title: '多言語対応',
+        cta_feat2_sub: 'EN · JP · CN',
+        cta_feat3_title: '空港10分',
+        cta_feat3_sub: '10 min from Airport',
+        cta_feat4_title: '分割支払いOK',
+        cta_feat4_sub: 'Installments Available',
+        
+        // Floating Button
+        floating_btn_text: '無料相談予約'
     },
     
     zh: {
@@ -1305,7 +1350,22 @@ const translations = {
         price_veneer_cta: '免费咨询 →',
         
         pricing_payment_info: '💳 支付方式：现金、卡、分期付款',
-        pricing_insurance_note: '💡 提示：住在Inspire度假村，步行5分钟！'
+        pricing_insurance_note: '💡 提示：住在Inspire度假村，步行5分钟！',
+        
+        // CTA Section
+        cta_title: '仁川牙科预约',
+        cta_subtitle: '仁川牙科 - 延世弥达斯牙科<br>距离仁川机场10分钟 | Inspire度假村内',
+        cta_feat1_title: '当日预约',
+        cta_feat1_sub: 'Same-day appointments',
+        cta_feat2_title: '多语言',
+        cta_feat2_sub: 'EN · JP · CN',
+        cta_feat3_title: '机场10分',
+        cta_feat3_sub: '10 min from Airport',
+        cta_feat4_title: '分期付款',
+        cta_feat4_sub: 'Installments Available',
+        
+        // Floating Button
+        floating_btn_text: '免费预约咨询'
     }
 };
 
