@@ -293,7 +293,38 @@ const translations = {
         review3_service: 'Emergency Dental Care',
         review3_text: '"I had a dental emergency while visiting Korea. The clinic is just 10 minutes from the airport, and they spoke perfect English. Dr. Choi was very professional and the treatment was painless. Highly recommend for international travelers!"',
         review3_date: 'November 2024',
-        reviews_avg_rating: '⭐ 평균 평점: 4.8 / 5.0'
+        reviews_avg_rating: '⭐ 평균 평점: 4.8 / 5.0',
+        
+        // Pricing Cards
+        price_implant_title: '🦷 임플란트',
+        price_implant_cost: '₩1,500,000~',
+        price_implant_feat1: '✓ 한국산 프리미엄 임플란트',
+        price_implant_feat2: '✓ 유럽산 (₩2,000,000~)',
+        price_implant_feat3: '✓ 3D CT 스캔 포함',
+        price_implant_feat4: '✓ 크라운 제작 포함',
+        price_implant_feat5: '✓ 당일 임플란트 가능',
+        price_implant_cta: '자세히 보기 →',
+        
+        price_whitening_title: '✨ 치아 미백',
+        price_whitening_cost: '₩300,000~',
+        price_whitening_feat1: '✓ 전문가 미백 (In-Office)',
+        price_whitening_feat2: '✓ 홈 미백 키트',
+        price_whitening_feat3: '✓ 8단계 이상 미백',
+        price_whitening_feat4: '✓ 1회 시술 60분',
+        price_whitening_feat5: '✓ 사후 관리 포함',
+        price_whitening_cta: '예약 문의 →',
+        
+        price_veneer_title: '💎 미니쉬 베니어',
+        price_veneer_cost: '₩800,000~',
+        price_veneer_feat1: '✓ 최소 삭제 (0.3mm)',
+        price_veneer_feat2: '✓ 자연스러운 투명도',
+        price_veneer_feat3: '✓ 맞춤형 색상',
+        price_veneer_feat4: '✓ 반영구적 유지',
+        price_veneer_feat5: '✓ 2회 방문으로 완성',
+        price_veneer_cta: '무료 상담 →',
+        
+        pricing_payment_info: '💳 결제 방법: 현금, 카드, 분할 결제 가능',
+        pricing_insurance_note: '💡 Tip: 인스파이어 리조트 내 숙박 시 클리닉까지 도보 5분!'
     },
     
     en: {
@@ -589,7 +620,38 @@ const translations = {
         review3_service: 'Emergency Dental Care',
         review3_text: '"I had a dental emergency while visiting Korea. The clinic is just 10 minutes from the airport, and they spoke perfect English. Dr. Choi was very professional and the treatment was painless. Highly recommend for international travelers!"',
         review3_date: 'November 2024',
-        reviews_avg_rating: '⭐ Average Rating: 4.8 / 5.0'
+        reviews_avg_rating: '⭐ Average Rating: 4.8 / 5.0',
+        
+        // Pricing Cards
+        price_implant_title: '🦷 Dental Implants',
+        price_implant_cost: '₩1,500,000~',
+        price_implant_feat1: '✓ Premium Korean implants',
+        price_implant_feat2: '✓ European (₩2,000,000~)',
+        price_implant_feat3: '✓ 3D CT scan included',
+        price_implant_feat4: '✓ Crown included',
+        price_implant_feat5: '✓ Same-day implants available',
+        price_implant_cta: 'Learn More →',
+        
+        price_whitening_title: '✨ Teeth Whitening',
+        price_whitening_cost: '₩300,000~',
+        price_whitening_feat1: '✓ Professional in-office whitening',
+        price_whitening_feat2: '✓ Take-home whitening kit',
+        price_whitening_feat3: '✓ 8+ shades whiter',
+        price_whitening_feat4: '✓ 60-minute session',
+        price_whitening_feat5: '✓ Aftercare included',
+        price_whitening_cta: 'Book Appointment →',
+        
+        price_veneer_title: '💎 Minish Veneers',
+        price_veneer_cost: '₩800,000~',
+        price_veneer_feat1: '✓ Minimal removal (0.3mm)',
+        price_veneer_feat2: '✓ Natural translucency',
+        price_veneer_feat3: '✓ Custom color matching',
+        price_veneer_feat4: '✓ Semi-permanent',
+        price_veneer_feat5: '✓ Complete in 2 visits',
+        price_veneer_cta: 'Free Consultation →',
+        
+        pricing_payment_info: '💳 Payment: Cash, Card, Installments available',
+        pricing_insurance_note: '💡 Tip: Only 5-min walk from Inspire Resort!'
     },
     
     ja: {
@@ -885,7 +947,38 @@ const translations = {
         review3_service: '緊急歯科治療',
         review3_text: '"韓国訪問中に歯科の緊急事態が発生しました。クリニックは空港からわずか10分で、完璧な英語を話してくれました。Choi先生はとても専門的で、治療も痛みがありませんでした。国際旅行者に強くお勧めします！"',
         review3_date: '2024年11月',
-        reviews_avg_rating: '⭐ 平均評価：4.8 / 5.0'
+        reviews_avg_rating: '⭐ 平均評価：4.8 / 5.0',
+        
+        // Pricing Cards
+        price_implant_title: '🦷 インプラント',
+        price_implant_cost: '₩1,500,000~',
+        price_implant_feat1: '✓ 韓国産プレミアムインプラント',
+        price_implant_feat2: '✓ ヨーロッパ産 (₩2,000,000~)',
+        price_implant_feat3: '✓ 3D CTスキャン含む',
+        price_implant_feat4: '✓ クラウン製作含む',
+        price_implant_feat5: '✓ 当日インプラント可能',
+        price_implant_cta: '詳細を見る →',
+        
+        price_whitening_title: '✨ 歯のホワイトニング',
+        price_whitening_cost: '₩300,000~',
+        price_whitening_feat1: '✓ 専門家によるオフィスホワイトニング',
+        price_whitening_feat2: '✓ ホームホワイトニングキット',
+        price_whitening_feat3: '✓ 8段階以上の美白',
+        price_whitening_feat4: '✓ 1回60分の施術',
+        price_whitening_feat5: '✓ アフターケア含む',
+        price_whitening_cta: '予約問い合わせ →',
+        
+        price_veneer_title: '💎 ミニッシュベニア',
+        price_veneer_cost: '₩800,000~',
+        price_veneer_feat1: '✓ 最小削除 (0.3mm)',
+        price_veneer_feat2: '✓ 自然な透明度',
+        price_veneer_feat3: '✓ カスタムカラー',
+        price_veneer_feat4: '✓ 半永久的に維持',
+        price_veneer_feat5: '✓ 2回の訪問で完成',
+        price_veneer_cta: '無料相談 →',
+        
+        pricing_payment_info: '💳 支払い方法：現金、カード、分割支払い可能',
+        pricing_insurance_note: '💡 Tip：インスパイアリゾート内宿泊時、徒歩5分！'
     },
     
     zh: {
@@ -1181,7 +1274,38 @@ const translations = {
         review3_service: '紧急牙科护理',
         review3_text: '"在韩国访问期间遇到牙科紧急情况。诊所距离机场只有10分钟，他们说完美的英语。Choi医生非常专业，治疗无痛。强烈推荐给国际旅行者！"',
         review3_date: '2024年11月',
-        reviews_avg_rating: '⭐ 平均评分：4.8 / 5.0'
+        reviews_avg_rating: '⭐ 平均评分：4.8 / 5.0',
+        
+        // Pricing Cards
+        price_implant_title: '🦷 种植牙',
+        price_implant_cost: '₩1,500,000~',
+        price_implant_feat1: '✓ 韩国高端种植体',
+        price_implant_feat2: '✓ 欧洲产 (₩2,000,000~)',
+        price_implant_feat3: '✓ 含3D CT扫描',
+        price_implant_feat4: '✓ 含牙冠制作',
+        price_implant_feat5: '✓ 当日种植可能',
+        price_implant_cta: '了解详情 →',
+        
+        price_whitening_title: '✨ 牙齿美白',
+        price_whitening_cost: '₩300,000~',
+        price_whitening_feat1: '✓ 专业美白服务',
+        price_whitening_feat2: '✓ 家用美白套装',
+        price_whitening_feat3: '✓ 提升8个色阶',
+        price_whitening_feat4: '✓ 单次服务60分钟',
+        price_whitening_feat5: '✓ 含术后护理',
+        price_whitening_cta: '预约咨询 →',
+        
+        price_veneer_title: '💎 贴面',
+        price_veneer_cost: '₩800,000~',
+        price_veneer_feat1: '✓ 最少磨除 (0.3mm)',
+        price_veneer_feat2: '✓ 自然透明度',
+        price_veneer_feat3: '✓ 定制颜色',
+        price_veneer_feat4: '✓ 半永久保持',
+        price_veneer_feat5: '✓ 2次访问完成',
+        price_veneer_cta: '免费咨询 →',
+        
+        pricing_payment_info: '💳 支付方式：现金、卡、分期付款',
+        pricing_insurance_note: '💡 提示：住在Inspire度假村，步行5分钟！'
     }
 };
 
