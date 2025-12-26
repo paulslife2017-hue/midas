@@ -1,0 +1,35 @@
+# Yonsei Midas Dental Clinic - Robots.txt
+
+User-agent: *
+Allow: /
+Allow: /en/
+Allow: /ja/
+Allow: /zh/
+Allow: /assets/
+Allow: /css/
+Allow: /js/
+
+# Disallow admin or private directories (if any)
+# Disallow: /admin/
+
+# Sitemap
+Sitemap: https://yonseimidasdental.com/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 0
+
+# Allow all search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /assets/
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Yandex
+Allow: /
+
+User-agent: Baiduspider
+Allow: /

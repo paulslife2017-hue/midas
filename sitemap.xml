@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    
+    <!-- Korean (Default) -->
+    <url>
+        <loc>https://yonseimidasdental.com/</loc>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://yonseimidasdental.com/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://yonseimidasdental.com/en/" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://yonseimidasdental.com/ja/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://yonseimidasdental.com/zh/" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://yonseimidasdental.com/" />
+        <lastmod>2025-12-26</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <!-- English -->
+    <url>
+        <loc>https://yonseimidasdental.com/en/</loc>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://yonseimidasdental.com/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://yonseimidasdental.com/en/" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://yonseimidasdental.com/ja/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://yonseimidasdental.com/zh/" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://yonseimidasdental.com/" />
+        <lastmod>2025-12-26</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <!-- Japanese -->
+    <url>
+        <loc>https://yonseimidasdental.com/ja/</loc>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://yonseimidasdental.com/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://yonseimidasdental.com/en/" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://yonseimidasdental.com/ja/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://yonseimidasdental.com/zh/" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://yonseimidasdental.com/" />
+        <lastmod>2025-12-26</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <!-- Chinese -->
+    <url>
+        <loc>https://yonseimidasdental.com/zh/</loc>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://yonseimidasdental.com/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://yonseimidasdental.com/en/" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://yonseimidasdental.com/ja/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://yonseimidasdental.com/zh/" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://yonseimidasdental.com/" />
+        <lastmod>2025-12-26</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+</urlset>
