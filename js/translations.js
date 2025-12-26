@@ -232,6 +232,7 @@ const translations = {
         directions: '길찾기',
         footer_address1: '인천광역시 중구 공항문화로 127',
         footer_address2: '인스파이어호텔 썬타워 3층',
+        footer_address3: '(인천국제공항에서 차로 10분)',
         
         footer_desc: '정직과 신뢰를 바탕으로<br>최상의 치과 진료 서비스를 제공합니다',
         footer_nav: '바로가기',
@@ -473,6 +474,7 @@ const translations = {
         directions: 'Directions',
         footer_address1: '127 Gonghang Munhwa-ro, Jung-gu, Incheon',
         footer_address2: 'Inspire Hotel Sun Tower 3F',
+        footer_address3: '(10 minutes from Incheon Airport)',
         
         footer_desc: 'Based on integrity and trust<br>Providing the best dental care services',
         footer_nav: 'Quick Links',
@@ -714,6 +716,7 @@ const translations = {
         directions: '道順案内',
         footer_address1: '仁川広域市 中区 公港文化路 127',
         footer_address2: 'インスパイアホテル サンタワー 3階',
+        footer_address3: '(仁川国際空港から車で10分)',
         
         footer_desc: '正直と信頼を基盤に<br>最上の歯科診療サービスを提供します',
         footer_nav: 'クイックリンク',
@@ -955,6 +958,7 @@ const translations = {
         directions: '导航',
         footer_address1: '仁川广域市 中区 公港文化路 127',
         footer_address2: '韵斯派尔酒店 太阳塔 3层',
+        footer_address3: '(距仁川国际机场10分钟)',
         
         footer_desc: '基于诚实与信赖<br>提供最优质的牙科诊疗服务',
         footer_nav: '快速链接',
