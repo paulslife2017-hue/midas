@@ -21,7 +21,7 @@ const translations = {
         
         hero_badge: 'Since 2024',
         hero_title: '당신의 소중한 미소를 위한<br><span class="highlight">최고의 선택</span>',
-        hero_subtitle: '연세대학교 출신 전문의의 고품격 치과 진료<br>정직과 신뢰를 바탕으로 한 최상의 서비스',
+        hero_subtitle: '인천국제공항에서 차로 10분 | 영종도 인스파이어 리조트 내<br>연세대학교 출신 전문의의 프리미엄 치과 진료',  
         hero_cta1: '예약 상담',
         hero_cta2: '진료안내',
         stat1: 'Years Experience',
@@ -212,7 +212,7 @@ const translations = {
         
         contact_tag: 'Contact',
         contact_title: '오시는 길',
-        contact_subtitle: '연세미다스치과를 찾아오시는 길을 안내해 드립니다',
+        contact_subtitle: '인천국제공항에서 차로 10분 거리 | 공항 이용객 긴급 치과 치료 가능',
         contact_address: '주소',
         contact_phone: '전화',
         contact_hours: '진료시간',
@@ -226,7 +226,7 @@ const translations = {
         
         address_line1: '인천광역시 중구 공항문화로 127',
         address_line2: '인스파이어호텔 썬타워 3층',
-        address_line3: '(강남역 2번 출구 도보 5분)',
+        address_line3: '(인천국제공항에서 차로 10분)',
         phone_text: '예약 문의',
         call_button: '전화 걸기',
         directions: '길찾기',
@@ -262,7 +262,7 @@ const translations = {
         
         hero_badge: 'Since 2024',
         hero_title: 'Your Best Choice<br><span class="highlight">for a Precious Smile</span>',
-        hero_subtitle: 'Premium Dental Care by Yonsei University Graduate Specialist<br>Integrity and Trust-Based Excellence',
+        hero_subtitle: 'Only 10 Minutes from Incheon International Airport | At Inspire Resort<br>Premium Dental Care by Yonsei University Specialist',
         hero_cta1: 'Book Now',
         hero_cta2: 'Our Services',
         stat1: 'Years Experience',
@@ -453,7 +453,7 @@ const translations = {
         
         contact_tag: 'Contact',
         contact_title: 'Visit Us',
-        contact_subtitle: 'Find your way to Yonsei Midas Dental Clinic',
+        contact_subtitle: 'Just 10 minutes from Incheon Airport | Emergency dental care available for travelers',
         contact_address: 'Address',
         contact_phone: 'Phone',
         contact_hours: 'Hours',
@@ -467,7 +467,7 @@ const translations = {
         
         address_line1: '127 Gonghang Munhwa-ro, Jung-gu, Incheon',
         address_line2: 'Inspire Hotel Sun Tower 3F',
-        address_line3: '(5 min walk from Gangnam Station Exit 2)',
+        address_line3: '(10 minutes by car from Incheon International Airport)',
         phone_text: 'Reservation Inquiry',
         call_button: 'Call Now',
         directions: 'Directions',
@@ -503,7 +503,7 @@ const translations = {
         
         hero_badge: 'Since 2024',
         hero_title: 'あなたの大切な笑顔のための<br><span class="highlight">最高の選択</span>',
-        hero_subtitle: '延世大学出身専門医の高品格歯科診療<br>正直と信頼を基盤とした最上のサービス',
+        hero_subtitle: '仁川国際空港から車で10分 | インスパイアリゾート内<br>延世大学出身専門医のプレミアム歯科診療',
         hero_cta1: '予約相談',
         hero_cta2: '診療案内',
         stat1: 'Years Experience',
@@ -694,7 +694,7 @@ const translations = {
         
         contact_tag: 'Contact',
         contact_title: 'アクセス',
-        contact_subtitle: '延世ミダス歯科までのアクセスをご案内します',
+        contact_subtitle: '仁川国際空港から車で10分 | 空港利用者の緊急歯科治療対応可能',
         contact_address: '住所',
         contact_phone: '電話',
         contact_hours: '診療時間',
@@ -708,7 +708,7 @@ const translations = {
         
         address_line1: '仁川広域市 中区 公港文化路 127 (雲西洞)',
         address_line2: 'インスパイアホテル サンタワー 3階',
-        address_line3: '(江南駅2番出口から徒歩5分)',
+        address_line3: '(仁川国際空港から車で10分)',
         phone_text: '予約お問い合わせ',
         call_button: 'お電話',
         directions: '道順案内',
@@ -744,7 +744,7 @@ const translations = {
         
         hero_badge: 'Since 2024',
         hero_title: '为了您珍贵的微笑<br><span class="highlight">最佳的选择</span>',
-        hero_subtitle: '延世大学出身专业医生的高品质牙科诊疗<br>基于诚实与信赖的最优服务',
+        hero_subtitle: '距仁川国际机场仅10分钟车程 | 韵斯派尔度假村内<br>延世大学出身专业医生的高端牙科诊疗',
         hero_cta1: '预约咨询',
         hero_cta2: '诊疗指南',
         stat1: 'Years Experience',
@@ -935,7 +935,7 @@ const translations = {
         
         contact_tag: 'Contact',
         contact_title: '就诊地址',
-        contact_subtitle: '为您指引前往延世弥达斯牙科的路线',
+        contact_subtitle: '距仁川国际机场仅10分钟车程 | 可为机场旅客提供紧急牙科治疗',
         contact_address: '地址',
         contact_phone: '电话',
         contact_hours: '诊疗时间',
@@ -949,7 +949,7 @@ const translations = {
         
         address_line1: '仁川广域市 中区 公港文化路 127 (云西洞)',
         address_line2: '韵斯派尔酒店 太阳塔 3层',
-        address_line3: '(江南站2号出口步行5分钟)',
+        address_line3: '(距仁川国际机场10分钟车程)',
         phone_text: '预约咨询',
         call_button: '拨打电话',
         directions: '导航',
