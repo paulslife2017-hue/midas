@@ -67,8 +67,8 @@ const eeat_translations_ko = {
     guide_step1_1: '✓ 온라인 예약: 웹사이트 또는 이메일로 예약',
     guide_step1_2: '✓ X-ray 전송: 본국에서 촬영한 X-ray 사진 전송 (선택)',
     guide_step1_3: '✓ 투명한 가격: 상세 견적 + 치료 계획 안내',
-    guide_step1_4: '✓ 일정 조율: 방문 날짜 및 치료 기간 확정',
-    guide_step1_5: '✓ 치료 준비: 필요한 서류 및 준비 사항 안내',
+    guide_step1_4: '✓ 견적서 받기: 투명한 가격 + 치료 계획',
+    guide_step1_5: '✓ 일정 조율: 방문 날짜 및 치료 기간 확정',
     guide_step2_title: '공항 도착 (Day 1)',
     guide_step2_1: '✓ 인천국제공항 도착',
     guide_step2_2: '✓ 교통편: 택시 10분 (약 ₩8,000) 또는 리무진 버스',
@@ -80,7 +80,7 @@ const eeat_translations_ko = {
     guide_step3_2: '✓ 전문의 상담: 상세한 구강 검사 및 진단',
     guide_step3_3: '✓ 치료 계획 설명: 단계별 과정 상세 안내',
     guide_step3_4: '✓ 최종 견적 확정: 투명한 비용 안내',
-    guide_step3_5: '✓ 동의서 작성: 치료 동의 및 서명',
+    guide_step3_5: '✓ 동의서 작성: 모국어로 제공',
     guide_step4_title: '치료 시작 (Day 4-7)',
     guide_step4_1: '✓ 무통 마취: 최소 통증 보장',
     guide_step4_2: '✓ 시술 진행: 최첨단 장비 사용',
@@ -93,7 +93,7 @@ const eeat_translations_ko = {
     guide_step5_2: '✓ 관리 교육: 집에서의 관리 방법',
     guide_step5_3: '✓ 서류 발급: 치료 기록, 영수증 (보험 청구용)',
     guide_step5_4: '✓ 공항 이동: 택시 이용 (10분, 약 ₩8,000)',
-    guide_step5_5: '✓ 사후 연락: 귀국 후 이메일/전화 상담 지원'
+    guide_step5_5: '✓ 원격 상담: 귀국 후에도 24/7 지원'
 };
 
 // English E-E-A-T Translations
@@ -165,6 +165,8 @@ const eeat_translations_en = {
     guide_step1_2_desc: '- Detailed cost estimate<br>- No hidden fees<br>- Payment plan options available',
     guide_step1_3: '📅 Appointment Scheduling',
     guide_step1_3_desc: '- Choose convenient date<br>- Flexible scheduling<br>- Weekend appointments available',
+    guide_step1_4: '✓ Get Quote: Transparent pricing + treatment plan',
+    guide_step1_5: '✓ Schedule Coordination: Confirm visit date & treatment period',
     
     guide_step2_title: 'Step 2: Arrival Day',
     guide_step2_1: '🚕 From Airport to Clinic',
@@ -173,6 +175,7 @@ const eeat_translations_en = {
     guide_step2_2_desc: '- Comprehensive oral examination<br>- 3D CT scan (included)<br>- Detailed treatment explanation',
     guide_step2_3: '💳 Payment Options',
     guide_step2_3_desc: '- Cash, Credit Card<br>- KRW, USD, JPY, CNY accepted<br>- Tax refund available for foreigners',
+    guide_step2_4: '✓ First Appointment: Same day or next day',
     
     guide_step3_title: 'Step 3: During Treatment',
     guide_step3_1: '⏰ Treatment Timeline',
@@ -181,19 +184,21 @@ const eeat_translations_en = {
     guide_step3_2_desc: '- Inspire Resort (in same building)<br>- Paradise City (5 min drive)<br>- Airport hotels (10 min)',
     guide_step3_3: '🎰 What to Do While Healing',
     guide_step3_3_desc: '- Casino at Inspire Resort<br>- Shopping at Paradise City<br>- Short trip to Seoul (1 hour)',
+    guide_step3_4: '✓ Final Quote Confirmation: Transparent cost guidance',
+    guide_step3_5: '✓ Consent Forms: Provided in your language',
     
     guide_step4_title: 'Step 4: Post-Treatment & Departure',
     guide_step4_1: '✓ Final Check-up: Treatment result verification',
     guide_step4_2: '✓ Care Instructions: Home care methods',
     guide_step4_3: '✓ Documents: Treatment records, receipts (for insurance)',
     guide_step4_4: '✓ Airport Transfer: Taxi to airport (10 min, ~₩8,000)',
-    guide_step4_5: '✓ Follow-up Support: Email/phone consultation after return',
     
     guide_step5_title: 'Step 5: Long-term Aftercare (3-6 months later)',
     guide_step5_1: '✓ Follow-up Contact: Email/phone support available',
     guide_step5_2: '✓ X-ray Review: Send X-rays for remote evaluation',
     guide_step5_3: '✓ 2nd Visit (Implants): Final crown placement',
     guide_step5_4: '✓ Warranty: Implant warranty provided',
+    guide_step5_5: '✓ Remote Consultation: 24/7 support even after returning home',
     
     guide_info1_title: 'Average Stay Duration',
     guide_info1_desc: 'Whitening/Veneers: 1-2 weeks<br>Implants: 3-7 days (+ revisit after 6 months)',
@@ -272,6 +277,8 @@ const eeat_translations_ja = {
     guide_step1_2_desc: '- 詳細な費用見積<br>- 隠れた費用なし<br>- 分割払いオプション可能',
     guide_step1_3: '📅 予約スケジューリング',
     guide_step1_3_desc: '- 便利な日付を選択<br>- 柔軟なスケジューリング<br>- 週末予約可能',
+    guide_step1_4: '✓ 見積書取得: 透明な価格 + 治療計画',
+    guide_step1_5: '✓ スケジュール調整: 訪問日と治療期間確定',
     
     guide_step2_title: 'ステップ2: 到着日',
     guide_step2_1: '🚕 空港からクリニックまで',
@@ -280,6 +287,7 @@ const eeat_translations_ja = {
     guide_step2_2_desc: '- 通訳サポート可能(事前リクエスト)<br>- 3D CTスキャン(含まれる)<br>- 詳細な治療説明',
     guide_step2_3: '💳 支払いオプション',
     guide_step2_3_desc: '- 現金、クレジットカード<br>- KRW、USD、JPY、CNY受付<br>- 外国人税還付可能',
+    guide_step2_4: '✓ 初回診察予約: 到着当日または翌日',
     
     guide_step3_title: 'ステップ3: 治療中',
     guide_step3_1: '⏰ 治療スケジュール',
@@ -288,19 +296,21 @@ const eeat_translations_ja = {
     guide_step3_2_desc: '- インスパイアリゾート(同じビル内)<br>- パラダイスシティ(車で5分)<br>- 空港ホテル(10分)',
     guide_step3_3: '🎰 治癒中にできること',
     guide_step3_3_desc: '- インスパイアリゾートのカジノ<br>- パラダイスシティでショッピング<br>- ソウルへの短期旅行(1時間)',
+    guide_step3_4: '✓ 最終見積確定: 透明な費用案内',
+    guide_step3_5: '✓ 同意書作成: 母国語で提供',
     
     guide_step4_title: 'ステップ4: 治療後と帰国',
     guide_step4_1: '✓ 最終検診: 治療結果確認',
     guide_step4_2: '✓ ケア指示: 自宅でのケア方法',
     guide_step4_3: '✓ 書類: 治療記録、領収書(保険用)',
     guide_step4_4: '✓ 空港移動: タクシー利用(10分、約₩8,000)',
-    guide_step4_5: '✓ フォローアップ: 帰国後メール/電話相談サポート',
     
     guide_step5_title: 'ステップ5: 長期アフターケア (3-6ヶ月後)',
     guide_step5_1: '✓ フォローアップ連絡: メール/電話サポート可能',
     guide_step5_2: '✓ X線確認: X線送信で遠隔評価',
     guide_step5_3: '✓ 2回目訪問 (インプラント): 最終クラウン装着',
     guide_step5_4: '✓ 保証: インプラント保証提供',
+    guide_step5_5: '✓ 遠隔相談: 帰国後も24/7サポート',
     
     guide_info1_title: '平均滞在期間',
     guide_info1_desc: 'ホワイトニング/ベニア: 1-2週間<br>インプラント: 3-7日 (+ 6ヶ月後再訪)',
@@ -379,6 +389,8 @@ const eeat_translations_zh = {
     guide_step1_2_desc: '- 详细费用估算<br>- 无隐藏费用<br>- 可选分期付款',
     guide_step1_3: '📅 预约安排',
     guide_step1_3_desc: '- 选择方便的日期<br>- 灵活安排<br>- 周末预约可用',
+    guide_step1_4: '✓ 获取报价: 透明价格 + 治疗计划',
+    guide_step1_5: '✓ 日程协调: 确认访问日期和治疗周期',
     
     guide_step2_title: '步骤2: 抵达日',
     guide_step2_1: '🚕 从机场到诊所',
@@ -387,6 +399,7 @@ const eeat_translations_zh = {
     guide_step2_2_desc: '- 可提供翻译支持(需提前预约)<br>- 3D CT扫描(包含)<br>- 详细治疗说明',
     guide_step2_3: '💳 支付选项',
     guide_step2_3_desc: '- 现金、信用卡<br>- 接受KRW、USD、JPY、CNY<br>- 外国人可退税',
+    guide_step2_4: '✓ 首次就诊预约: 抵达当天或次日',
     
     guide_step3_title: '步骤3: 治疗期间',
     guide_step3_1: '⏰ 治疗时间表',
@@ -395,19 +408,21 @@ const eeat_translations_zh = {
     guide_step3_2_desc: '- Inspire Resort(同一建筑内)<br>- Paradise City(车程5分钟)<br>- 机场酒店(10分钟)',
     guide_step3_3: '🎰 愈合期间可做的事',
     guide_step3_3_desc: '- Inspire Resort的赌场<br>- Paradise City购物<br>- 首尔短途旅行(1小时)',
+    guide_step3_4: '✓ 最终报价确认: 透明费用指导',
+    guide_step3_5: '✓ 同意书填写: 以母语提供',
     
     guide_step4_title: '步骤4: 治疗后与离境',
     guide_step4_1: '✓ 最终检查: 治疗结果确认',
     guide_step4_2: '✓ 护理指导: 家庭护理方法',
     guide_step4_3: '✓ 文件: 治疗记录、收据(用于保险)',
     guide_step4_4: '✓ 机场移动: 出租车(10分钟，约₩8,000)',
-    guide_step4_5: '✓ 后续支持: 回国后邮件/电话咨询支持',
     
     guide_step5_title: '步骤5: 长期术后护理 (3-6个月后)',
     guide_step5_1: '✓ 后续联系: 邮件/电话支持可用',
     guide_step5_2: '✓ X光检查: 发送X光片进行远程评估',
     guide_step5_3: '✓ 第2次访问 (种植牙): 最终牙冠安装',
     guide_step5_4: '✓ 保修: 种植牙保修提供',
+    guide_step5_5: '✓ 远程咨询: 回国后24/7支持',
     
     guide_info1_title: '平均停留时间',
     guide_info1_desc: '美白/贴面: 1-2周<br>种植牙: 3-7天 (+ 6个月后再次访问)',

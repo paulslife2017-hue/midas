@@ -1240,8 +1240,8 @@
             </p>
             
             <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem;">
-                <a href="#contact" style="display: inline-block; padding: 1.2rem 2.5rem; background: #c9a961; color: white; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem; transition: all 0.3s ease;">📞 무료 상담 예약</a>
-                <a href="#pricing" style="display: inline-block; padding: 1.2rem 2.5rem; background: white; color: #0f2942; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem;">💰 비용 확인하기</a>
+                <a href="#contact" data-translate="cta_book_btn" style="display: inline-block; padding: 1.2rem 2.5rem; background: #c9a961; color: white; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem; transition: all 0.3s ease;">📞 무료 상담 예약</a>
+                <a href="#pricing" data-translate="cta_price_btn" style="display: inline-block; padding: 1.2rem 2.5rem; background: white; color: #0f2942; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem;">💰 비용 확인하기</a>
             </div>
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 3rem; max-width: 900px; margin-left: auto; margin-right: auto;">
@@ -1501,10 +1501,60 @@
 
     <!-- Floating Booking Button -->
     <div id="floating-booking-btn" style="position: fixed; bottom: 30px; right: 30px; z-index: 9999;">
-        <a href="#contact" style="display: flex; align-items: center; gap: 0.75rem; padding: 1rem 1.5rem; background: linear-gradient(135deg, #c9a961 0%, #b39448 100%); color: white; text-decoration: none; border-radius: 50px; font-weight: 600; font-size: 1.1rem; box-shadow: 0 4px 20px rgba(201, 169, 97, 0.4); transition: all 0.3s ease; animation: pulse 2s infinite;">
+        <button id="floating-btn" style="display: flex; align-items: center; gap: 0.75rem; padding: 1rem 1.5rem; background: linear-gradient(135deg, #c9a961 0%, #b39448 100%); color: white; border: none; border-radius: 50px; font-weight: 600; font-size: 1.1rem; box-shadow: 0 4px 20px rgba(201, 169, 97, 0.4); transition: all 0.3s ease; animation: pulse 2s infinite; cursor: pointer;">
             <span style="font-size: 1.5rem;">📞</span>
             <span data-translate="floating_btn_text">무료 예약 상담</span>
-        </a>
+        </button>
+    </div>
+
+    <!-- Booking Modal -->
+    <div id="booking-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 10000; align-items: center; justify-content: center;">
+        <div style="background: white; padding: 2.5rem; border-radius: 16px; max-width: 500px; width: 90%; max-height: 90vh; overflow-y: auto; position: relative;">
+            <button id="close-modal" style="position: absolute; top: 1rem; right: 1rem; background: none; border: none; font-size: 2rem; color: #999; cursor: pointer; line-height: 1;">&times;</button>
+            
+            <h2 style="color: #0f2942; margin-bottom: 0.5rem; font-size: 1.8rem;" data-translate="modal_title">무료 예약 상담</h2>
+            <p style="color: #777; margin-bottom: 2rem;" data-translate="modal_subtitle">연락처를 남겨주시면 빠르게 상담해 드리겠습니다</p>
+            
+            <form id="booking-form">
+                <div style="margin-bottom: 1.5rem;">
+                    <label style="display: block; color: #0f2942; font-weight: 600; margin-bottom: 0.5rem;" data-translate="form_name">이름 *</label>
+                    <input type="text" id="name" required style="width: 100%; padding: 0.875rem; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 1rem; transition: border-color 0.3s;">
+                </div>
+                
+                <div style="margin-bottom: 1.5rem;">
+                    <label style="display: block; color: #0f2942; font-weight: 600; margin-bottom: 0.5rem;" data-translate="form_phone">전화번호 *</label>
+                    <input type="tel" id="phone" required style="width: 100%; padding: 0.875rem; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 1rem; transition: border-color 0.3s;">
+                </div>
+                
+                <div style="margin-bottom: 1.5rem;">
+                    <label style="display: block; color: #0f2942; font-weight: 600; margin-bottom: 0.5rem;" data-translate="form_email">이메일 *</label>
+                    <input type="email" id="email" required style="width: 100%; padding: 0.875rem; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 1rem; transition: border-color 0.3s;">
+                </div>
+                
+                <div style="margin-bottom: 1.5rem;">
+                    <label style="display: block; color: #0f2942; font-weight: 600; margin-bottom: 0.5rem;" data-translate="form_service">희망 진료</label>
+                    <select id="service" style="width: 100%; padding: 0.875rem; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 1rem;">
+                        <option value="임플란트">임플란트 / Implants</option>
+                        <option value="치아미백">치아미백 / Whitening</option>
+                        <option value="베니어">베니어 / Veneers</option>
+                        <option value="교정">교정 / Orthodontics</option>
+                        <option value="긴급치료">긴급치료 / Emergency</option>
+                        <option value="기타">기타 / Other</option>
+                    </select>
+                </div>
+                
+                <div style="margin-bottom: 1.5rem;">
+                    <label style="display: block; color: #0f2942; font-weight: 600; margin-bottom: 0.5rem;" data-translate="form_message">상담 내용</label>
+                    <textarea id="message" rows="4" style="width: 100%; padding: 0.875rem; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 1rem; resize: vertical;"></textarea>
+                </div>
+                
+                <button type="submit" id="submit-btn" style="width: 100%; padding: 1rem; background: linear-gradient(135deg, #c9a961 0%, #b39448 100%); color: white; border: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem; cursor: pointer; transition: all 0.3s;">
+                    <span data-translate="form_submit">예약 신청하기</span>
+                </button>
+                
+                <p id="form-message" style="margin-top: 1rem; text-align: center; font-weight: 600;"></p>
+            </form>
+        </div>
     </div>
 
     <style>
