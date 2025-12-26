@@ -1499,8 +1499,13 @@
         }
     </script>
 
-    <!-- Floating Contact Buttons (Always Visible - 2 Buttons) -->
+    <!-- Floating Contact Buttons (Always Visible - 3 Buttons) -->
     <div id="floating-buttons-container" style="position: fixed; bottom: 25px; right: 25px; z-index: 9998; display: flex; flex-direction: column; gap: 12px; align-items: flex-end;">
+        
+        <!-- WhatsApp Button -->
+        <a href="https://wa.me/821058947690?text=안녕하세요,%20연세미다스치과%20예약%20문의드립니다." target="_blank" rel="noopener noreferrer" id="floating-whatsapp-btn" style="display: flex; align-items: center; justify-content: center; width: 56px; height: 56px; background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); color: white; text-decoration: none; border-radius: 50%; font-size: 1.8rem; box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5); transition: all 0.3s ease; cursor: pointer;">
+            💬
+        </a>
         
         <!-- Instagram Button -->
         <a href="https://ig.me/m/KBEAUTYSEOUL.CO.KR" target="_blank" rel="noopener noreferrer" id="floating-instagram-btn" style="display: flex; align-items: center; justify-content: center; width: 56px; height: 56px; background: linear-gradient(135deg, #E1306C 0%, #C13584 50%, #833AB4 100%); color: white; text-decoration: none; border-radius: 50%; font-size: 1.8rem; box-shadow: 0 4px 20px rgba(225, 48, 108, 0.5); transition: all 0.3s ease; cursor: pointer;">
@@ -1577,6 +1582,11 @@
             }
         }
 
+        #floating-whatsapp-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 28px rgba(37, 211, 102, 0.8);
+        }
+
         #floating-booking-btn:hover {
             transform: scale(1.05);
             box-shadow: 0 6px 28px rgba(201, 169, 97, 0.8) !important;
@@ -1587,6 +1597,7 @@
             box-shadow: 0 6px 28px rgba(225, 48, 108, 0.8);
         }
 
+        #floating-whatsapp-btn:active,
         #floating-booking-btn:active,
         #floating-instagram-btn:active {
             transform: scale(0.95);
@@ -1600,6 +1611,7 @@
                 gap: 10px !important;
             }
             
+            #floating-whatsapp-btn,
             #floating-booking-btn,
             #floating-instagram-btn {
                 width: 52px !important;
