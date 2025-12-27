@@ -82,20 +82,22 @@
     <link rel="stylesheet" href="./css/styles.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="./css/styles.css"></noscript>
     
-    <!-- Structured Data -->
+    <!-- Structured Data - Unified Dentist Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Dentist",
-      "name": "연세미다스치과",
-      "alternateName": ["Yonsei Midas Dental", "Yonsei Midas Dental Clinic", "延世ミダス歯科", "延世弥达斯牙科"],
+      "@id": "https://incheondentist.com/#organization",
+      "name": "Yonsei Midas Dental Clinic",
+      "alternateName": ["연세미다스치과", "Yonsei Midas Dental", "延世ミダス歯科", "延世弥达斯牙科"],
       "image": "https://incheondentist.com/assets/director.jpg",
-      "description": "인천 인스파이어 엔터테인먼트 리조트 내 프리미엄 치과. 임플란트, 미백, 미니쉬 베니어 전문. 영어/일본어/중국어 진료 가능.",
+      "description": "Premium international dental clinic at Inspire Resort Incheon, 10 minutes from Incheon Airport. Specializing in dental implants, teeth whitening, veneers with multilingual services (English, Japanese, Chinese). 인천 인스파이어 리조트 내 프리미엄 치과.",
+      "url": "https://incheondentist.com",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "공항문화로 127 인스파이어호텔 썬타워 3층",
-        "addressLocality": "영종도",
-        "addressRegion": "인천광역시 중구",
+        "streetAddress": "127 Gonghang Munhwa-ro, Sun Tower 3F, Inspire Hotel",
+        "addressLocality": "Jung-gu",
+        "addressRegion": "Incheon",
         "postalCode": "22382",
         "addressCountry": "KR"
       },
@@ -133,15 +135,14 @@
       "areaServed": [
         {
           "@type": "City",
-          "name": "인천광역시"
+          "name": "Incheon"
         },
         {
           "@type": "Place",
-          "name": "영종도"
+          "name": "Yeongjongdo"
         }
       ],
       "hasMap": "https://maps.google.com/?q=37.4948,126.4937",
-      "url": "https://incheondentist.com",
       "amenityFeature": [
         {
           "@type": "LocationFeatureSpecification",
@@ -205,47 +206,6 @@
           "position": 3,
           "name": "Inspire Resort Dental",
           "item": "https://incheondentist.com/#about"
-        }
-      ]
-    }
-    </script>
-    
-    <!-- LocalBusiness Schema for International SEO -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Yonsei Midas Dental Clinic at Inspire Resort Incheon",
-      "description": "Premium international dental clinic located at Inspire Entertainment Resort, near Incheon International Airport. Specializing in dental implants, cosmetic dentistry, teeth whitening, and veneers with multilingual services.",
-      "url": "https://incheondentist.com",
-      "image": "https://incheondentist.com/assets/director.jpg",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "127 Gonghang Munhwa-ro, Sun Tower 3F, Inspire Hotel",
-        "addressLocality": "Yeongjongdo",
-        "addressRegion": "Jung-gu",
-        "addressCountry": "KR",
-        "postalCode": "22382"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 37.4948,
-        "longitude": 126.4937
-      },
-      "telephone": "+82-32-0000-0000",
-      "priceRange": "$$$$",
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-          "opens": "09:00",
-          "closes": "18:00"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": "Saturday",
-          "opens": "09:00",
-          "closes": "13:00"
         }
       ]
     }
