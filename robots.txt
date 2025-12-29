@@ -1,35 +1,34 @@
-# Yonsei Midas Dental Clinic - Robots.txt
+# robots.txt for Yonsei Midas Dental Clinic
+# Updated: 2025-12-29
 
 User-agent: *
 Allow: /
-Allow: /en/
-Allow: /ja/
-Allow: /zh/
-Allow: /assets/
-Allow: /css/
-Allow: /js/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /_*
 
-# Disallow admin or private directories (if any)
-# Disallow: /admin/
+# Sitemaps
+Sitemap: https://www.yonseimidas.com/sitemap.xml
 
-# Sitemap
-Sitemap: https://incheondentist.com/sitemap.xml
-
-# Crawl-delay
-Crawl-delay: 0
-
-# Allow all search engines
+# Specific rules for major search engines
 User-agent: Googlebot
 Allow: /
-
-User-agent: Googlebot-Image
-Allow: /assets/
+Crawl-delay: 0
 
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 0
 
-User-agent: Yandex
+User-agent: Yeti
 Allow: /
+Crawl-delay: 0
 
-User-agent: Baiduspider
-Allow: /
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
