@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>백링크 등록 체크리스트 - 연세미다스치과</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 30px;
+            background: #f8f9fa;
+        }
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #667eea;
+        }
+        .stat-label {
+            color: #666;
+            margin-top: 5px;
+        }
+        .content {
+            padding: 40px;
+        }
+        .category {
+            margin-bottom: 40px;
+        }
+        .category-header {
+            background: #667eea;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+        .directory-item {
+            background: #f8f9fa;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            border-left: 5px solid #667eea;
+            transition: all 0.3s ease;
+        }
+        .directory-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .directory-item.completed {
+            border-left-color: #28a745;
+            opacity: 0.7;
+        }
+        .directory-name {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .directory-info {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+        .info-badge {
+            background: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .priority-1 { color: #dc3545; font-weight: bold; }
+        .priority-2 { color: #ffc107; font-weight: bold; }
+        .priority-3 { color: #28a745; font-weight: bold; }
+        .directory-url {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .directory-url:hover {
+            text-decoration: underline;
+        }
+        .instructions {
+            background: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        .checkbox {
+            float: right;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+        .business-info {
+            background: #e7f3ff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        .business-info h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        .business-info p {
+            margin: 5px 0;
+            line-height: 1.6;
+        }
+        .progress-bar {
+            width: 100%;
+            height: 30px;
+            background: #e0e0e0;
+            border-radius: 15px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            width: 0%;
+            transition: width 0.5s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+        .btn-success {
+            background: #28a745;
+            color: white;
+        }
+        .btn:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔗 백링크 등록 체크리스트</h1>
+            <p>연세미다스치과 SEO 백링크 자동화</p>
+        </div>
+        
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-number" id="total-count">35</div>
+                <div class="stat-label">총 디렉토리</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="completed-count">0</div>
+                <div class="stat-label">완료</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="pending-count">35</div>
+                <div class="stat-label">대기</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="completion-rate">0%</div>
+                <div class="stat-label">완료율</div>
+            </div>
+        </div>
+        
+        <div class="progress-bar">
+            <div class="progress-fill" id="progress-fill">0%</div>
+        </div>
+        
+        <div class="content">
+            <div class="business-info">
+                <h3>📋 비즈니스 정보 (복사하여 사용)</h3>
+                <p><strong>Business Name:</strong> Yonsei Midas Dental Clinic</p>
+                <p><strong>비즈니스명 (한글):</strong> 연세미다스치과</p>
+                <p><strong>Address:</strong> 127 Gonghang Culture-ro, Jung-gu, Incheon, South Korea</p>
+                <p><strong>주소 (한글):</strong> 인천광역시 중구 공항문화로 127</p>
+                <p><strong>Phone:</strong> +82-32-722-2879</p>
+                <p><strong>Website:</strong> https://www.yonseimidas.com</p>
+                <p><strong>Email:</strong> info@yonseimidas.com</p>
+                <p><strong>Services:</strong> Dental Implants, Teeth Whitening, Orthodontics, General Dentistry, Cosmetic Dentistry, Root Canal Treatment, Tooth Extraction, Dental Crowns & Bridges</p>
+                <p><strong>Languages:</strong> English, Korean, Japanese, Chinese</p>
+            </div>
+
+            <div class="category">
+                <div class="category-header">
+                    Google Ecosystem (2개)
+                </div>
+
+                <div class="directory-item" data-name="Google My Business">
+                    <input type="checkbox" class="checkbox" onchange="updateProgress(this)">
+                    <div class="directory-name">Google My Business</div>
+                    <div class="directory-info">
+                        <span class="info-badge priority-1">우선순위: 1</span>
+                        <span class="info-badge">⭐⭐⭐⭐⭐</span>
+                        <a href="https://business.google.com" target="_blank" class="directory-url">https://business.google.com</a>
+                    </div>
+                    <div class="instructions">
+                        📝 Sign in with Google account → Create business profile → Verify location
+                    </div>
+                    <div class="action-buttons">
+                        <a href="https://business.google.com" target="_blank" class="btn btn-primary">등록하기</a>
+                        <button class="btn btn-success" onclick="markCompleted(this)">완료 표시</button>
+                    </div>
+                </div>
+
+                <div class="directory-item" data-name="Google Search Console">
+                    <input type="checkbox" class="checkbox" onchange="updateProgress(this)">
+                    <div class="directory-name">Google Search Console</div>
+                    <div class="directory-info">
+                        <span class="info-badge priority-1">우선순위: 1</span>
+                        <span class="info-badge">⭐⭐⭐⭐⭐</span>
+                        <a href="https://search.google.com/search-console" target="_blank" class="directory-url">https://search.google.com/search-console</a>
+                    </div>
+                    <div class="instructions">
+                        📝 Add property → Verify domain → Submit sitemap
+                    </div>
+                    <div class="action-buttons">
+                        <a href="https://search.google.com/search-console" target="_blank" class="btn btn-primary">등록하기</a>
+                        <button class="btn btn-success" onclick="markCompleted(this)">완료 표시</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="category">
+                <div class="category-header">
+                    Maps & Reviews (4개)
+                </div>
+
+                <div class="directory-item" data-name="Naver Map">
+                    <input type="checkbox" class="checkbox" onchange="updateProgress(this)">
+                    <div class="directory-name">Naver Map</div>
+                    <div class="directory-info">
+                        <span class="info-badge priority-1">우선순위: 1</span>
+                        <span class="info-badge">⭐⭐⭐⭐⭐</span>
+                        <a href="https://map.naver.com" target="_blank" class="directory-url">https://map.naver.com</a>
+                    </div>
+                    <div class="instructions">
+                        📝 네이버 로그인 → 내 비즈니스 등록 → 주소 인증
+                    </div>
+                    <div class="action-buttons">
+                        <a href="https://map.naver.com" target="_blank" class="btn btn-primary">등록하기</a>
+                        <button class="btn btn-success" onclick="markCompleted(this)">완료 표시</button>
+                    </div>
+                </div>
+
+                <div class="directory-item" data-name="Kakao Map">
+                    <input type="checkbox" class="checkbox" onchange="updateProgress(this)">
+                    <div class="directory-name">Kakao Map</div>
+                    <div class="directory-info">
+                        <span class="info-badge priority-1">우선순위: 1</span>
+                        <span class="info-badge">⭐⭐⭐⭐⭐</span>
+                        <a href="https://map.kakao.com" target="_blank" class="directory-url">https://map.kakao.com</a>
+                    </div>
+                    <div class="instructions">
+                        📝 카카오 로그인 → 장소 등록 → 사업자 인증
+                    </div>
+                    <div class="action-buttons">
+                        <a href="https://map.kakao.com" target="_blank" class="btn btn-primary">등록하기</a>
+                        <button class="btn btn-success" onclick="markCompleted(this)">완료 표시</button>
+                    </div>
+                </div>
+
+                <div class="directory-item" data-name="Apple Maps">
+                    <input type="checkbox" class="checkbox" onchange="updateProgress(this)">
+                    <div class="directory-name">Apple Maps</div>
+                    <div class="directory-info">
+                        <span class="info-badge priority-1">우선순위: 1</span>
+                        <span class="info-badge">⭐⭐⭐⭐</span>
+                        <a href="https://mapsconnect.apple.com" target="_blank" class="directory-url">https://mapsconnect.apple.com</a>
+                    </div>
+                    <div class="instructions">
+                        📝 Sign in with Apple ID → Add location → Verify business
+                    </div>
+                    <div class="action-buttons">
+                        <a href="https://mapsconnect.apple.com" target="_blank" class="btn btn-primary">등록하기</a>
+                        <button class="btn btn-success" onclick="markCompleted(this)">완료 표시</button>
+                    </div>
+                </div>
+
+                <div class="directory-item" data-name="Bing Places">
+                    <input type="checkbox" class="checkbox" onchange="updateProgress(this)">
+                    <div class="directory-name">Bing Places</div>
+                    <div class="directory-info">
+                        <span class="info-badge priority-1">우선순위: 1</span>
+                        <span class="info-badge">⭐⭐⭐⭐</span>
+                        <a href="https://www.bingplaces.com" target="_blank" class="directory-url">https://www.bingplaces.com</a>
+                    </div>
+                    <div class="instructions">
+                        📝 Sign in → Add business → Verify phone
+                    </div>
+                    <div class="action-buttons">
+                        <a href="https://www.bingplaces.com" target="_blank" class="btn btn-primary">등록하기</a>
+                        <button class="btn btn-success" onclick="markCompleted(this)">완료 표시</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="category">
+                <div class="category-header">
+                    Medical Directories (3개)
+                </div>
+
+                <div class="directory-item" data-name="굿닥 (GoodDoc)">
+                    <input type="checkbox" class="checkbox" onchange="updateProgress(this)">
+                    <div class="directory-name">굿닥 (GoodDoc)</div>
+                    <div class="directory-info">
+                        <span class="info-badge priority-1">우선순위: 1</span>
+                        <span class="info-badge">⭐⭐⭐⭐⭐</span>
+                        <a href="https://www.goodoc.co.kr" target="_blank" class="directory-url">https://www.goodoc.co.kr</a>
+                    </div>
+                    <div class="instructions">
+                        📝 병원 등록 신청 → 정보 입력 → 승인 대기
+                    </div>
+                    <div class="action-buttons">
+                        <a href="https://www.goodoc.co.kr" target="_blank" class="btn btn-primary">등록하기</a>
+                        <button class="btn btn-success" onclick="markCompleted(this)">완료 표시</button>
+                    </div>
+                </div>
+
+                <div class="directory-item" data-name="병원정보">
+                    <input type="checkbox" class="checkbox" onchange="updateProgress(this)">
+                    <div class="directory-name">병원정보</div>
+                    <div class="directory-info">
+                        <span class="info-badge priority-2">우선순위: 2</span>
+                        <span class="info-badge">⭐⭐⭐⭐</span>
+                        <a href="https://www.hospitalinfo.co.kr" target="_blank" class="directory-url">https://www.hospitalinfo.co.kr</a>
+                    </div>
+                    <div class="instructions">
+                        📝 회원가입 → 병원 등록 → 정보 입력
+                    </div>
+                    <div class="action-buttons">
+                        <a href="https://www.hospitalinfo.co.kr" target="_blank" class="btn btn-primary">등록하기</a>
+                        <button class="btn btn-success" onclick="markCompleted(this)">완료 표시</button>
+                    </div>
+                </div>
+
+                <div class="directory-item" data-name="114 병원">
+                    <input type="checkbox" class="checkbox" onchange="updateProgress(this)">
+                    <div class="directory-name">114 병원</div>
+                    <div class="directory-info">
+                        <span class="info-badge priority-2">우선순위: 2</span>
+                        <span class="info-badge">⭐⭐⭐⭐</span>
+                        <a href="https://www.114.co.kr" target="_blank" class="directory-url">https://www.114.co.kr</a>
+                    </div>
+                    <div class="instructions">
+                        📝 114 고객센터 문의 → 병원 등록 신청
+                    </div>
+                    <div class="action-buttons">
+                        <a href="https://www.114.co.kr" target="_blank" class="btn btn-primary">등록하기</a>
+                        <button class="btn btn-success" onclick="markCompleted(this)">완료 표시</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="category">
+                <div class="category-header">
+                    Medical Tourism (5개)
+                </div>
+
+                <div class="directory-item" data-name="Medical Departures">
+                    <input type="checkbox" class="checkbox" onchange="updateProgress(this)">
+                    <div class="directory-name">Medical Departures</div>
+                    <div class="directory-info">
+                        <span class="info-badge priority-1">우선순위: 1</span>
+                        <span class="info-badge">⭐⭐⭐⭐⭐</span>
+                        <a href="https://www.medicaldepartures.com" target="_blank" class="directory-url">https://www.medicaldepartures.com</a>
+                    </div>
+                    <div class="instructions">
+                        📝 Sign up → Add clinic → Submit verification documents
+                    </div>
+                    <div class="action-buttons">
+                        <a href="https://www.medicaldepartures.com" target="_blank" class="btn btn-primary">등록하기</a>
+                        <button class="btn btn-success" onclick="markCompleted(this)">완료 표시</button>
+                    </div>
+                </div>
+
+                <div class="directory-item" data-name="Dental Departures">
+                    <input type="checkbox" class="checkbox" onchange="updateProgress(this)">
+                    <div class="directory-name">Dental Departures</div>
+                    <div class="directory-info">
+                        <span class="info-badge priority-1">우선순위: 1</span>
+                        <span class="info-badge">⭐⭐⭐⭐⭐</span>
+                        <a href="https://www.dentaldepartures.com" target="_blank" class="directory-url">https://www.dentaldepartures.com</a>
+                    </div>
+                    <div class="instructions">
+                        📝 Create account → List your clinic → Upload certificates
+                    </div>
+                    <div class="action-buttons">
+                        <a href="https://www.dentaldepartures.com" target="_blank" class="btn btn-primary">등록하기</a>
+                        <button class="btn btn-success" onclick="markCompleted(this)">완료 표시</button>
+                    </div>
+                </div>
+
+                <div class="directory-item" data-name="Whatclinic">
+                    <input type="checkbox" class="checkbox" onchange="updateProgress(this)">
+                    <div class="directory-name">Whatclinic</div>
+                    <div class="directory-info">
+                        <span class="info-badge priority-1">우선순위: 1</span>
+                        <span class="info-badge">⭐⭐⭐⭐⭐</span>
+                        <a href="https://www.whatclinic.com" target="_blank" class="directory-url">https://www.whatclinic.com</a>
+                    </div>
+                    <div class="instructions">
+                        📝 Register clinic → Complete profile → Add treatments
+                    </div>
+                    <div class="action-buttons">
+                        <a href="https://www.whatclinic.com" target="_blank" class="btn btn-primary">등록하기</a>
+                        <button class="btn btn-success" onclick="markCompleted(this)">완료 표시</button>
+                    </div>
+                </div>
+
+                <div class="directory-item" data-name="Medical Tourism">
+                    <input type="checkbox" class="checkbox" onchange="updateProgress(this)">
+                    <div class="directory-name">Medical Tourism</div>
+                    <div class="directory-info">
+                        <span class="info-badge priority-2">우선순위: 2</span>
+                        <span class="info-badge">⭐⭐⭐⭐</span>
+                        <a href="https://www.medicaltourism.com" target="_blank" class="directory-url">https://www.medicaltourism.com</a>
+                    </div>
+                    <div class="instructions">
+                        📝 Sign up as provider → Submit clinic info
+                    </div>
+                    <div class="action-buttons">
+                        <a href="https://www.medicaltourism.com" target="_blank" class="btn btn-primary">등록하기</a>
+                        <button class="btn btn-success" onclick="markCompleted(this)">완료 표시</button>
+                    </div>
+                </div>
+
+                <div class="directory-item" data-name="PlacidWay">
+                    <input type="checkbox" class="checkbox" onchange="updateProgress(this)">
+                    <div class="directory-name">PlacidWay</div>
+                    <div class="directory-info">
+                        <span class="info-badge priority-2">우선순위: 2</span>
+                        <span class="info-badge">⭐⭐⭐⭐</span>
+                        <a href="https://www.placidway.com" target="_blank" class="directory-url">https://www.placidway.com</a>
+                    </div>
+                    <div class="instructions">
+                        📝 Provider signup → Complete verification
+                    </div>
+                    <div class="action-buttons">
+                        <a href="https://www.placidway.com" target="_blank" class="btn btn-primary">등록하기</a>
+                        <button class="btn btn-success" onclick="markCompleted(this)">완료 표시</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="category">
+                <div class="category-header">
+                    Travel & Reviews (4개)
+                </div>
+
+                <div class="directory-item" data-name="TripAdvisor">
+                    <input type="checkbox" class="checkbox" onchange="updateProgress(this)">
+                    <div class="directory-name">TripAdvisor</div>
+                    <div class="directory-info">
+                        <span class="info-badge priority-1">우선순위: 1</span>
+                        <span class="info-badge">⭐⭐⭐⭐⭐</span>
+                        <a href="https://www.tripadvisor.com" target="_blank" class="directory-url">https://www.tripadvisor.com</a>
+                    </div>
+                    <div class="instructions">
+                        📝 Sign up → Add your business → Claim listing
+                    </div>
+                    <div class="action-buttons">
+                        <a href="https://www.tripadvisor.com" target="_blank" class="btn btn-primary">등록하기</a>
+                        <button class="btn btn-success" onclick="markCompleted(this)">완료 표시</button>
+                    </div>
+                </div>
+
+                <div class="directory-item" data-name="Yelp">
+                    <input type="checkbox" class="checkbox" onchange="updateProgress(this)">
+                    <div class="directory-name">Yelp</div>
+                    <div class="directory-info">
+                        <span class="info-badge priority-1">우선순위: 1</span>
+                        <span class="info-badge">⭐⭐⭐⭐⭐</span>
+                        <a href="https://www.yelp.com" target="_blank" class="directory-url">https://www.yelp.com</a>
+                    </div>
+                    <div class="instructions">
+                        📝 Create account → Add business → Verify ownership
+                    </div>
+                    <div class="action-buttons">
+                        <a href="https://www.yelp.com" target="_blank" class="btn btn-primary">등록하기</a>
+                        <button class="btn btn-success" onclick="markCompleted(this)">완료 표시</button>
+                    </div>
+                </div>
+
+                <div class="directory-item" data-name="Foursquare">
+                    <input type="checkbox" class="checkbox" onchange="updateProgress(this)">
+                    <div class="directory-name">Foursquare</div>
+                    <div class="directory-info">
+                        <span class="info-badge priority-2">우선순위: 2</span>
+                        <span class="info-badge">⭐⭐⭐⭐</span>
+                        <a href="https://foursquare.com" target="_blank" class="directory-url">https://foursquare.com</a>
+                    </div>
+                    <div class="instructions">
+                        📝 Sign up → Add venue → Claim business
+                    </div>
+                    <div class="action-buttons">
+                        <a href="https://foursquare.com" target="_blank" class="btn btn-primary">등록하기</a>
+                        <button class="btn btn-success" onclick="markCompleted(this)">완료 표시</button>
+                    </div>
+                </div>
+
+                <div class="directory-item" data-name="Yellow Pages">
+                    <input type="checkbox" class="checkbox" onchange="updateProgress(this)">
+                    <div class="directory-name">Yellow Pages</div>
+                    <div class="directory-info">
+                        <span class="info-badge priority-2">우선순위: 2</span>
+                        <span class="info-badge">⭐⭐⭐⭐</span>
+                        <a href="https://www.yellowpages.com" target="_blank" class="directory-url">https://www.yellowpages.com</a>
+                    </div>
+                    <div class="instructions">
+                        📝 Add business → Complete profile
+                    </div>
+                    <div class="action-buttons">
+                        <a href="https://www.yellowpages.com" target="_blank" class="btn btn-primary">등록하기</a>
+                        <button class="btn btn-success" onclick="markCompleted(this)">완료 표시</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="category">
+                <div class="category-header">
+                    Business Directories (5개)
+                </div>
+
+                <div class="directory-item" data-name="Manta">
+                    <input type="checkbox" class="checkbox" onchange="updateProgress(this)">
+                    <div class="directory-name">Manta</div>
+                    <div class="directory-info">
+                        <span class="info-badge priority-2">우선순위: 2</span>
+                        <span class="info-badge">⭐⭐⭐⭐</span>
+                        <a href="https://www.manta.com" target="_blank" class="directory-url">https://www.manta.com</a>
+                    </div>
+                    <div class="instructions">
+                        📝 Create account → Add business listing
+                    </div>
+                    <div class="action-buttons">
+                        <a href="https://www.manta.com" target="_blank" class="btn btn-primary">등록하기</a>
+                        <button class="btn btn-success" onclick="markCompleted(this)">완료 표시</button>
+                    </div>
+                </div>
+
+                <div class="directory-item" data-name="Hotfrog">
+                    <input type="checkbox" class="checkbox" onchange="updateProgress(this)">
+                    <div class="directory-name">Hotfrog</div>
+                    <div class="directory-info">
+                        <span class="info-badge priority-2">우선순위: 2</span>
+                        <span class="info-badge">⭐⭐⭐⭐</span>
+                        <a href="https://www.hotfrog.com" target="_blank" class="directory-url">https://www.hotfrog.com</a>
+                    </div>
+                    <div class="instructions">
+                        📝 Sign up → Add business → Verify email
+                    </div>
+                    <div class="action-buttons">
+                        <a href="https://www.hotfrog.com" target="_blank" class="btn btn-primary">등록하기</a>
+                        <button class="btn btn-success" onclick="markCompleted(this)">완료 표시</button>
+                    </div>
+                </div>
+
+                <div class="directory-item" data-name="Brownbook">
+                    <input type="checkbox" class="checkbox" onchange="updateProgress(this)">
+                    <div class="directory-name">Brownbook</div>
+                    <div class="directory-info">
+                        <span class="info-badge priority-2">우선순위: 2</span>
+                        <span class="info-badge">⭐⭐⭐⭐</span>
+                        <a href="https://www.brownbook.net" target="_blank" class="directory-url">https://www.brownbook.net</a>
+                    </div>
+                    <div class="instructions">
+                        📝 Register → Add company → Activate listing
+                    </div>
+                    <div class="action-buttons">
+                        <a href="https://www.brownbook.net" target="_blank" class="btn btn-primary">등록하기</a>
+                        <button class="btn btn-success" onclick="markCompleted(this)">완료 표시</button>
+                    </div>
+                </div>
+
+                <div class="directory-item" data-name="MerchantCircle">
+                    <input type="checkbox" class="checkbox" onchange="updateProgress(this)">
+                    <div class="directory-name">MerchantCircle</div>
+                    <div class="directory-info">
+                        <span class="info-badge priority-2">우선순위: 2</span>
+                        <span class="info-badge">⭐⭐⭐⭐</span>
+                        <a href="https://www.merchantcircle.com" target="_blank" class="directory-url">https://www.merchantcircle.com</a>
+                    </div>
+                    <div class="instructions">
+                        📝 Sign up → Create listing → Verify business
+                    </div>
+                    <div class="action-buttons">
+                        <a href="https://www.merchantcircle.com" target="_blank" class="btn btn-primary">등록하기</a>
+                        <button class="btn btn-success" onclick="markCompleted(this)">완료 표시</button>
+                    </div>
+                </div>
+
+                <div class="directory-item" data-name="Alignable">
+                    <input type="checkbox" class="checkbox" onchange="updateProgress(this)">
+                    <div class="directory-name">Alignable</div>
+                    <div class="directory-info">
+                        <span class="info-badge priority-2">우선순위: 2</span>
+                        <span class="info-badge">⭐⭐⭐⭐</span>
+                        <a href="https://www.alignable.com" target="_blank" class="directory-url">https://www.alignable.com</a>
+                    </div>
+                    <div class="instructions">
+                        📝 Join → Create business profile → Network with local businesses
+                    </div>
+                    <div class="action-buttons">
+                        <a href="https://www.alignable.com" target="_blank" class="btn btn-primary">등록하기</a>
+                        <button class="btn btn-success" onclick="markCompleted(this)">완료 표시</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="category">
+                <div class="category-header">
+                    Social Media (7개)
+                </div>
+
+                <div class="directory-item" data-name="Facebook Business Page">
+                    <input type="checkbox" class="checkbox" onchange="updateProgress(this)">
+                    <div class="directory-name">Facebook Business Page</div>
+                    <div class="directory-info">
+                        <span class="info-badge priority-1">우선순위: 1</span>
+                        <span class="info-badge">⭐⭐⭐⭐⭐</span>
+                        <a href="https://www.facebook.com/business" target="_blank" class="directory-url">https://www.facebook.com/business</a>
+                    </div>
+                    <div class="instructions">
+                        📝 Create page → Add business info → Verify page
+                    </div>
+                    <div class="action-buttons">
+                        <a href="https://www.facebook.com/business" target="_blank" class="btn btn-primary">등록하기</a>
+                        <button class="btn btn-success" onclick="markCompleted(this)">완료 표시</button>
+                    </div>
+                </div>
+
+                <div class="directory-item" data-name="Instagram Business">
+                    <input type="checkbox" class="checkbox" onchange="updateProgress(this)">
+                    <div class="directory-name">Instagram Business</div>
+                    <div class="directory-info">
+                        <span class="info-badge priority-1">우선순위: 1</span>
+                        <span class="info-badge">⭐⭐⭐⭐⭐</span>
+                        <a href="https://www.instagram.com" target="_blank" class="directory-url">https://www.instagram.com</a>
+                    </div>
+                    <div class="instructions">
+                        📝 Create account → Switch to business → Add location
+                    </div>
+                    <div class="action-buttons">
+                        <a href="https://www.instagram.com" target="_blank" class="btn btn-primary">등록하기</a>
+                        <button class="btn btn-success" onclick="markCompleted(this)">완료 표시</button>
+                    </div>
+                </div>
+
+                <div class="directory-item" data-name="LinkedIn Company Page">
+                    <input type="checkbox" class="checkbox" onchange="updateProgress(this)">
+                    <div class="directory-name">LinkedIn Company Page</div>
+                    <div class="directory-info">
+                        <span class="info-badge priority-1">우선순위: 1</span>
+                        <span class="info-badge">⭐⭐⭐⭐⭐</span>
+                        <a href="https://www.linkedin.com" target="_blank" class="directory-url">https://www.linkedin.com</a>
+                    </div>
+                    <div class="instructions">
+                        📝 Create company page → Complete profile → Publish updates
+                    </div>
+                    <div class="action-buttons">
+                        <a href="https://www.linkedin.com" target="_blank" class="btn btn-primary">등록하기</a>
+                        <button class="btn btn-success" onclick="markCompleted(this)">완료 표시</button>
+                    </div>
+                </div>
+
+                <div class="directory-item" data-name="YouTube Channel">
+                    <input type="checkbox" class="checkbox" onchange="updateProgress(this)">
+                    <div class="directory-name">YouTube Channel</div>
+                    <div class="directory-info">
+                        <span class="info-badge priority-1">우선순위: 1</span>
+                        <span class="info-badge">⭐⭐⭐⭐⭐</span>
+                        <a href="https://www.youtube.com" target="_blank" class="directory-url">https://www.youtube.com</a>
+                    </div>
+                    <div class="instructions">
+                        📝 Create channel → Add business info → Upload videos
+                    </div>
+                    <div class="action-buttons">
+                        <a href="https://www.youtube.com" target="_blank" class="btn btn-primary">등록하기</a>
+                        <button class="btn btn-success" onclick="markCompleted(this)">완료 표시</button>
+                    </div>
+                </div>
+
+                <div class="directory-item" data-name="네이버 블로그">
+                    <input type="checkbox" class="checkbox" onchange="updateProgress(this)">
+                    <div class="directory-name">네이버 블로그</div>
+                    <div class="directory-info">
+                        <span class="info-badge priority-1">우선순위: 1</span>
+                        <span class="info-badge">⭐⭐⭐⭐⭐</span>
+                        <a href="https://blog.naver.com" target="_blank" class="directory-url">https://blog.naver.com</a>
+                    </div>
+                    <div class="instructions">
+                        📝 네이버 로그인 → 블로그 개설 → 치과 소개 포스팅
+                    </div>
+                    <div class="action-buttons">
+                        <a href="https://blog.naver.com" target="_blank" class="btn btn-primary">등록하기</a>
+                        <button class="btn btn-success" onclick="markCompleted(this)">완료 표시</button>
+                    </div>
+                </div>
+
+                <div class="directory-item" data-name="티스토리">
+                    <input type="checkbox" class="checkbox" onchange="updateProgress(this)">
+                    <div class="directory-name">티스토리</div>
+                    <div class="directory-info">
+                        <span class="info-badge priority-1">우선순위: 1</span>
+                        <span class="info-badge">⭐⭐⭐⭐⭐</span>
+                        <a href="https://www.tistory.com" target="_blank" class="directory-url">https://www.tistory.com</a>
+                    </div>
+                    <div class="instructions">
+                        📝 카카오 로그인 → 블로그 개설 → SEO 최적화 글쓰기
+                    </div>
+                    <div class="action-buttons">
+                        <a href="https://www.tistory.com" target="_blank" class="btn btn-primary">등록하기</a>
+                        <button class="btn btn-success" onclick="markCompleted(this)">완료 표시</button>
+                    </div>
+                </div>
+
+                <div class="directory-item" data-name="Pinterest Business">
+                    <input type="checkbox" class="checkbox" onchange="updateProgress(this)">
+                    <div class="directory-name">Pinterest Business</div>
+                    <div class="directory-info">
+                        <span class="info-badge priority-2">우선순위: 2</span>
+                        <span class="info-badge">⭐⭐⭐⭐</span>
+                        <a href="https://www.pinterest.com/business" target="_blank" class="directory-url">https://www.pinterest.com/business</a>
+                    </div>
+                    <div class="instructions">
+                        📝 Create business account → Add profile → Create pins
+                    </div>
+                    <div class="action-buttons">
+                        <a href="https://www.pinterest.com/business" target="_blank" class="btn btn-primary">등록하기</a>
+                        <button class="btn btn-success" onclick="markCompleted(this)">완료 표시</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="category">
+                <div class="category-header">
+                    Healthcare Professionals (5개)
+                </div>
+
+                <div class="directory-item" data-name="Healthgrades">
+                    <input type="checkbox" class="checkbox" onchange="updateProgress(this)">
+                    <div class="directory-name">Healthgrades</div>
+                    <div class="directory-info">
+                        <span class="info-badge priority-1">우선순위: 1</span>
+                        <span class="info-badge">⭐⭐⭐⭐⭐</span>
+                        <a href="https://www.healthgrades.com" target="_blank" class="directory-url">https://www.healthgrades.com</a>
+                    </div>
+                    <div class="instructions">
+                        📝 Claim profile → Verify credentials → Update info
+                    </div>
+                    <div class="action-buttons">
+                        <a href="https://www.healthgrades.com" target="_blank" class="btn btn-primary">등록하기</a>
+                        <button class="btn btn-success" onclick="markCompleted(this)">완료 표시</button>
+                    </div>
+                </div>
+
+                <div class="directory-item" data-name="Vitals">
+                    <input type="checkbox" class="checkbox" onchange="updateProgress(this)">
+                    <div class="directory-name">Vitals</div>
+                    <div class="directory-info">
+                        <span class="info-badge priority-2">우선순위: 2</span>
+                        <span class="info-badge">⭐⭐⭐⭐</span>
+                        <a href="https://www.vitals.com" target="_blank" class="directory-url">https://www.vitals.com</a>
+                    </div>
+                    <div class="instructions">
+                        📝 Register → Claim practice → Complete profile
+                    </div>
+                    <div class="action-buttons">
+                        <a href="https://www.vitals.com" target="_blank" class="btn btn-primary">등록하기</a>
+                        <button class="btn btn-success" onclick="markCompleted(this)">완료 표시</button>
+                    </div>
+                </div>
+
+                <div class="directory-item" data-name="RateMDs">
+                    <input type="checkbox" class="checkbox" onchange="updateProgress(this)">
+                    <div class="directory-name">RateMDs</div>
+                    <div class="directory-info">
+                        <span class="info-badge priority-2">우선순위: 2</span>
+                        <span class="info-badge">⭐⭐⭐⭐</span>
+                        <a href="https://www.ratemds.com" target="_blank" class="directory-url">https://www.ratemds.com</a>
+                    </div>
+                    <div class="instructions">
+                        📝 Find listing → Claim profile → Update information
+                    </div>
+                    <div class="action-buttons">
+                        <a href="https://www.ratemds.com" target="_blank" class="btn btn-primary">등록하기</a>
+                        <button class="btn btn-success" onclick="markCompleted(this)">완료 표시</button>
+                    </div>
+                </div>
+
+                <div class="directory-item" data-name="WebMD Physician Directory">
+                    <input type="checkbox" class="checkbox" onchange="updateProgress(this)">
+                    <div class="directory-name">WebMD Physician Directory</div>
+                    <div class="directory-info">
+                        <span class="info-badge priority-1">우선순위: 1</span>
+                        <span class="info-badge">⭐⭐⭐⭐⭐</span>
+                        <a href="https://doctor.webmd.com" target="_blank" class="directory-url">https://doctor.webmd.com</a>
+                    </div>
+                    <div class="instructions">
+                        📝 Register → Submit credentials → Complete profile
+                    </div>
+                    <div class="action-buttons">
+                        <a href="https://doctor.webmd.com" target="_blank" class="btn btn-primary">등록하기</a>
+                        <button class="btn btn-success" onclick="markCompleted(this)">완료 표시</button>
+                    </div>
+                </div>
+
+                <div class="directory-item" data-name="Zocdoc">
+                    <input type="checkbox" class="checkbox" onchange="updateProgress(this)">
+                    <div class="directory-name">Zocdoc</div>
+                    <div class="directory-info">
+                        <span class="info-badge priority-1">우선순위: 1</span>
+                        <span class="info-badge">⭐⭐⭐⭐⭐</span>
+                        <a href="https://www.zocdoc.com" target="_blank" class="directory-url">https://www.zocdoc.com</a>
+                    </div>
+                    <div class="instructions">
+                        📝 Sign up as provider → Set up schedule → Accept bookings
+                    </div>
+                    <div class="action-buttons">
+                        <a href="https://www.zocdoc.com" target="_blank" class="btn btn-primary">등록하기</a>
+                        <button class="btn btn-success" onclick="markCompleted(this)">완료 표시</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    
+    <script>
+        // 로컬 스토리지에서 진행 상황 로드
+        function loadProgress() {
+            const saved = localStorage.getItem('backlink_progress');
+            if (saved) {
+                const completed = JSON.parse(saved);
+                completed.forEach(name => {
+                    const item = document.querySelector(`[data-name="${name}"]`);
+                    if (item) {
+                        item.querySelector('.checkbox').checked = true;
+                        item.classList.add('completed');
+                    }
+                });
+                updateStats();
+            }
+        }
+        
+        // 진행 상황 저장
+        function saveProgress() {
+            const completed = [];
+            document.querySelectorAll('.directory-item.completed').forEach(item => {
+                completed.push(item.getAttribute('data-name'));
+            });
+            localStorage.setItem('backlink_progress', JSON.stringify(completed));
+        }
+        
+        // 통계 업데이트
+        function updateStats() {
+            const total = document.querySelectorAll('.directory-item').length;
+            const completed = document.querySelectorAll('.directory-item.completed').length;
+            const pending = total - completed;
+            const rate = Math.round((completed / total) * 100);
+            
+            document.getElementById('completed-count').textContent = completed;
+            document.getElementById('pending-count').textContent = pending;
+            document.getElementById('completion-rate').textContent = rate + '%';
+            
+            const progressFill = document.getElementById('progress-fill');
+            progressFill.style.width = rate + '%';
+            progressFill.textContent = rate + '%';
+        }
+        
+        // 체크박스 변경 시
+        function updateProgress(checkbox) {
+            const item = checkbox.closest('.directory-item');
+            if (checkbox.checked) {
+                item.classList.add('completed');
+            } else {
+                item.classList.remove('completed');
+            }
+            updateStats();
+            saveProgress();
+        }
+        
+        // 완료 표시 버튼
+        function markCompleted(button) {
+            const item = button.closest('.directory-item');
+            const checkbox = item.querySelector('.checkbox');
+            checkbox.checked = true;
+            item.classList.add('completed');
+            updateStats();
+            saveProgress();
+        }
+        
+        // 페이지 로드 시 진행 상황 복원
+        window.addEventListener('load', loadProgress);
+    </script>
+</body>
+</html>

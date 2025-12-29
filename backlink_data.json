@@ -1,0 +1,410 @@
+{
+  "business_info": {
+    "name": "Yonsei Midas Dental Clinic",
+    "name_kr": "연세미다스치과",
+    "address": "127 Gonghang Culture-ro, Jung-gu, Incheon, South Korea",
+    "address_kr": "인천광역시 중구 공항문화로 127",
+    "phone": "+82-32-722-2879",
+    "website": "https://www.yonseimidas.com",
+    "email": "info@yonseimidas.com",
+    "category_primary": "Dentist / Dental Clinic",
+    "category_secondary": [
+      "Cosmetic Dentist",
+      "Orthodontist",
+      "Dental Implants"
+    ],
+    "hours": {
+      "Monday": "9:00 AM - 6:00 PM",
+      "Tuesday": "9:00 AM - 6:00 PM",
+      "Wednesday": "9:00 AM - 6:00 PM",
+      "Thursday": "9:00 AM - 6:00 PM",
+      "Friday": "9:00 AM - 6:00 PM",
+      "Saturday": "Closed",
+      "Sunday": "Closed"
+    },
+    "services": [
+      "Dental Implants",
+      "Teeth Whitening",
+      "Orthodontics",
+      "General Dentistry",
+      "Cosmetic Dentistry",
+      "Root Canal Treatment",
+      "Tooth Extraction",
+      "Dental Crowns & Bridges"
+    ],
+    "languages": [
+      "English",
+      "Korean",
+      "Japanese",
+      "Chinese"
+    ],
+    "description_en": "English-speaking dentist near Incheon Airport. Premium dental care for international patients. Specializing in dental implants, teeth whitening, and cosmetic dentistry. 10 minutes from Incheon International Airport.",
+    "description_kr": "인천공항 10분 거리 연세미다스치과. 외국인 환자 전문 치과. 임플란트, 미백, 교정치료 전문. 영어, 일본어, 중국어 진료 가능.",
+    "description_ja": "仁川空港から10分の延世ミダス歯科。外国人患者専門の歯科医院。インプラント、ホワイトニング、矯正治療の専門医。英語・日本語・中国語診療可能。",
+    "description_zh": "距离仁川机场10分钟的延世米达斯牙科。专门为外国患者提供服务。专业种植牙、美白、正畸治疗。提供英语、日语、中文诊疗服务。",
+    "coordinates": {
+      "latitude": "37.4911",
+      "longitude": "126.6215"
+    }
+  },
+  "directories": [
+    {
+      "name": "Google My Business",
+      "url": "https://business.google.com",
+      "priority": 1,
+      "rating": 5,
+      "category": "Google Ecosystem",
+      "auto_submit": false,
+      "instructions": "Sign in with Google account → Create business profile → Verify location"
+    },
+    {
+      "name": "Google Search Console",
+      "url": "https://search.google.com/search-console",
+      "priority": 1,
+      "rating": 5,
+      "category": "Google Ecosystem",
+      "auto_submit": true,
+      "instructions": "Add property → Verify domain → Submit sitemap"
+    },
+    {
+      "name": "Naver Map",
+      "url": "https://map.naver.com",
+      "priority": 1,
+      "rating": 5,
+      "category": "Maps & Reviews",
+      "auto_submit": false,
+      "instructions": "네이버 로그인 → 내 비즈니스 등록 → 주소 인증"
+    },
+    {
+      "name": "Kakao Map",
+      "url": "https://map.kakao.com",
+      "priority": 1,
+      "rating": 5,
+      "category": "Maps & Reviews",
+      "auto_submit": false,
+      "instructions": "카카오 로그인 → 장소 등록 → 사업자 인증"
+    },
+    {
+      "name": "Apple Maps",
+      "url": "https://mapsconnect.apple.com",
+      "priority": 1,
+      "rating": 4,
+      "category": "Maps & Reviews",
+      "auto_submit": false,
+      "instructions": "Sign in with Apple ID → Add location → Verify business"
+    },
+    {
+      "name": "Bing Places",
+      "url": "https://www.bingplaces.com",
+      "priority": 1,
+      "rating": 4,
+      "category": "Maps & Reviews",
+      "auto_submit": false,
+      "instructions": "Sign in → Add business → Verify phone"
+    },
+    {
+      "name": "굿닥 (GoodDoc)",
+      "url": "https://www.goodoc.co.kr",
+      "priority": 1,
+      "rating": 5,
+      "category": "Medical Directories",
+      "auto_submit": false,
+      "instructions": "병원 등록 신청 → 정보 입력 → 승인 대기"
+    },
+    {
+      "name": "병원정보",
+      "url": "https://www.hospitalinfo.co.kr",
+      "priority": 2,
+      "rating": 4,
+      "category": "Medical Directories",
+      "auto_submit": false,
+      "instructions": "회원가입 → 병원 등록 → 정보 입력"
+    },
+    {
+      "name": "114 병원",
+      "url": "https://www.114.co.kr",
+      "priority": 2,
+      "rating": 4,
+      "category": "Medical Directories",
+      "auto_submit": false,
+      "instructions": "114 고객센터 문의 → 병원 등록 신청"
+    },
+    {
+      "name": "Medical Departures",
+      "url": "https://www.medicaldepartures.com",
+      "priority": 1,
+      "rating": 5,
+      "category": "Medical Tourism",
+      "auto_submit": false,
+      "instructions": "Sign up → Add clinic → Submit verification documents"
+    },
+    {
+      "name": "Dental Departures",
+      "url": "https://www.dentaldepartures.com",
+      "priority": 1,
+      "rating": 5,
+      "category": "Medical Tourism",
+      "auto_submit": false,
+      "instructions": "Create account → List your clinic → Upload certificates"
+    },
+    {
+      "name": "Whatclinic",
+      "url": "https://www.whatclinic.com",
+      "priority": 1,
+      "rating": 5,
+      "category": "Medical Tourism",
+      "auto_submit": false,
+      "instructions": "Register clinic → Complete profile → Add treatments"
+    },
+    {
+      "name": "Medical Tourism",
+      "url": "https://www.medicaltourism.com",
+      "priority": 2,
+      "rating": 4,
+      "category": "Medical Tourism",
+      "auto_submit": false,
+      "instructions": "Sign up as provider → Submit clinic info"
+    },
+    {
+      "name": "PlacidWay",
+      "url": "https://www.placidway.com",
+      "priority": 2,
+      "rating": 4,
+      "category": "Medical Tourism",
+      "auto_submit": false,
+      "instructions": "Provider signup → Complete verification"
+    },
+    {
+      "name": "TripAdvisor",
+      "url": "https://www.tripadvisor.com",
+      "priority": 1,
+      "rating": 5,
+      "category": "Travel & Reviews",
+      "auto_submit": false,
+      "instructions": "Sign up → Add your business → Claim listing"
+    },
+    {
+      "name": "Yelp",
+      "url": "https://www.yelp.com",
+      "priority": 1,
+      "rating": 5,
+      "category": "Travel & Reviews",
+      "auto_submit": false,
+      "instructions": "Create account → Add business → Verify ownership"
+    },
+    {
+      "name": "Foursquare",
+      "url": "https://foursquare.com",
+      "priority": 2,
+      "rating": 4,
+      "category": "Travel & Reviews",
+      "auto_submit": false,
+      "instructions": "Sign up → Add venue → Claim business"
+    },
+    {
+      "name": "Yellow Pages",
+      "url": "https://www.yellowpages.com",
+      "priority": 2,
+      "rating": 4,
+      "category": "Travel & Reviews",
+      "auto_submit": false,
+      "instructions": "Add business → Complete profile"
+    },
+    {
+      "name": "Manta",
+      "url": "https://www.manta.com",
+      "priority": 2,
+      "rating": 4,
+      "category": "Business Directories",
+      "auto_submit": false,
+      "instructions": "Create account → Add business listing"
+    },
+    {
+      "name": "Hotfrog",
+      "url": "https://www.hotfrog.com",
+      "priority": 2,
+      "rating": 4,
+      "category": "Business Directories",
+      "auto_submit": false,
+      "instructions": "Sign up → Add business → Verify email"
+    },
+    {
+      "name": "Brownbook",
+      "url": "https://www.brownbook.net",
+      "priority": 2,
+      "rating": 4,
+      "category": "Business Directories",
+      "auto_submit": false,
+      "instructions": "Register → Add company → Activate listing"
+    },
+    {
+      "name": "MerchantCircle",
+      "url": "https://www.merchantcircle.com",
+      "priority": 2,
+      "rating": 4,
+      "category": "Business Directories",
+      "auto_submit": false,
+      "instructions": "Sign up → Create listing → Verify business"
+    },
+    {
+      "name": "Alignable",
+      "url": "https://www.alignable.com",
+      "priority": 2,
+      "rating": 4,
+      "category": "Business Directories",
+      "auto_submit": false,
+      "instructions": "Join → Create business profile → Network with local businesses"
+    },
+    {
+      "name": "Facebook Business Page",
+      "url": "https://www.facebook.com/business",
+      "priority": 1,
+      "rating": 5,
+      "category": "Social Media",
+      "auto_submit": false,
+      "instructions": "Create page → Add business info → Verify page"
+    },
+    {
+      "name": "Instagram Business",
+      "url": "https://www.instagram.com",
+      "priority": 1,
+      "rating": 5,
+      "category": "Social Media",
+      "auto_submit": false,
+      "instructions": "Create account → Switch to business → Add location"
+    },
+    {
+      "name": "LinkedIn Company Page",
+      "url": "https://www.linkedin.com",
+      "priority": 1,
+      "rating": 5,
+      "category": "Social Media",
+      "auto_submit": false,
+      "instructions": "Create company page → Complete profile → Publish updates"
+    },
+    {
+      "name": "YouTube Channel",
+      "url": "https://www.youtube.com",
+      "priority": 1,
+      "rating": 5,
+      "category": "Social Media",
+      "auto_submit": false,
+      "instructions": "Create channel → Add business info → Upload videos"
+    },
+    {
+      "name": "네이버 블로그",
+      "url": "https://blog.naver.com",
+      "priority": 1,
+      "rating": 5,
+      "category": "Social Media",
+      "auto_submit": false,
+      "instructions": "네이버 로그인 → 블로그 개설 → 치과 소개 포스팅"
+    },
+    {
+      "name": "티스토리",
+      "url": "https://www.tistory.com",
+      "priority": 1,
+      "rating": 5,
+      "category": "Social Media",
+      "auto_submit": false,
+      "instructions": "카카오 로그인 → 블로그 개설 → SEO 최적화 글쓰기"
+    },
+    {
+      "name": "Pinterest Business",
+      "url": "https://www.pinterest.com/business",
+      "priority": 2,
+      "rating": 4,
+      "category": "Social Media",
+      "auto_submit": false,
+      "instructions": "Create business account → Add profile → Create pins"
+    },
+    {
+      "name": "Healthgrades",
+      "url": "https://www.healthgrades.com",
+      "priority": 1,
+      "rating": 5,
+      "category": "Healthcare Professionals",
+      "auto_submit": false,
+      "instructions": "Claim profile → Verify credentials → Update info"
+    },
+    {
+      "name": "Vitals",
+      "url": "https://www.vitals.com",
+      "priority": 2,
+      "rating": 4,
+      "category": "Healthcare Professionals",
+      "auto_submit": false,
+      "instructions": "Register → Claim practice → Complete profile"
+    },
+    {
+      "name": "RateMDs",
+      "url": "https://www.ratemds.com",
+      "priority": 2,
+      "rating": 4,
+      "category": "Healthcare Professionals",
+      "auto_submit": false,
+      "instructions": "Find listing → Claim profile → Update information"
+    },
+    {
+      "name": "WebMD Physician Directory",
+      "url": "https://doctor.webmd.com",
+      "priority": 1,
+      "rating": 5,
+      "category": "Healthcare Professionals",
+      "auto_submit": false,
+      "instructions": "Register → Submit credentials → Complete profile"
+    },
+    {
+      "name": "Zocdoc",
+      "url": "https://www.zocdoc.com",
+      "priority": 1,
+      "rating": 5,
+      "category": "Healthcare Professionals",
+      "auto_submit": false,
+      "instructions": "Sign up as provider → Set up schedule → Accept bookings"
+    }
+  ],
+  "progress": {
+    "completed": [],
+    "in_progress": [],
+    "pending": [
+      "Google My Business",
+      "Google Search Console",
+      "Naver Map",
+      "Kakao Map",
+      "Apple Maps",
+      "Bing Places",
+      "굿닥 (GoodDoc)",
+      "병원정보",
+      "114 병원",
+      "Medical Departures",
+      "Dental Departures",
+      "Whatclinic",
+      "Medical Tourism",
+      "PlacidWay",
+      "TripAdvisor",
+      "Yelp",
+      "Foursquare",
+      "Yellow Pages",
+      "Manta",
+      "Hotfrog",
+      "Brownbook",
+      "MerchantCircle",
+      "Alignable",
+      "Facebook Business Page",
+      "Instagram Business",
+      "LinkedIn Company Page",
+      "YouTube Channel",
+      "네이버 블로그",
+      "티스토리",
+      "Pinterest Business",
+      "Healthgrades",
+      "Vitals",
+      "RateMDs",
+      "WebMD Physician Directory",
+      "Zocdoc"
+    ],
+    "last_updated": null
+  },
+  "export_date": "2025-12-29T15:22:32.200050"
+}
