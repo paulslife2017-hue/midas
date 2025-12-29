@@ -1,0 +1,189 @@
+{
+  "timestamp": "2025-12-29T15:19:43.266271",
+  "target_url": "https://incheondentist.org",
+  "target_keywords": [
+    "인천 치과",
+    "인천 임플란트",
+    "인천 치아미백",
+    "인천 응급 치과",
+    "Incheon Dentist",
+    "Incheon Dental Clinic"
+  ],
+  "platforms": {
+    "web2.0": [
+      {
+        "name": "WordPress.com",
+        "url": "https://wordpress.com",
+        "type": "블로그",
+        "da": 94,
+        "instructions": "무료 블로그 생성 후 포스팅"
+      },
+      {
+        "name": "Blogger",
+        "url": "https://www.blogger.com",
+        "type": "블로그",
+        "da": 100,
+        "instructions": "구글 계정으로 블로그 생성"
+      },
+      {
+        "name": "Medium",
+        "url": "https://medium.com",
+        "type": "블로그",
+        "da": 96,
+        "instructions": "기사 작성 및 게시"
+      },
+      {
+        "name": "Tumblr",
+        "url": "https://www.tumblr.com",
+        "type": "블로그",
+        "da": 99,
+        "instructions": "블로그 포스트 작성"
+      },
+      {
+        "name": "Wix",
+        "url": "https://www.wix.com",
+        "type": "웹사이트 빌더",
+        "da": 93,
+        "instructions": "무료 사이트 생성"
+      }
+    ],
+    "social_bookmarks": [
+      {
+        "name": "Reddit",
+        "url": "https://www.reddit.com",
+        "da": 91,
+        "instructions": "관련 서브레딧에 포스팅"
+      },
+      {
+        "name": "Mix (formerly StumbleUpon)",
+        "url": "https://mix.com",
+        "da": 92,
+        "instructions": "컨텐츠 공유"
+      },
+      {
+        "name": "Folkd",
+        "url": "https://www.folkd.com",
+        "da": 52,
+        "instructions": "소셜 북마크 추가"
+      },
+      {
+        "name": "Diigo",
+        "url": "https://www.diigo.com",
+        "da": 92,
+        "instructions": "북마크 및 주석 추가"
+      },
+      {
+        "name": "Scoop.it",
+        "url": "https://www.scoop.it",
+        "da": 93,
+        "instructions": "큐레이션 생성"
+      }
+    ],
+    "directories": [
+      {
+        "name": "Google My Business",
+        "url": "https://business.google.com",
+        "da": 100,
+        "priority": "최우선",
+        "instructions": "비즈니스 프로필 생성"
+      },
+      {
+        "name": "Bing Places",
+        "url": "https://www.bingplaces.com",
+        "da": 95,
+        "priority": "높음",
+        "instructions": "비즈니스 등록"
+      },
+      {
+        "name": "Yelp",
+        "url": "https://www.yelp.com/biz/add",
+        "da": 95,
+        "priority": "높음",
+        "instructions": "비즈니스 리스팅 추가"
+      },
+      {
+        "name": "Yellow Pages",
+        "url": "https://www.yellowpages.com",
+        "da": 92,
+        "priority": "중간",
+        "instructions": "디렉토리 등록"
+      },
+      {
+        "name": "Foursquare",
+        "url": "https://foursquare.com/business",
+        "da": 93,
+        "priority": "중간",
+        "instructions": "장소 등록"
+      }
+    ],
+    "korean_platforms": [
+      {
+        "name": "네이버 블로그",
+        "url": "https://blog.naver.com",
+        "da": 98,
+        "priority": "최우선",
+        "instructions": "네이버 계정으로 블로그 생성 및 포스팅"
+      },
+      {
+        "name": "티스토리",
+        "url": "https://www.tistory.com",
+        "da": 90,
+        "priority": "최우선",
+        "instructions": "카카오 계정으로 블로그 생성"
+      },
+      {
+        "name": "네이버 카페",
+        "url": "https://section.cafe.naver.com",
+        "da": 98,
+        "priority": "높음",
+        "instructions": "관련 카페에 게시글 작성"
+      },
+      {
+        "name": "다음 카페",
+        "url": "https://cafe.daum.net",
+        "da": 92,
+        "priority": "높음",
+        "instructions": "카페 게시글 작성"
+      },
+      {
+        "name": "네이버 플레이스",
+        "url": "https://new.place.naver.com",
+        "da": 100,
+        "priority": "최우선",
+        "instructions": "비즈니스 등록"
+      }
+    ],
+    "japanese_platforms": [
+      {
+        "name": "Ameba Blog",
+        "url": "https://ameblo.jp",
+        "da": 88,
+        "priority": "높음",
+        "instructions": "아메바 블로그 작성"
+      },
+      {
+        "name": "FC2 Blog",
+        "url": "https://blog.fc2.com",
+        "da": 85,
+        "priority": "중간",
+        "instructions": "FC2 블로그 포스팅"
+      },
+      {
+        "name": "Hatena Blog",
+        "url": "https://hatenablog.com",
+        "da": 82,
+        "priority": "중간",
+        "instructions": "하테나 블로그 작성"
+      },
+      {
+        "name": "Google My Business (Japan)",
+        "url": "https://business.google.com",
+        "da": 100,
+        "priority": "최우선",
+        "instructions": "일본어 비즈니스 프로필"
+      }
+    ]
+  },
+  "total_platforms": 24,
+  "estimated_backlinks": 24
+}

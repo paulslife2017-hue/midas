@@ -1,0 +1,1009 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자동 백링크 생성 계획</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        .summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 40px;
+            background: #f8f9fa;
+        }
+        .summary-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .summary-card:hover {
+            transform: translateY(-5px);
+        }
+        .summary-card .number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        .summary-card .label {
+            font-size: 0.9em;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .content {
+            padding: 40px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section h2 {
+            font-size: 1.8em;
+            color: #667eea;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+        .platform-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .platform-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 20px;
+            transition: all 0.3s;
+        }
+        .platform-card:hover {
+            border-color: #667eea;
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.2);
+            transform: translateY(-3px);
+        }
+        .platform-card .platform-name {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .platform-card .platform-url {
+            color: #667eea;
+            text-decoration: none;
+            font-size: 0.9em;
+            word-break: break-all;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .platform-card .platform-url:hover {
+            text-decoration: underline;
+        }
+        .badge {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: bold;
+            margin: 5px 5px 5px 0;
+        }
+        .badge-priority-최우선 {
+            background: #ff4757;
+            color: white;
+        }
+        .badge-priority-높음 {
+            background: #ffa502;
+            color: white;
+        }
+        .badge-priority-중간 {
+            background: #57606f;
+            color: white;
+        }
+        .badge-da {
+            background: #2ed573;
+            color: white;
+        }
+        .badge-type {
+            background: #667eea;
+            color: white;
+        }
+        .instructions {
+            margin-top: 10px;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 5px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        .checklist {
+            margin-top: 20px;
+        }
+        .checklist-item {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .checklist-item input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+        .checklist-item .item-content {
+            flex: 1;
+        }
+        .status-badge {
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: bold;
+        }
+        .status-대기중 {
+            background: #ffeaa7;
+            color: #fdcb6e;
+        }
+        .status-완료 {
+            background: #55efc4;
+            color: #00b894;
+        }
+        .footer {
+            background: #f8f9fa;
+            padding: 30px;
+            text-align: center;
+            color: #666;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .btn:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+        .content-sample {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            border-left: 4px solid #667eea;
+        }
+        .content-sample h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        .content-sample pre {
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        @media (max-width: 768px) {
+            .platform-grid {
+                grid-template-columns: 1fr;
+            }
+            .summary {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 자동 백링크 생성 계획</h1>
+            <p>Incheon Dentist 웹사이트를 위한 종합 백링크 전략</p>
+            <p style="font-size: 0.9em; margin-top: 10px;">생성일: 2025-12-29T15:19:43.267248</p>
+        </div>
+        
+        <div class="summary">
+            <div class="summary-card">
+                <div class="number">5</div>
+                <div class="label">플랫폼 카테고리</div>
+            </div>
+            <div class="summary-card">
+                <div class="number">24</div>
+                <div class="label">총 플랫폼 수</div>
+            </div>
+            <div class="summary-card">
+                <div class="number">24</div>
+                <div class="label">예상 백링크</div>
+            </div>
+            <div class="summary-card">
+                <div class="number">6</div>
+                <div class="label">타겟 키워드</div>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="section">
+                <h2>📊 타겟 정보</h2>
+                <p><strong>타겟 URL:</strong> <a href="https://incheondentist.org" target="_blank">https://incheondentist.org</a></p>
+                <p><strong>타겟 키워드:</strong> 인천 치과, 인천 임플란트, 인천 치아미백, 인천 응급 치과, Incheon Dentist, Incheon Dental Clinic</p>
+            </div>
+
+            <div class="section">
+                <h2>🇰🇷 한국 플랫폼 (최우선)</h2>
+                <div class="platform-grid">
+
+                    <div class="platform-card">
+                        <div class="platform-name">네이버 블로그</div>
+                        <a href="https://blog.naver.com" target="_blank" class="platform-url">https://blog.naver.com</a>
+                        <div>
+                            <span class="badge badge-da">DA: 98</span>
+                            <span class="badge badge-priority-최우선">최우선</span>
+                            
+                        </div>
+                        <div class="instructions">
+                            📝 네이버 계정으로 블로그 생성 및 포스팅
+                        </div>
+                    </div>
+
+                    <div class="platform-card">
+                        <div class="platform-name">티스토리</div>
+                        <a href="https://www.tistory.com" target="_blank" class="platform-url">https://www.tistory.com</a>
+                        <div>
+                            <span class="badge badge-da">DA: 90</span>
+                            <span class="badge badge-priority-최우선">최우선</span>
+                            
+                        </div>
+                        <div class="instructions">
+                            📝 카카오 계정으로 블로그 생성
+                        </div>
+                    </div>
+
+                    <div class="platform-card">
+                        <div class="platform-name">네이버 카페</div>
+                        <a href="https://section.cafe.naver.com" target="_blank" class="platform-url">https://section.cafe.naver.com</a>
+                        <div>
+                            <span class="badge badge-da">DA: 98</span>
+                            <span class="badge badge-priority-높음">높음</span>
+                            
+                        </div>
+                        <div class="instructions">
+                            📝 관련 카페에 게시글 작성
+                        </div>
+                    </div>
+
+                    <div class="platform-card">
+                        <div class="platform-name">다음 카페</div>
+                        <a href="https://cafe.daum.net" target="_blank" class="platform-url">https://cafe.daum.net</a>
+                        <div>
+                            <span class="badge badge-da">DA: 92</span>
+                            <span class="badge badge-priority-높음">높음</span>
+                            
+                        </div>
+                        <div class="instructions">
+                            📝 카페 게시글 작성
+                        </div>
+                    </div>
+
+                    <div class="platform-card">
+                        <div class="platform-name">네이버 플레이스</div>
+                        <a href="https://new.place.naver.com" target="_blank" class="platform-url">https://new.place.naver.com</a>
+                        <div>
+                            <span class="badge badge-da">DA: 100</span>
+                            <span class="badge badge-priority-최우선">최우선</span>
+                            
+                        </div>
+                        <div class="instructions">
+                            📝 비즈니스 등록
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>📁 디렉토리 및 비즈니스 리스팅</h2>
+                <div class="platform-grid">
+
+                    <div class="platform-card">
+                        <div class="platform-name">Google My Business</div>
+                        <a href="https://business.google.com" target="_blank" class="platform-url">https://business.google.com</a>
+                        <div>
+                            <span class="badge badge-da">DA: 100</span>
+                            <span class="badge badge-priority-최우선">최우선</span>
+                            
+                        </div>
+                        <div class="instructions">
+                            📝 비즈니스 프로필 생성
+                        </div>
+                    </div>
+
+                    <div class="platform-card">
+                        <div class="platform-name">Bing Places</div>
+                        <a href="https://www.bingplaces.com" target="_blank" class="platform-url">https://www.bingplaces.com</a>
+                        <div>
+                            <span class="badge badge-da">DA: 95</span>
+                            <span class="badge badge-priority-높음">높음</span>
+                            
+                        </div>
+                        <div class="instructions">
+                            📝 비즈니스 등록
+                        </div>
+                    </div>
+
+                    <div class="platform-card">
+                        <div class="platform-name">Yelp</div>
+                        <a href="https://www.yelp.com/biz/add" target="_blank" class="platform-url">https://www.yelp.com/biz/add</a>
+                        <div>
+                            <span class="badge badge-da">DA: 95</span>
+                            <span class="badge badge-priority-높음">높음</span>
+                            
+                        </div>
+                        <div class="instructions">
+                            📝 비즈니스 리스팅 추가
+                        </div>
+                    </div>
+
+                    <div class="platform-card">
+                        <div class="platform-name">Yellow Pages</div>
+                        <a href="https://www.yellowpages.com" target="_blank" class="platform-url">https://www.yellowpages.com</a>
+                        <div>
+                            <span class="badge badge-da">DA: 92</span>
+                            <span class="badge badge-priority-중간">중간</span>
+                            
+                        </div>
+                        <div class="instructions">
+                            📝 디렉토리 등록
+                        </div>
+                    </div>
+
+                    <div class="platform-card">
+                        <div class="platform-name">Foursquare</div>
+                        <a href="https://foursquare.com/business" target="_blank" class="platform-url">https://foursquare.com/business</a>
+                        <div>
+                            <span class="badge badge-da">DA: 93</span>
+                            <span class="badge badge-priority-중간">중간</span>
+                            
+                        </div>
+                        <div class="instructions">
+                            📝 장소 등록
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🌐 Web 2.0 플랫폼</h2>
+                <div class="platform-grid">
+
+                    <div class="platform-card">
+                        <div class="platform-name">WordPress.com</div>
+                        <a href="https://wordpress.com" target="_blank" class="platform-url">https://wordpress.com</a>
+                        <div>
+                            <span class="badge badge-da">DA: 94</span>
+                            <span class="badge badge-priority-중간">중간</span>
+                            <span class="badge badge-type">블로그</span>
+                        </div>
+                        <div class="instructions">
+                            📝 무료 블로그 생성 후 포스팅
+                        </div>
+                    </div>
+
+                    <div class="platform-card">
+                        <div class="platform-name">Blogger</div>
+                        <a href="https://www.blogger.com" target="_blank" class="platform-url">https://www.blogger.com</a>
+                        <div>
+                            <span class="badge badge-da">DA: 100</span>
+                            <span class="badge badge-priority-중간">중간</span>
+                            <span class="badge badge-type">블로그</span>
+                        </div>
+                        <div class="instructions">
+                            📝 구글 계정으로 블로그 생성
+                        </div>
+                    </div>
+
+                    <div class="platform-card">
+                        <div class="platform-name">Medium</div>
+                        <a href="https://medium.com" target="_blank" class="platform-url">https://medium.com</a>
+                        <div>
+                            <span class="badge badge-da">DA: 96</span>
+                            <span class="badge badge-priority-중간">중간</span>
+                            <span class="badge badge-type">블로그</span>
+                        </div>
+                        <div class="instructions">
+                            📝 기사 작성 및 게시
+                        </div>
+                    </div>
+
+                    <div class="platform-card">
+                        <div class="platform-name">Tumblr</div>
+                        <a href="https://www.tumblr.com" target="_blank" class="platform-url">https://www.tumblr.com</a>
+                        <div>
+                            <span class="badge badge-da">DA: 99</span>
+                            <span class="badge badge-priority-중간">중간</span>
+                            <span class="badge badge-type">블로그</span>
+                        </div>
+                        <div class="instructions">
+                            📝 블로그 포스트 작성
+                        </div>
+                    </div>
+
+                    <div class="platform-card">
+                        <div class="platform-name">Wix</div>
+                        <a href="https://www.wix.com" target="_blank" class="platform-url">https://www.wix.com</a>
+                        <div>
+                            <span class="badge badge-da">DA: 93</span>
+                            <span class="badge badge-priority-중간">중간</span>
+                            <span class="badge badge-type">웹사이트 빌더</span>
+                        </div>
+                        <div class="instructions">
+                            📝 무료 사이트 생성
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🔖 소셜 북마크</h2>
+                <div class="platform-grid">
+
+                    <div class="platform-card">
+                        <div class="platform-name">Reddit</div>
+                        <a href="https://www.reddit.com" target="_blank" class="platform-url">https://www.reddit.com</a>
+                        <div>
+                            <span class="badge badge-da">DA: 91</span>
+                            <span class="badge badge-priority-중간">중간</span>
+                            
+                        </div>
+                        <div class="instructions">
+                            📝 관련 서브레딧에 포스팅
+                        </div>
+                    </div>
+
+                    <div class="platform-card">
+                        <div class="platform-name">Mix (formerly StumbleUpon)</div>
+                        <a href="https://mix.com" target="_blank" class="platform-url">https://mix.com</a>
+                        <div>
+                            <span class="badge badge-da">DA: 92</span>
+                            <span class="badge badge-priority-중간">중간</span>
+                            
+                        </div>
+                        <div class="instructions">
+                            📝 컨텐츠 공유
+                        </div>
+                    </div>
+
+                    <div class="platform-card">
+                        <div class="platform-name">Folkd</div>
+                        <a href="https://www.folkd.com" target="_blank" class="platform-url">https://www.folkd.com</a>
+                        <div>
+                            <span class="badge badge-da">DA: 52</span>
+                            <span class="badge badge-priority-중간">중간</span>
+                            
+                        </div>
+                        <div class="instructions">
+                            📝 소셜 북마크 추가
+                        </div>
+                    </div>
+
+                    <div class="platform-card">
+                        <div class="platform-name">Diigo</div>
+                        <a href="https://www.diigo.com" target="_blank" class="platform-url">https://www.diigo.com</a>
+                        <div>
+                            <span class="badge badge-da">DA: 92</span>
+                            <span class="badge badge-priority-중간">중간</span>
+                            
+                        </div>
+                        <div class="instructions">
+                            📝 북마크 및 주석 추가
+                        </div>
+                    </div>
+
+                    <div class="platform-card">
+                        <div class="platform-name">Scoop.it</div>
+                        <a href="https://www.scoop.it" target="_blank" class="platform-url">https://www.scoop.it</a>
+                        <div>
+                            <span class="badge badge-da">DA: 93</span>
+                            <span class="badge badge-priority-중간">중간</span>
+                            
+                        </div>
+                        <div class="instructions">
+                            📝 큐레이션 생성
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🇯🇵 일본 플랫폼</h2>
+                <div class="platform-grid">
+
+                    <div class="platform-card">
+                        <div class="platform-name">Ameba Blog</div>
+                        <a href="https://ameblo.jp" target="_blank" class="platform-url">https://ameblo.jp</a>
+                        <div>
+                            <span class="badge badge-da">DA: 88</span>
+                            <span class="badge badge-priority-높음">높음</span>
+                            
+                        </div>
+                        <div class="instructions">
+                            📝 아메바 블로그 작성
+                        </div>
+                    </div>
+
+                    <div class="platform-card">
+                        <div class="platform-name">FC2 Blog</div>
+                        <a href="https://blog.fc2.com" target="_blank" class="platform-url">https://blog.fc2.com</a>
+                        <div>
+                            <span class="badge badge-da">DA: 85</span>
+                            <span class="badge badge-priority-중간">중간</span>
+                            
+                        </div>
+                        <div class="instructions">
+                            📝 FC2 블로그 포스팅
+                        </div>
+                    </div>
+
+                    <div class="platform-card">
+                        <div class="platform-name">Hatena Blog</div>
+                        <a href="https://hatenablog.com" target="_blank" class="platform-url">https://hatenablog.com</a>
+                        <div>
+                            <span class="badge badge-da">DA: 82</span>
+                            <span class="badge badge-priority-중간">중간</span>
+                            
+                        </div>
+                        <div class="instructions">
+                            📝 하테나 블로그 작성
+                        </div>
+                    </div>
+
+                    <div class="platform-card">
+                        <div class="platform-name">Google My Business (Japan)</div>
+                        <a href="https://business.google.com" target="_blank" class="platform-url">https://business.google.com</a>
+                        <div>
+                            <span class="badge badge-da">DA: 100</span>
+                            <span class="badge badge-priority-최우선">최우선</span>
+                            
+                        </div>
+                        <div class="instructions">
+                            📝 일본어 비즈니스 프로필
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>📝 컨텐츠 샘플</h2>
+                
+                <div class="content-sample">
+                    <h3>🇰🇷 한국어 컨텐츠</h3>
+                    <p><strong>제목:</strong> 인천 치과 추천 - 외국인 환자 전문</p>
+                    <pre>
+인천 치과를 찾는 외국인 여행객들을 위한 완벽한 가이드!
+
+https://incheondentist.org에서는:
+🦷 최신 장비를 이용한 정밀 진료
+👨‍⚕️ 경험 많은 치과 전문의
+🌏 다국어 지원 (한국어, 영어, 일본어, 중국어)
+✈️ 공항 근처 편리한 위치
+
+자세한 내용은 https://incheondentist.org에서 확인하세요!
+                    </pre>
+                </div>
+                
+                <div class="content-sample">
+                    <h3>🇺🇸 영어 컨텐츠</h3>
+                    <p><strong>제목:</strong> Teeth Whitening in Incheon - Quality Service</p>
+                    <pre>
+Welcome to Incheon's premier dental clinic for international patients!
+
+At https://incheondentist.org, we offer:
+🦷 State-of-the-art equipment
+👨‍⚕️ Experienced dental professionals
+🌏 Multilingual support
+✈️ Convenient location near the airport
+
+Learn more at https://incheondentist.org!
+                    </pre>
+                </div>
+                
+                <div class="content-sample">
+                    <h3>🇯🇵 일본어 컨텐츠</h3>
+                    <p><strong>제목:</strong> 仁川でのインプラント治療</p>
+                    <pre>
+仁川で歯科医院をお探しですか？https://incheondentist.orgで外国人患者向けの専門的な歯科サービスを提供しています。
+
+✅ 主なサービス:
+- 歯科インプラント
+- ホワイトニング
+- 緊急歯科診療
+- 外国人患者サポート
+
+📍 場所: 仁川空港近く
+🌐 ウェブサイト: https://incheondentist.org
+💰 手頃な価格と透明な診療
+
+今すぐ訪問して詳細をご確認ください！
+                    </pre>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>✅ 실행 체크리스트</h2>
+                <div class="checklist">
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check-0">
+                        <div class="item-content">
+                            <strong>WordPress.com</strong> (web2.0)
+                            <br>
+                            <small>무료 블로그 생성 후 포스팅</small>
+                        </div>
+                        <span class="badge badge-da">DA: 94</span>
+                        <span class="status-badge status-대기중">대기중</span>
+                    </div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check-1">
+                        <div class="item-content">
+                            <strong>Blogger</strong> (web2.0)
+                            <br>
+                            <small>구글 계정으로 블로그 생성</small>
+                        </div>
+                        <span class="badge badge-da">DA: 100</span>
+                        <span class="status-badge status-대기중">대기중</span>
+                    </div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check-2">
+                        <div class="item-content">
+                            <strong>Medium</strong> (web2.0)
+                            <br>
+                            <small>기사 작성 및 게시</small>
+                        </div>
+                        <span class="badge badge-da">DA: 96</span>
+                        <span class="status-badge status-대기중">대기중</span>
+                    </div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check-3">
+                        <div class="item-content">
+                            <strong>Tumblr</strong> (web2.0)
+                            <br>
+                            <small>블로그 포스트 작성</small>
+                        </div>
+                        <span class="badge badge-da">DA: 99</span>
+                        <span class="status-badge status-대기중">대기중</span>
+                    </div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check-4">
+                        <div class="item-content">
+                            <strong>Wix</strong> (web2.0)
+                            <br>
+                            <small>무료 사이트 생성</small>
+                        </div>
+                        <span class="badge badge-da">DA: 93</span>
+                        <span class="status-badge status-대기중">대기중</span>
+                    </div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check-5">
+                        <div class="item-content">
+                            <strong>Reddit</strong> (social_bookmarks)
+                            <br>
+                            <small>관련 서브레딧에 포스팅</small>
+                        </div>
+                        <span class="badge badge-da">DA: 91</span>
+                        <span class="status-badge status-대기중">대기중</span>
+                    </div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check-6">
+                        <div class="item-content">
+                            <strong>Mix (formerly StumbleUpon)</strong> (social_bookmarks)
+                            <br>
+                            <small>컨텐츠 공유</small>
+                        </div>
+                        <span class="badge badge-da">DA: 92</span>
+                        <span class="status-badge status-대기중">대기중</span>
+                    </div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check-7">
+                        <div class="item-content">
+                            <strong>Folkd</strong> (social_bookmarks)
+                            <br>
+                            <small>소셜 북마크 추가</small>
+                        </div>
+                        <span class="badge badge-da">DA: 52</span>
+                        <span class="status-badge status-대기중">대기중</span>
+                    </div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check-8">
+                        <div class="item-content">
+                            <strong>Diigo</strong> (social_bookmarks)
+                            <br>
+                            <small>북마크 및 주석 추가</small>
+                        </div>
+                        <span class="badge badge-da">DA: 92</span>
+                        <span class="status-badge status-대기중">대기중</span>
+                    </div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check-9">
+                        <div class="item-content">
+                            <strong>Scoop.it</strong> (social_bookmarks)
+                            <br>
+                            <small>큐레이션 생성</small>
+                        </div>
+                        <span class="badge badge-da">DA: 93</span>
+                        <span class="status-badge status-대기중">대기중</span>
+                    </div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check-10">
+                        <div class="item-content">
+                            <strong>Google My Business</strong> (directories)
+                            <br>
+                            <small>비즈니스 프로필 생성</small>
+                        </div>
+                        <span class="badge badge-da">DA: 100</span>
+                        <span class="status-badge status-대기중">대기중</span>
+                    </div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check-11">
+                        <div class="item-content">
+                            <strong>Bing Places</strong> (directories)
+                            <br>
+                            <small>비즈니스 등록</small>
+                        </div>
+                        <span class="badge badge-da">DA: 95</span>
+                        <span class="status-badge status-대기중">대기중</span>
+                    </div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check-12">
+                        <div class="item-content">
+                            <strong>Yelp</strong> (directories)
+                            <br>
+                            <small>비즈니스 리스팅 추가</small>
+                        </div>
+                        <span class="badge badge-da">DA: 95</span>
+                        <span class="status-badge status-대기중">대기중</span>
+                    </div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check-13">
+                        <div class="item-content">
+                            <strong>Yellow Pages</strong> (directories)
+                            <br>
+                            <small>디렉토리 등록</small>
+                        </div>
+                        <span class="badge badge-da">DA: 92</span>
+                        <span class="status-badge status-대기중">대기중</span>
+                    </div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check-14">
+                        <div class="item-content">
+                            <strong>Foursquare</strong> (directories)
+                            <br>
+                            <small>장소 등록</small>
+                        </div>
+                        <span class="badge badge-da">DA: 93</span>
+                        <span class="status-badge status-대기중">대기중</span>
+                    </div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check-15">
+                        <div class="item-content">
+                            <strong>네이버 블로그</strong> (korean_platforms)
+                            <br>
+                            <small>네이버 계정으로 블로그 생성 및 포스팅</small>
+                        </div>
+                        <span class="badge badge-da">DA: 98</span>
+                        <span class="status-badge status-대기중">대기중</span>
+                    </div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check-16">
+                        <div class="item-content">
+                            <strong>티스토리</strong> (korean_platforms)
+                            <br>
+                            <small>카카오 계정으로 블로그 생성</small>
+                        </div>
+                        <span class="badge badge-da">DA: 90</span>
+                        <span class="status-badge status-대기중">대기중</span>
+                    </div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check-17">
+                        <div class="item-content">
+                            <strong>네이버 카페</strong> (korean_platforms)
+                            <br>
+                            <small>관련 카페에 게시글 작성</small>
+                        </div>
+                        <span class="badge badge-da">DA: 98</span>
+                        <span class="status-badge status-대기중">대기중</span>
+                    </div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check-18">
+                        <div class="item-content">
+                            <strong>다음 카페</strong> (korean_platforms)
+                            <br>
+                            <small>카페 게시글 작성</small>
+                        </div>
+                        <span class="badge badge-da">DA: 92</span>
+                        <span class="status-badge status-대기중">대기중</span>
+                    </div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check-19">
+                        <div class="item-content">
+                            <strong>네이버 플레이스</strong> (korean_platforms)
+                            <br>
+                            <small>비즈니스 등록</small>
+                        </div>
+                        <span class="badge badge-da">DA: 100</span>
+                        <span class="status-badge status-대기중">대기중</span>
+                    </div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check-20">
+                        <div class="item-content">
+                            <strong>Ameba Blog</strong> (japanese_platforms)
+                            <br>
+                            <small>아메바 블로그 작성</small>
+                        </div>
+                        <span class="badge badge-da">DA: 88</span>
+                        <span class="status-badge status-대기중">대기중</span>
+                    </div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check-21">
+                        <div class="item-content">
+                            <strong>FC2 Blog</strong> (japanese_platforms)
+                            <br>
+                            <small>FC2 블로그 포스팅</small>
+                        </div>
+                        <span class="badge badge-da">DA: 85</span>
+                        <span class="status-badge status-대기중">대기중</span>
+                    </div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check-22">
+                        <div class="item-content">
+                            <strong>Hatena Blog</strong> (japanese_platforms)
+                            <br>
+                            <small>하테나 블로그 작성</small>
+                        </div>
+                        <span class="badge badge-da">DA: 82</span>
+                        <span class="status-badge status-대기중">대기중</span>
+                    </div>
+
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check-23">
+                        <div class="item-content">
+                            <strong>Google My Business (Japan)</strong> (japanese_platforms)
+                            <br>
+                            <small>일본어 비즈니스 프로필</small>
+                        </div>
+                        <span class="badge badge-da">DA: 100</span>
+                        <span class="status-badge status-대기중">대기중</span>
+                    </div>
+
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>🎯 실행 가이드</h2>
+                <ol style="line-height: 2;">
+                    <li><strong>우선순위 설정:</strong> "최우선" 표시된 플랫폼부터 시작</li>
+                    <li><strong>계정 생성:</strong> 각 플랫폼에 계정 생성 (실제 이메일 사용)</li>
+                    <li><strong>컨텐츠 작성:</strong> 위의 샘플을 참고하여 자연스러운 컨텐츠 작성</li>
+                    <li><strong>링크 삽입:</strong> 컨텐츠 내에 자연스럽게 백링크 삽입</li>
+                    <li><strong>다양화:</strong> 각 플랫폼마다 조금씩 다른 컨텐츠 사용</li>
+                    <li><strong>정기적 업데이트:</strong> 주 2-3회 새로운 컨텐츠 추가</li>
+                    <li><strong>추적:</strong> 생성된 백링크 URL 기록</li>
+                </ol>
+            </div>
+            
+            <div class="section">
+                <h2>⚠️ 주의사항</h2>
+                <ul style="line-height: 2;">
+                    <li>스팸으로 보이지 않도록 자연스러운 컨텐츠 작성</li>
+                    <li>각 플랫폼의 이용 약관 준수</li>
+                    <li>과도한 키워드 반복 피하기</li>
+                    <li>다양한 앵커 텍스트 사용</li>
+                    <li>점진적으로 백링크 생성 (하루에 5-10개 이내)</li>
+                    <li>품질 > 수량 (고품질 백링크에 집중)</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p><strong>자동 백링크 생성기</strong></p>
+            <p>이 도구로 생성된 계획은 수동으로 실행해야 합니다.</p>
+            <p>© 2024 Incheon Dentist SEO Project</p>
+            <div style="margin-top: 20px;">
+                <button class="btn" onclick="window.print()">📄 인쇄하기</button>
+                <a href="backlink_plan.json" class="btn" download>💾 JSON 다운로드</a>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // 체크박스 상태 저장
+        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {{
+            checkbox.addEventListener('change', function() {{
+                const item = this.closest('.checklist-item');
+                const statusBadge = item.querySelector('.status-badge');
+                if (this.checked) {{
+                    statusBadge.textContent = '완료';
+                    statusBadge.className = 'status-badge status-완료';
+                    item.style.opacity = '0.6';
+                }} else {{
+                    statusBadge.textContent = '대기중';
+                    statusBadge.className = 'status-badge status-대기중';
+                    item.style.opacity = '1';
+                }}
+            }});
+        }});
+    </script>
+</body>
+</html>
