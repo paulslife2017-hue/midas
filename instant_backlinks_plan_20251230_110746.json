@@ -1,0 +1,243 @@
+{
+  "title": "즉시 생성 가능한 실제 백링크 플랜",
+  "created_at": "2025-12-30T11:07:46.436741",
+  "target_website": "https://www.yonseimidas.com",
+  "priority_1_immediate": {
+    "description": "지금 당장 5분 안에 만들 수 있는 백링크 (최고 우선순위)",
+    "backlinks": [
+      {
+        "platform": "GitHub README",
+        "action": "현재 repo의 README.md에 웹사이트 링크 추가",
+        "quality": "⭐⭐⭐⭐⭐ (DA 94)",
+        "time": "2분",
+        "difficulty": "매우 쉬움",
+        "implementation": "README.md 파일 수정"
+      },
+      {
+        "platform": "GitHub Profile",
+        "action": "GitHub 프로필에 웹사이트 추가",
+        "quality": "⭐⭐⭐⭐⭐ (DA 94)",
+        "time": "1분",
+        "difficulty": "매우 쉬움",
+        "implementation": "프로필 설정에서 website 필드 추가"
+      }
+    ],
+    "total_time": "3분",
+    "expected_backlinks": 2
+  },
+  "priority_2_quick_setup": {
+    "description": "10분 안에 만들 수 있는 백링크 (빠른 설정)",
+    "backlinks": [
+      {
+        "platform": "WordPress.com",
+        "action": "무료 블로그 생성 + 첫 포스트 작성",
+        "quality": "⭐⭐⭐⭐⭐ (DA 90+)",
+        "time": "5분",
+        "difficulty": "쉬움",
+        "result_url": "yonseimidas.wordpress.com"
+      },
+      {
+        "platform": "Blogger",
+        "action": "Google 블로그 생성 + 첫 포스트",
+        "quality": "⭐⭐⭐⭐ (DA 95)",
+        "time": "5분",
+        "difficulty": "쉬움",
+        "result_url": "yonseimidas.blogspot.com"
+      },
+      {
+        "platform": "Medium",
+        "action": "스토리 발행",
+        "quality": "⭐⭐⭐⭐⭐ (DA 96)",
+        "time": "10분",
+        "difficulty": "쉬움",
+        "result_url": "medium.com/@yonseimidas"
+      }
+    ],
+    "total_time": "20분",
+    "expected_backlinks": 3
+  },
+  "priority_3_social_bookmarks": {
+    "description": "소셜 북마킹 (즉시 가능)",
+    "backlinks": [
+      {
+        "platform": "Pinterest",
+        "action": "핀 생성 (이미지 필요)",
+        "quality": "⭐⭐⭐⭐⭐",
+        "time": "3분",
+        "difficulty": "쉬움"
+      },
+      {
+        "platform": "Reddit",
+        "action": "관련 서브레딧에 포스트",
+        "quality": "⭐⭐⭐⭐⭐",
+        "time": "5분",
+        "difficulty": "중간 (커뮤니티 규칙 준수 필요)"
+      }
+    ],
+    "total_time": "8분",
+    "expected_backlinks": 2
+  },
+  "total_summary": {
+    "total_backlinks_today": "7개",
+    "total_time_needed": "31분",
+    "immediate_action": "GitHub README 수정 (2분)",
+    "high_da_backlinks": 5,
+    "dofollow_backlinks": 4
+  },
+  "github_implementation": {
+    "platform": "GitHub",
+    "type": "Profile Backlink",
+    "quality": "⭐⭐⭐⭐⭐ (Very High - DA 90+)",
+    "do_follow": "Yes",
+    "instant_method": "GitHub Repository README",
+    "steps": [
+      "1. 사용자의 GitHub 계정 이용 (이미 있음: paulslife2017-hue)",
+      "2. 현재 repo에 README.md 업데이트",
+      "3. Profile README에 웹사이트 링크 추가",
+      "4. Organization page 생성 (선택)"
+    ],
+    "actual_implementation": "README 파일에 링크 추가",
+    "backlink_url": "https://github.com/paulslife2017-hue/midas",
+    "target_url": "https://www.yonseimidas.com",
+    "status": "CAN BE CREATED NOW",
+    "estimated_time": "2 minutes",
+    "seo_value": "Very High - GitHub has DA 94"
+  },
+  "web2_platforms": [
+    {
+      "platform": "WordPress.com",
+      "method": "Create free blog + publish post with backlink",
+      "quality": "⭐⭐⭐⭐⭐",
+      "do_follow": "Yes",
+      "url": "https://wordpress.com",
+      "blog_name_suggestion": "yonseimidas or yonseidental",
+      "first_post_title": "Welcome to Yonsei Midas Dental Clinic",
+      "content_template": "\n# Welcome to Yonsei Midas Dental Clinic\n\nLocated near Incheon Airport, [Yonsei Midas Dental Clinic](https://www.yonseimidas.com) provides premium dental care for international patients.\n\n## Our Services\n- Dental Implants\n- Teeth Whitening\n- Cosmetic Dentistry\n- General Dentistry\n\nVisit our website: **https://www.yonseimidas.com**\n\n📍 Address: 127 Gonghang Culture-ro, Jung-gu, Incheon, South Korea\n📞 Phone: +82-32-722-2879\n✉️ Email: info@yonseimidas.com\n\nWe speak English, Korean, Japanese, and Chinese!\n            ",
+      "status": "READY TO CREATE",
+      "estimated_time": "5 minutes"
+    },
+    {
+      "platform": "Blogger (Google)",
+      "method": "Create free blog + publish post with backlink",
+      "quality": "⭐⭐⭐⭐",
+      "do_follow": "Yes",
+      "url": "https://www.blogger.com",
+      "blog_name_suggestion": "yonseimidas or yonseidentalkorea",
+      "first_post_title": "Yonsei Midas Dental Clinic - English-Speaking Dentist in Incheon",
+      "content_template": "\n<h1>Yonsei Midas Dental Clinic</h1>\n<h2>English-Speaking Dentist Near Incheon Airport</h2>\n\n<p>Looking for a <strong>premium dental clinic in Incheon</strong>? <a href=\"https://www.yonseimidas.com\" target=\"_blank\">Yonsei Midas Dental Clinic</a> specializes in providing top-quality dental care for international patients.</p>\n\n<h3>Our Services Include:</h3>\n<ul>\n<li>🦷 Dental Implants</li>\n<li>✨ Teeth Whitening</li>\n<li>😊 Cosmetic Dentistry</li>\n<li>🏥 General Dentistry</li>\n<li>🦴 Orthodontics</li>\n</ul>\n\n<h3>Why Choose Us?</h3>\n<ul>\n<li>✅ English, Korean, Japanese, Chinese spoken</li>\n<li>✅ 10 minutes from Incheon Airport</li>\n<li>✅ Modern equipment & technology</li>\n<li>✅ Experienced dentists</li>\n</ul>\n\n<p><strong>Visit us:</strong> <a href=\"https://www.yonseimidas.com\">https://www.yonseimidas.com</a></p>\n\n<p>📍 <strong>Address:</strong> 127 Gonghang Culture-ro, Jung-gu, Incheon, South Korea<br>\n📞 <strong>Phone:</strong> +82-32-722-2879<br>\n✉️ <strong>Email:</strong> info@yonseimidas.com</p>\n            ",
+      "status": "READY TO CREATE",
+      "estimated_time": "5 minutes"
+    },
+    {
+      "platform": "Medium",
+      "method": "Publish story with backlink",
+      "quality": "⭐⭐⭐⭐⭐",
+      "do_follow": "No (but DA 95+)",
+      "url": "https://medium.com/new-story",
+      "story_title": "Why Yonsei Midas Dental Clinic is Perfect for International Patients in Korea",
+      "content_template": "\n# Why Yonsei Midas Dental Clinic is Perfect for International Patients in Korea\n\nTraveling to Korea and need dental care? Or planning a dental tourism trip? [Yonsei Midas Dental Clinic](https://www.yonseimidas.com) near Incheon Airport offers the perfect solution.\n\n## Location, Location, Location\nLocated just 10 minutes from Incheon International Airport, it's incredibly convenient for travelers and expats in Korea.\n\n## English-Speaking Staff\nNo language barrier! Our team speaks English, Korean, Japanese, and Chinese.\n\n## Comprehensive Services\n- 🦷 **Dental Implants**: State-of-the-art implant technology\n- ✨ **Teeth Whitening**: Professional whitening treatments\n- 😊 **Cosmetic Dentistry**: Transform your smile\n- 🏥 **General Dentistry**: Complete oral health care\n\n## Why Choose Yonsei Midas?\n1. International patient experience\n2. Modern facilities\n3. Affordable prices compared to Western countries\n4. High-quality care\n\n**Book your appointment today:**\n🌐 Website: https://www.yonseimidas.com\n📞 Phone: +82-32-722-2879\n✉️ Email: info@yonseimidas.com\n\n📍 Address: 127 Gonghang Culture-ro, Jung-gu, Incheon, South Korea\n\n*Keywords: Incheon dentist, dental clinic Korea, Incheon Airport dentist, dental tourism Korea, English-speaking dentist Korea*\n            ",
+      "status": "READY TO CREATE",
+      "estimated_time": "10 minutes"
+    }
+  ],
+  "social_bookmarks": [
+    {
+      "platform": "Pinterest",
+      "method": "Create pin with image + link",
+      "quality": "⭐⭐⭐⭐⭐",
+      "do_follow": "No (but huge traffic)",
+      "board_suggestion": "Dental Health",
+      "pin_title": "Yonsei Midas Dental Clinic - Incheon, Korea",
+      "pin_description": "English-speaking dentist near Incheon Airport. Premium dental care for international patients. Specializing in dental implants, teeth whitening, and cosmetic dentistry. Visit: https://www.yonseimidas.com",
+      "image_needed": "Yes - dental clinic photo",
+      "direct_url": "https://www.pinterest.com/pin/create/button/?url=https%3A//www.yonseimidas.com&description=English-speaking%20dentist%20near%20Incheon%20Airport",
+      "status": "READY TO CREATE",
+      "estimated_time": "3 minutes"
+    },
+    {
+      "platform": "Reddit",
+      "method": "Submit link to relevant subreddit",
+      "quality": "⭐⭐⭐⭐⭐",
+      "do_follow": "No (but viral potential)",
+      "subreddits": [
+        "r/korea",
+        "r/dentistry",
+        "r/Incheon",
+        "r/expats"
+      ],
+      "title_suggestion": "English-speaking dentist recommendation near Incheon Airport",
+      "content_template": "For anyone in Incheon or near the airport needing dental work: Yonsei Midas Dental Clinic provides excellent care for international patients. They speak English, Korean, Japanese, and Chinese. https://www.yonseimidas.com",
+      "rules_note": "Follow subreddit rules - provide value, not just advertising",
+      "status": "READY TO CREATE",
+      "estimated_time": "5 minutes"
+    }
+  ],
+  "profile_sites": [
+    {
+      "platform": "About.me",
+      "method": "Create profile page",
+      "quality": "⭐⭐⭐⭐",
+      "do_follow": "Yes",
+      "profile_url": "https://about.me/yonseimidas",
+      "name": "Yonsei Midas Dental Clinic",
+      "bio": "English-speaking dentist near Incheon Airport. Premium dental care for international patients. Specializing in dental implants, teeth whitening, and cosmetic dentistry.",
+      "website_link": "https://www.yonseimidas.com",
+      "status": "READY TO CREATE",
+      "estimated_time": "3 minutes"
+    },
+    {
+      "platform": "Gravatar",
+      "method": "Add website to profile",
+      "quality": "⭐⭐⭐⭐",
+      "do_follow": "Yes",
+      "email_needed": "info@yonseimidas.com",
+      "profile_link": "https://www.yonseimidas.com",
+      "status": "READY TO CREATE",
+      "estimated_time": "2 minutes"
+    }
+  ],
+  "step_by_step_today": [
+    {
+      "step": 1,
+      "action": "GitHub README 업데이트",
+      "file": "README.md",
+      "time": "2분",
+      "result": "DA 94 백링크 획득"
+    },
+    {
+      "step": 2,
+      "action": "WordPress.com 블로그 생성",
+      "url": "https://wordpress.com/start",
+      "time": "5분",
+      "result": "DA 90+ 백링크 획득"
+    },
+    {
+      "step": 3,
+      "action": "Blogger 블로그 생성",
+      "url": "https://www.blogger.com",
+      "time": "5분",
+      "result": "DA 95 백링크 획득"
+    },
+    {
+      "step": 4,
+      "action": "Medium 스토리 발행",
+      "url": "https://medium.com/new-story",
+      "time": "10분",
+      "result": "DA 96 백링크 획득"
+    },
+    {
+      "step": 5,
+      "action": "Pinterest 핀 생성",
+      "url": "https://www.pinterest.com/pin/create/button/",
+      "time": "3분",
+      "result": "높은 트래픽 백링크 획득"
+    },
+    {
+      "step": 6,
+      "action": "Reddit 포스트",
+      "url": "https://www.reddit.com/r/korea",
+      "time": "5분",
+      "result": "바이럴 가능성 있는 백링크"
+    }
+  ]
+}

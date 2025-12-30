@@ -2,6 +2,8 @@
 
 🦷 Premium International Dental Clinic at Inspire Resort Incheon
 
+🌐 **Official Website**: [https://www.yonseimidas.com](https://www.yonseimidas.com)
+
 ## 🌐 Multilingual Support
 
 - 🇰🇷 Korean (한국어)
@@ -135,12 +137,18 @@ Total: 4,057 lines of code
 
 ## 📞 Contact
 
-**Phone**: +82-32-0000-0000  
+**Website**: [https://www.yonseimidas.com](https://www.yonseimidas.com)  
+**Phone**: +82-32-722-2879  
+**Email**: info@yonseimidas.com  
+**Address**: 127 Gonghang Culture-ro, Jung-gu, Incheon, South Korea  
+
 **Hours**: 
 - Weekdays: 09:00-18:00
 - Saturday: 09:00-13:00
 - Lunch: 13:00-14:00
 - Closed: Sundays & Holidays
+
+**Languages**: English, Korean, Japanese, Chinese
 
 ## 📄 License
 
