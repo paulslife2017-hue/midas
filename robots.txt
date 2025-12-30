@@ -8,7 +8,7 @@ Disallow: /private/
 Disallow: /_*
 
 # Sitemaps
-Sitemap: https://www.incheondentist.com/sitemap.xml
+Sitemap: https://incheondentist.com/sitemap.xml
 
 # Specific rules for major search engines
 User-agent: Googlebot
