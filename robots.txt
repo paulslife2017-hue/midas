@@ -1,5 +1,5 @@
-# robots.txt for Yonsei Midas Dental Clinic
-# Updated: 2025-12-29
+# robots.txt for Incheon Dentist
+# Updated: 2025-12-30
 
 User-agent: *
 Allow: /
@@ -8,7 +8,7 @@ Disallow: /private/
 Disallow: /_*
 
 # Sitemaps
-Sitemap: https://www.yonseimidas.com/sitemap.xml
+Sitemap: https://www.incheondentist.com/sitemap.xml
 
 # Specific rules for major search engines
 User-agent: Googlebot
