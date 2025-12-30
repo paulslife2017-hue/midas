@@ -12,8 +12,8 @@
 스크린샷에 표시된 오류는 **정상적인 동작**입니다:
 
 ### Google Search Console이 거부한 URL들:
-1. `https://www.yonseimidas.com/#about` (18행)
-2. `https://www.yonseimidas.com/#services` (26행)
+1. `https://www.incheondentist.com/#about` (18행)
+2. `https://www.incheondentist.com/#services` (26행)
 
 ### 이유:
 - **Hash fragments (#)는 sitemap에 포함할 수 없습니다**
@@ -39,7 +39,7 @@
     
     <!-- 메인 페이지들 -->
     <url>
-        <loc>https://www.yonseimidas.com/</loc>
+        <loc>https://www.incheondentist.com/</loc>
         <lastmod>2025-12-30</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -47,13 +47,13 @@
     
     <!-- 다국어 페이지들 -->
     <url>
-        <loc>https://www.yonseimidas.com/en/</loc>
+        <loc>https://www.incheondentist.com/en/</loc>
         ...
     </url>
     
     <!-- 서비스 페이지들 -->
     <url>
-        <loc>https://www.yonseimidas.com/dental-implants-incheon/</loc>
+        <loc>https://www.incheondentist.com/dental-implants-incheon/</loc>
         ...
     </url>
 </urlset>
@@ -62,26 +62,26 @@
 ## 📋 Sitemap에 포함된 페이지 (7개)
 
 ### 메인 페이지 (4개)
-1. ✅ https://www.yonseimidas.com/ (한국어)
-2. ✅ https://www.yonseimidas.com/en/ (영어)
-3. ✅ https://www.yonseimidas.com/ja/ (일본어)
-4. ✅ https://www.yonseimidas.com/zh/ (중국어)
+1. ✅ https://www.incheondentist.com/ (한국어)
+2. ✅ https://www.incheondentist.com/en/ (영어)
+3. ✅ https://www.incheondentist.com/ja/ (일본어)
+4. ✅ https://www.incheondentist.com/zh/ (중국어)
 
 ### 서비스 페이지 (7개)
-5. ✅ https://www.yonseimidas.com/dental-implants-incheon/
-6. ✅ https://www.yonseimidas.com/dental-implant-incheon/
-7. ✅ https://www.yonseimidas.com/teeth-whitening-incheon/
-8. ✅ https://www.yonseimidas.com/emergency-dentist-incheon/
-9. ✅ https://www.yonseimidas.com/dental-cost-incheon/
-10. ✅ https://www.yonseimidas.com/incheon-dentist-prices/
-11. ✅ https://www.yonseimidas.com/foreign-patient-guide/
+5. ✅ https://www.incheondentist.com/dental-implants-incheon/
+6. ✅ https://www.incheondentist.com/dental-implant-incheon/
+7. ✅ https://www.incheondentist.com/teeth-whitening-incheon/
+8. ✅ https://www.incheondentist.com/emergency-dentist-incheon/
+9. ✅ https://www.incheondentist.com/dental-cost-incheon/
+10. ✅ https://www.incheondentist.com/incheon-dentist-prices/
+11. ✅ https://www.incheondentist.com/foreign-patient-guide/
 
 ## 🚫 Sitemap에 포함하면 안 되는 것들
 
 ### ❌ Hash Fragments (클라이언트 사이드 네비게이션)
-- `https://www.yonseimidas.com/#about`
-- `https://www.yonseimidas.com/#services`
-- `https://www.yonseimidas.com/#contact`
+- `https://www.incheondentist.com/#about`
+- `https://www.incheondentist.com/#services`
+- `https://www.incheondentist.com/#contact`
 
 ### ❌ 기타 제외 항목
 - 백링크 리포트: `backlink_report.html`
@@ -94,7 +94,7 @@
 ```
 1. Google Search Console 접속
 2. 색인 생성 > Sitemaps 메뉴 선택
-3. 새 사이트맵 URL 입력: https://www.yonseimidas.com/sitemap.xml
+3. 새 사이트맵 URL 입력: https://www.incheondentist.com/sitemap.xml
 4. "제출" 클릭
 ```
 
@@ -119,7 +119,7 @@ Disallow: /backlink_*
 Disallow: /*.json$
 Disallow: /*.py$
 
-Sitemap: https://www.yonseimidas.com/sitemap.xml
+Sitemap: https://www.incheondentist.com/sitemap.xml
 ```
 
 ### Index 확인 방법
@@ -165,5 +165,5 @@ Google Search Console의 "URL이 허용되지 않음" 메시지는:
 ---
 
 **업데이트 날짜**: 2025-12-30
-**Sitemap URL**: https://www.yonseimidas.com/sitemap.xml
+**Sitemap URL**: https://www.incheondentist.com/sitemap.xml
 **총 URL 수**: 11개
