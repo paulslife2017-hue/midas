@@ -4,63 +4,63 @@
     
     <!-- Homepage - Korean (Main) -->
     <url>
-        <loc>https://www.yonseimidas.com/</loc>
+        <loc>https://www.incheondentist.com/</loc>
         <lastmod>2025-12-30</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
-        <xhtml:link rel="alternate" hreflang="ko" href="https://www.yonseimidas.com/" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.yonseimidas.com/en/" />
-        <xhtml:link rel="alternate" hreflang="ja" href="https://www.yonseimidas.com/ja/" />
-        <xhtml:link rel="alternate" hreflang="zh" href="https://www.yonseimidas.com/zh/" />
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.yonseimidas.com/" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://www.incheondentist.com/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.incheondentist.com/en/" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://www.incheondentist.com/ja/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://www.incheondentist.com/zh/" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.incheondentist.com/" />
     </url>
     
     <!-- English Version -->
     <url>
-        <loc>https://www.yonseimidas.com/en/</loc>
+        <loc>https://www.incheondentist.com/en/</loc>
         <lastmod>2025-12-30</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.yonseimidas.com/en/" />
-        <xhtml:link rel="alternate" hreflang="ko" href="https://www.yonseimidas.com/" />
-        <xhtml:link rel="alternate" hreflang="ja" href="https://www.yonseimidas.com/ja/" />
-        <xhtml:link rel="alternate" hreflang="zh" href="https://www.yonseimidas.com/zh/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.incheondentist.com/en/" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://www.incheondentist.com/" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://www.incheondentist.com/ja/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://www.incheondentist.com/zh/" />
     </url>
     
     <!-- Japanese Version -->
     <url>
-        <loc>https://www.yonseimidas.com/ja/</loc>
+        <loc>https://www.incheondentist.com/ja/</loc>
         <lastmod>2025-12-30</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
-        <xhtml:link rel="alternate" hreflang="ja" href="https://www.yonseimidas.com/ja/" />
-        <xhtml:link rel="alternate" hreflang="ko" href="https://www.yonseimidas.com/" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.yonseimidas.com/en/" />
-        <xhtml:link rel="alternate" hreflang="zh" href="https://www.yonseimidas.com/zh/" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://www.incheondentist.com/ja/" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://www.incheondentist.com/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.incheondentist.com/en/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://www.incheondentist.com/zh/" />
     </url>
     
     <!-- Chinese Version -->
     <url>
-        <loc>https://www.yonseimidas.com/zh/</loc>
+        <loc>https://www.incheondentist.com/zh/</loc>
         <lastmod>2025-12-30</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://www.yonseimidas.com/zh/" />
-        <xhtml:link rel="alternate" hreflang="ko" href="https://www.yonseimidas.com/" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.yonseimidas.com/en/" />
-        <xhtml:link rel="alternate" hreflang="ja" href="https://www.yonseimidas.com/ja/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://www.incheondentist.com/zh/" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://www.incheondentist.com/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.incheondentist.com/en/" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://www.incheondentist.com/ja/" />
     </url>
     
     <!-- Service Pages - Dental Implants -->
     <url>
-        <loc>https://www.yonseimidas.com/dental-implants-incheon/</loc>
+        <loc>https://www.incheondentist.com/dental-implants-incheon/</loc>
         <lastmod>2025-12-30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     
     <url>
-        <loc>https://www.yonseimidas.com/dental-implant-incheon/</loc>
+        <loc>https://www.incheondentist.com/dental-implant-incheon/</loc>
         <lastmod>2025-12-30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
@@ -68,7 +68,7 @@
     
     <!-- Service Pages - Teeth Whitening -->
     <url>
-        <loc>https://www.yonseimidas.com/teeth-whitening-incheon/</loc>
+        <loc>https://www.incheondentist.com/teeth-whitening-incheon/</loc>
         <lastmod>2025-12-30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
@@ -76,7 +76,7 @@
     
     <!-- Service Pages - Emergency Dentist -->
     <url>
-        <loc>https://www.yonseimidas.com/emergency-dentist-incheon/</loc>
+        <loc>https://www.incheondentist.com/emergency-dentist-incheon/</loc>
         <lastmod>2025-12-30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
@@ -84,14 +84,14 @@
     
     <!-- Service Pages - Dental Cost & Prices -->
     <url>
-        <loc>https://www.yonseimidas.com/dental-cost-incheon/</loc>
+        <loc>https://www.incheondentist.com/dental-cost-incheon/</loc>
         <lastmod>2025-12-30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>https://www.yonseimidas.com/incheon-dentist-prices/</loc>
+        <loc>https://www.incheondentist.com/incheon-dentist-prices/</loc>
         <lastmod>2025-12-30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -99,7 +99,7 @@
     
     <!-- Service Pages - Foreign Patient Guide -->
     <url>
-        <loc>https://www.yonseimidas.com/foreign-patient-guide/</loc>
+        <loc>https://www.incheondentist.com/foreign-patient-guide/</loc>
         <lastmod>2025-12-30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
