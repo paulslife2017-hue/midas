@@ -5,6 +5,17 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.incheondentist.com"
+        }
+      ],
+      "destination": "https://incheondentist.com/:path*",
+      "permanent": true
+    },
+    {
       "source": "/en",
       "destination": "/?lang=en",
       "permanent": false
