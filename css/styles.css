@@ -1897,7 +1897,7 @@ section {
 }
 
 /* ===================================
-   Floating Social Button
+   Floating Social Buttons
    =================================== */
 .floating-social {
     position: fixed;
@@ -1916,12 +1916,29 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
     color: white;
     text-decoration: none;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     transition: all 0.3s ease;
     cursor: pointer;
+}
+
+/* KakaoTalk Button */
+.floating-social-btn.kakao-btn {
+    background: #3FC060;
+}
+
+.floating-social-btn.kakao-btn:hover {
+    background: #35A653;
+}
+
+/* Instagram Button */
+.floating-social-btn.instagram-btn {
+    background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.floating-social-btn.instagram-btn:hover {
+    background: linear-gradient(135deg, #e08323 0%, #d6582c 25%, #cc1733 50%, #bc1356 75%, #ac0878 100%);
 }
 
 .floating-social-btn:hover {
