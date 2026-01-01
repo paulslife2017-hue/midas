@@ -214,10 +214,38 @@
 <body>
     <!-- Language Selector -->
     <div class="language-selector">
-        <button class="lang-btn active" data-lang="ko">KOR</button>
-        <button class="lang-btn" data-lang="en">ENG</button>
-        <button class="lang-btn" data-lang="ja">JPN</button>
-        <button class="lang-btn" data-lang="zh">CHN</button>
+        <button class="lang-toggle" id="langToggle" aria-label="Select Language">
+            <svg class="globe-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+            <span class="current-lang">KOR</span>
+            <svg class="chevron-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"/>
+            </svg>
+        </button>
+        <div class="lang-dropdown" id="langDropdown">
+            <button class="lang-option active" data-lang="ko">
+                <span class="flag">🇰🇷</span>
+                <span class="lang-name">한국어</span>
+                <span class="lang-code">KOR</span>
+            </button>
+            <button class="lang-option" data-lang="en">
+                <span class="flag">🇺🇸</span>
+                <span class="lang-name">English</span>
+                <span class="lang-code">ENG</span>
+            </button>
+            <button class="lang-option" data-lang="ja">
+                <span class="flag">🇯🇵</span>
+                <span class="lang-name">日本語</span>
+                <span class="lang-code">JPN</span>
+            </button>
+            <button class="lang-option" data-lang="zh">
+                <span class="flag">🇨🇳</span>
+                <span class="lang-name">中文</span>
+                <span class="lang-code">CHN</span>
+            </button>
+        </div>
     </div>
 
     <!-- Navigation -->
@@ -1536,350 +1564,6 @@
         }
     </script>
 
-    <!-- Floating Contact Buttons (3 Buttons with WhatsApp) -->
-    <div id="floating-buttons-container" style="position: fixed; bottom: 25px; right: 25px; z-index: 9998; display: flex; flex-direction: column; gap: 12px; align-items: flex-end;">
-        
-        <!-- WhatsApp Button -->
-        <button id="floating-whatsapp-btn" style="display: flex; align-items: center; justify-content: center; width: 56px; height: 56px; background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); color: white; border: none; border-radius: 50%; font-size: 1.8rem; box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5); transition: all 0.3s ease; cursor: pointer;">
-            💬
-        </button>
-        
-        <!-- Instagram Button -->
-        <a href="https://ig.me/m/KBEAUTYSEOUL.CO.KR" target="_blank" rel="noopener noreferrer" id="floating-instagram-btn" style="display: flex; align-items: center; justify-content: center; width: 56px; height: 56px; background: linear-gradient(135deg, #E1306C 0%, #C13584 50%, #833AB4 100%); color: white; text-decoration: none; border-radius: 50%; font-size: 1.8rem; box-shadow: 0 4px 20px rgba(225, 48, 108, 0.5); transition: all 0.3s ease; cursor: pointer;">
-            📷
-        </a>
-        
-        <!-- Booking Button -->
-        <button id="floating-booking-btn" style="display: flex; align-items: center; justify-content: center; width: 56px; height: 56px; background: linear-gradient(135deg, #c9a961 0%, #b39448 100%); color: white; border: none; border-radius: 50%; font-size: 1.8rem; box-shadow: 0 4px 20px rgba(201, 169, 97, 0.5); transition: all 0.3s ease; animation: pulse 2s infinite; cursor: pointer;">
-            📞
-        </button>
-        
-    </div>
-
-    <!-- WhatsApp Chat Popup -->
-    <div id="whatsapp-chat-popup" style="display: none; position: fixed; bottom: 100px; right: 25px; z-index: 9999; width: 350px; max-width: calc(100vw - 40px); background: white; border-radius: 16px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); overflow: hidden;">
-        <!-- Header -->
-        <div style="background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); padding: 20px; color: white; display: flex; align-items: center; justify-content: space-between;">
-            <div style="display: flex; align-items: center; gap: 12px;">
-                <div style="width: 48px; height: 48px; border-radius: 50%; background: white; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
-                    💬
-                </div>
-                <div>
-                    <div style="font-weight: 700; font-size: 1.1rem;">Yonsei Midas Dental</div>
-                    <div style="font-size: 0.85rem; opacity: 0.9;">연세미다스치과</div>
-                </div>
-            </div>
-            <button id="close-whatsapp-chat" style="background: none; border: none; color: white; font-size: 1.8rem; cursor: pointer; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; transition: transform 0.2s;">&times;</button>
-        </div>
-        
-        <!-- Chat Body -->
-        <div style="padding: 20px; background: #f0f0f0;">
-            <!-- Agent Message -->
-            <div style="margin-bottom: 16px;">
-                <div style="background: white; padding: 12px 16px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); max-width: 85%; display: inline-block;">
-                    <div style="color: #666; font-size: 0.9rem; margin-bottom: 4px;">👋 How can I help you?</div>
-                    <div style="color: #333; font-size: 0.95rem;">안녕하세요! 무엇을 도와드릴까요?</div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Input Area -->
-        <div style="padding: 16px; background: white; border-top: 1px solid #e0e0e0;">
-            <textarea id="whatsapp-message-input" placeholder="Write a message... | 메시지를 입력하세요..." style="width: 100%; border: 1px solid #ddd; border-radius: 24px; padding: 12px 16px; font-size: 0.95rem; resize: none; font-family: inherit; outline: none;" rows="2"></textarea>
-            <button id="send-whatsapp-message" style="margin-top: 12px; width: 100%; background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); color: white; border: none; padding: 14px; border-radius: 24px; font-weight: 600; font-size: 1rem; cursor: pointer; transition: all 0.3s ease; display: flex; align-items: center; justify-content: center; gap: 8px;">
-                <span>Send Message</span>
-                <span style="font-size: 1.2rem;">➤</span>
-            </button>
-        </div>
-    </div>
-
-    <!-- Booking Modal -->
-    <div id="booking-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 10000; align-items: center; justify-content: center;">
-        <div style="background: white; padding: 2.5rem; border-radius: 16px; max-width: 500px; width: 90%; max-height: 90vh; overflow-y: auto; position: relative;">
-            <button id="close-modal" style="position: absolute; top: 1rem; right: 1rem; background: none; border: none; font-size: 2rem; color: #999; cursor: pointer; line-height: 1;">&times;</button>
-            
-            <h2 style="color: #0f2942; margin-bottom: 0.5rem; font-size: 1.8rem;" data-translate="modal_title">무료 예약 상담</h2>
-            <p style="color: #777; margin-bottom: 2rem;" data-translate="modal_subtitle">연락처를 남겨주시면 빠르게 상담해 드리겠습니다</p>
-            
-            <form id="booking-form">
-                <div style="margin-bottom: 1.5rem;">
-                    <label style="display: block; color: #0f2942; font-weight: 600; margin-bottom: 0.5rem;" data-translate="form_name">이름 *</label>
-                    <input type="text" id="name" required style="width: 100%; padding: 0.875rem; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 1rem; transition: border-color 0.3s;">
-                </div>
-                
-                <div style="margin-bottom: 1.5rem;">
-                    <label style="display: block; color: #0f2942; font-weight: 600; margin-bottom: 0.5rem;" data-translate="form_phone">전화번호 *</label>
-                    <input type="tel" id="phone" required style="width: 100%; padding: 0.875rem; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 1rem; transition: border-color 0.3s;">
-                </div>
-                
-                <div style="margin-bottom: 1.5rem;">
-                    <label style="display: block; color: #0f2942; font-weight: 600; margin-bottom: 0.5rem;" data-translate="form_email">이메일 *</label>
-                    <input type="email" id="email" required style="width: 100%; padding: 0.875rem; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 1rem; transition: border-color 0.3s;">
-                </div>
-                
-                <div style="margin-bottom: 1.5rem;">
-                    <label style="display: block; color: #0f2942; font-weight: 600; margin-bottom: 0.5rem;" data-translate="form_service">희망 진료</label>
-                    <select id="service" style="width: 100%; padding: 0.875rem; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 1rem;">
-                        <option value="임플란트">임플란트 / Implants</option>
-                        <option value="치아미백">치아미백 / Whitening</option>
-                        <option value="베니어">베니어 / Veneers</option>
-                        <option value="교정">교정 / Orthodontics</option>
-                        <option value="긴급치료">긴급치료 / Emergency</option>
-                        <option value="기타">기타 / Other</option>
-                    </select>
-                </div>
-                
-                <div style="margin-bottom: 1.5rem;">
-                    <label style="display: block; color: #0f2942; font-weight: 600; margin-bottom: 0.5rem;" data-translate="form_message">상담 내용</label>
-                    <textarea id="message" rows="4" style="width: 100%; padding: 0.875rem; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 1rem; resize: vertical;"></textarea>
-                </div>
-                
-                <button type="submit" id="submit-btn" style="width: 100%; padding: 1rem; background: linear-gradient(135deg, #c9a961 0%, #b39448 100%); color: white; border: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem; cursor: pointer; transition: all 0.3s;">
-                    <span data-translate="form_submit">예약 신청하기</span>
-                </button>
-                
-                <p id="form-message" style="margin-top: 1rem; text-align: center; font-weight: 600;"></p>
-            </form>
-        </div>
-    </div>
-
-    <style>
-        /* Floating Buttons Animation */
-        @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-                box-shadow: 0 4px 20px rgba(201, 169, 97, 0.5);
-            }
-            50% {
-                transform: scale(1.08);
-                box-shadow: 0 6px 28px rgba(201, 169, 97, 0.7);
-            }
-        }
-
-        #floating-whatsapp-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 28px rgba(37, 211, 102, 0.8);
-        }
-
-        #floating-whatsapp-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 28px rgba(37, 211, 102, 0.8);
-        }
-
-        #floating-booking-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 28px rgba(201, 169, 97, 0.8) !important;
-        }
-
-        #floating-instagram-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 28px rgba(225, 48, 108, 0.8);
-        }
-
-        #floating-whatsapp-btn:active,
-        #floating-booking-btn:active,
-        #floating-instagram-btn:active {
-            transform: scale(0.95);
-        }
-
-        #send-whatsapp-message:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
-        }
-
-        #close-whatsapp-chat:hover {
-            transform: scale(1.1);
-        }
-
-        /* Mobile Optimization */
-        @media (max-width: 768px) {
-            #floating-buttons-container {
-                bottom: 80px !important;
-                right: 15px !important;
-                gap: 10px !important;
-            }
-            
-            #floating-whatsapp-btn,
-            #floating-booking-btn,
-            #floating-instagram-btn {
-                width: 52px !important;
-                height: 52px !important;
-                font-size: 1.6rem !important;
-            }
-
-            #whatsapp-chat-popup {
-                bottom: 20px !important;
-                right: 15px !important;
-                width: calc(100vw - 30px) !important;
-            }
-        }
-        
-        /* Tablet Optimization */
-        @media (max-width: 1024px) and (min-width: 769px) {
-            #floating-buttons-container {
-                bottom: 25px;
-                right: 20px;
-            }
-        }
-
-        /* Hide when scrolled to footer */
-        .hide-floating {
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.3s ease;
-        }
-    </style>
-
-    <script>
-        // Floating Buttons Functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const bookingBtn = document.getElementById('floating-booking-btn');
-            const modal = document.getElementById('booking-modal');
-            const closeModalBtn = document.getElementById('close-modal');
-            const navBookingBtn = document.getElementById('bookingBtn');
-            const container = document.getElementById('floating-buttons-container');
-            
-            // WhatsApp Chat Popup Elements
-            const whatsappBtn = document.getElementById('floating-whatsapp-btn');
-            const whatsappPopup = document.getElementById('whatsapp-chat-popup');
-            const closeWhatsappBtn = document.getElementById('close-whatsapp-chat');
-            const sendWhatsappBtn = document.getElementById('send-whatsapp-message');
-            const messageInput = document.getElementById('whatsapp-message-input');
-
-            // Open WhatsApp chat popup
-            if (whatsappBtn) {
-                whatsappBtn.addEventListener('click', function() {
-                    whatsappPopup.style.display = 'block';
-                    messageInput.focus();
-                });
-            }
-
-            // Close WhatsApp chat popup
-            if (closeWhatsappBtn) {
-                closeWhatsappBtn.addEventListener('click', function() {
-                    whatsappPopup.style.display = 'none';
-                });
-            }
-
-            // Send WhatsApp message
-            if (sendWhatsappBtn) {
-                sendWhatsappBtn.addEventListener('click', function() {
-                    const message = messageInput.value.trim();
-                    if (message) {
-                        const phoneNumber = '821058947690';
-                        const encodedMessage = encodeURIComponent(message);
-                        window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
-                        whatsappPopup.style.display = 'none';
-                        messageInput.value = '';
-                    }
-                });
-            }
-
-            // Send on Enter key (Ctrl+Enter for new line)
-            if (messageInput) {
-                messageInput.addEventListener('keydown', function(e) {
-                    if (e.key === 'Enter' && !e.ctrlKey && !e.shiftKey) {
-                        e.preventDefault();
-                        sendWhatsappBtn.click();
-                    }
-                });
-            }
-
-            // Open modal from floating booking button
-            if (bookingBtn) {
-                bookingBtn.addEventListener('click', function() {
-                    modal.style.display = 'flex';
-                });
-            }
-
-            // Open modal from navigation
-            if (navBookingBtn) {
-                navBookingBtn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    modal.style.display = 'flex';
-                });
-            }
-
-            // Close modal
-            if (closeModalBtn) {
-                closeModalBtn.addEventListener('click', function() {
-                    modal.style.display = 'none';
-                });
-            }
-
-            // Close modal when clicking outside
-            if (modal) {
-                modal.addEventListener('click', function(e) {
-                    if (e.target === modal) {
-                        modal.style.display = 'none';
-                    }
-                });
-            }
-
-            // Hide floating buttons when near footer
-            window.addEventListener('scroll', function() {
-                const footer = document.querySelector('.footer');
-                if (footer && container) {
-                    const footerTop = footer.offsetTop;
-                    const scrollPosition = window.pageYOffset + window.innerHeight;
-
-                    if (scrollPosition > footerTop - 100) {
-                        container.classList.add('hide-floating');
-                    } else {
-                        container.classList.remove('hide-floating');
-                    }
-                }
-            });
-
-            // Handle form submission (Resend)
-            const form = document.getElementById('booking-form');
-            if (form) {
-                form.addEventListener('submit', async function(e) {
-                    e.preventDefault();
-                    
-                    const name = document.getElementById('name').value;
-                    const phone = document.getElementById('phone').value;
-                    const email = document.getElementById('email').value;
-                    const message = document.getElementById('message').value;
-                    const service = document.getElementById('service').value;
-
-                    try {
-                        const response = await fetch('https://api.resend.com/emails', {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json',
-                                'Authorization': 'Bearer re_AGTtkCJF_EAtsBSro97QTWY3d9RDhDmRW'
-                            },
-                            body: JSON.stringify({
-                                from: 'Yonsei Midas Dental <onboarding@resend.dev>',
-                                to: ['paulslife2017@gmail.com'],
-                                subject: `새 예약 문의: ${name}`,
-                                html: `
-                                    <h2>새 예약 문의</h2>
-                                    <p><strong>이름:</strong> ${name}</p>
-                                    <p><strong>전화번호:</strong> ${phone}</p>
-                                    <p><strong>이메일:</strong> ${email}</p>
-                                    <p><strong>진료 항목:</strong> ${service}</p>
-                                    <p><strong>메시지:</strong> ${message}</p>
-                                `
-                            })
-                        });
-
-                        if (response.ok) {
-                            alert('예약 문의가 성공적으로 전송되었습니다!');
-                            modal.style.display = 'none';
-                            form.reset();
-                        } else {
-                            alert('전송 중 오류가 발생했습니다. 다시 시도해주세요.');
-                        }
-                    } catch (error) {
-                        console.error('Error:', error);
-                        alert('전송 중 오류가 발생했습니다. 다시 시도해주세요.');
-                    }
-                });
-            }
-        });
-    </script>
 
 
 </body>

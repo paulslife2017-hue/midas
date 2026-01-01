@@ -1,5 +1,6 @@
 // 페이지 로드시 실행
 document.addEventListener('DOMContentLoaded', () => {
+    initLanguageSelector();
     initMobileMenu();
     initSmoothScroll();
     initScrollAnimations();
@@ -7,6 +8,104 @@ document.addEventListener('DOMContentLoaded', () => {
     initIntersectionObserver();
     initAOS();
 });
+
+// 언어 선택기 초기화
+function initLanguageSelector() {
+    const langToggle = document.getElementById('langToggle');
+    const langDropdown = document.getElementById('langDropdown');
+    const langOptions = document.querySelectorAll('.lang-option');
+    const currentLangSpan = document.querySelector('.current-lang');
+    
+    if (!langToggle || !langDropdown) return;
+    
+    // 자동 언어 감지
+    function detectBrowserLanguage() {
+        const browserLang = navigator.language || navigator.userLanguage;
+        const langCode = browserLang.toLowerCase();
+        
+        // 브라우저 언어를 사이트 언어로 매핑
+        if (langCode.startsWith('ko')) return 'ko';
+        if (langCode.startsWith('ja')) return 'ja';
+        if (langCode.startsWith('zh')) return 'zh';
+        return 'en'; // 기본값 영어
+    }
+    
+    // URL 파라미터에서 언어 가져오기
+    function getLanguageFromURL() {
+        const params = new URLSearchParams(window.location.search);
+        return params.get('lang');
+    }
+    
+    // 저장된 언어 또는 자동 감지
+    function getInitialLanguage() {
+        // 1순위: URL 파라미터
+        const urlLang = getLanguageFromURL();
+        if (urlLang && ['ko', 'en', 'ja', 'zh'].includes(urlLang)) {
+            return urlLang;
+        }
+        
+        // 2순위: localStorage
+        const savedLang = localStorage.getItem('preferredLanguage');
+        if (savedLang && ['ko', 'en', 'ja', 'zh'].includes(savedLang)) {
+            return savedLang;
+        }
+        
+        // 3순위: 브라우저 자동 감지
+        return detectBrowserLanguage();
+    }
+    
+    // 초기 언어 설정
+    const initialLang = getInitialLanguage();
+    if (initialLang && window.changeLanguage) {
+        window.changeLanguage(initialLang);
+    }
+    
+    // 토글 버튼 클릭
+    langToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        langToggle.classList.toggle('active');
+        langDropdown.classList.toggle('show');
+    });
+    
+    // 언어 옵션 클릭
+    langOptions.forEach(option => {
+        option.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const lang = option.dataset.lang;
+            
+            // 언어 변경
+            if (window.changeLanguage) {
+                window.changeLanguage(lang);
+            }
+            
+            // localStorage에 저장
+            localStorage.setItem('preferredLanguage', lang);
+            
+            // 활성화 상태 업데이트
+            langOptions.forEach(opt => opt.classList.remove('active'));
+            option.classList.add('active');
+            
+            // 현재 언어 표시 업데이트
+            const langCode = option.querySelector('.lang-code').textContent;
+            currentLangSpan.textContent = langCode;
+            
+            // 드롭다운 닫기
+            langToggle.classList.remove('active');
+            langDropdown.classList.remove('show');
+        });
+    });
+    
+    // 외부 클릭시 드롭다운 닫기
+    document.addEventListener('click', () => {
+        langToggle.classList.remove('active');
+        langDropdown.classList.remove('show');
+    });
+    
+    // 드롭다운 내부 클릭시 전파 중지
+    langDropdown.addEventListener('click', (e) => {
+        e.stopPropagation();
+    });
+}
 
 // 모바일 메뉴 토글
 function initMobileMenu() {
