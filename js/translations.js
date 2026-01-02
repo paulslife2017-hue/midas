@@ -47,6 +47,11 @@ const translations = {
         services_title: '진료 안내',
         services_subtitle: '전문적이고 체계적인 치료 프로그램을 제공합니다',
         
+        // SEO Intro Section
+        seo_intro_p1: '<strong>인천치과 연세미다스치과</strong>는 <strong>인천공항 근처</strong>에서 <strong>영어·일본어·중국어 진료</strong>가 가능한 <strong>Incheon Dentist</strong>입니다. <strong>인천임플란트</strong>, <strong>인천치아미백</strong>, <strong>인천교정치과</strong> 전문으로 <strong>연세대학교 치과대학 출신</strong> 대표원장이 직접 진료합니다.',
+        seo_intro_p2: '<strong>영종도치과</strong>와 <strong>송도치과</strong>를 찾는 환자분들께 <strong>투명한 가격</strong>과 <strong>최첨단 3D CT 디지털 장비</strong>로 정확한 진단을 제공합니다. <strong>인천공항치과</strong>로 외국인 환자 진료 경험이 풍부하며, <strong>무료 상담</strong> 및 <strong>당일 치료</strong>도 가능합니다.',
+        seo_intro_p3: '<strong>Incheon Dentist</strong>를 찾는다면 <strong>인천치과 연세미다스</strong>를 선택하세요. <strong>인천 중구 공항문화로 127</strong> 인스파이어호텔 썬타워 3층에 위치하며, 주차 가능하고 <strong>평일 오전 9시부터 오후 6시</strong>까지 진료합니다.',
+        
         // Service Cards
         implant_card_title: '임플란트',
         implant_card_desc: '상실된 치아를 완벽하게 회복하는 최첨단 임플란트 시술',
@@ -431,6 +436,11 @@ const translations = {
         services_tag: 'Our Services',
         services_title: 'Our Services',
         services_subtitle: 'Professional and systematic treatment programs',
+        
+        // SEO Intro Section
+        seo_intro_p1: '<strong>Yonsei Midas Dental Clinic</strong> is an <strong>Incheon Dentist</strong> near <strong>Incheon Airport</strong> offering treatment in <strong>English, Japanese, and Chinese</strong>. Specializing in <strong>dental implants</strong>, <strong>teeth whitening</strong>, and <strong>orthodontics</strong>, our director is a graduate of <strong>Yonsei University College of Dentistry</strong> and provides direct care.',
+        seo_intro_p2: 'For patients seeking dental care in <strong>Yeongjongdo</strong> and <strong>Songdo</strong>, we offer <strong>transparent pricing</strong> and precise diagnosis using <strong>cutting-edge 3D CT digital equipment</strong>. As an <strong>Incheon Airport dental clinic</strong>, we have extensive experience treating international patients and offer <strong>free consultations</strong> and <strong>same-day treatment</strong>.',
+        seo_intro_p3: 'If you are looking for an <strong>Incheon Dentist</strong>, choose <strong>Yonsei Midas Dental Clinic</strong>. Located on the 3rd floor of Sun Tower, Inspire Hotel, <strong>127 Gonghang Munhwa-ro, Jung-gu, Incheon</strong>, with parking available. Open <strong>weekdays from 9 AM to 6 PM</strong>.',
         
         // Service Cards
         implant_card_title: 'Dental Implants',
@@ -817,6 +827,11 @@ const translations = {
         services_title: '診療案内',
         services_subtitle: '専門的かつ体系的な治療プログラムを提供します',
         
+        // SEO Intro Section
+        seo_intro_p1: '<strong>仁川歯科 延世ミダス歯科医院</strong>は<strong>仁川国際空港近く</strong>で<strong>英語・日本語・中国語診療</strong>が可能な<strong>Incheon Dentist（仁川歯科）</strong>です。<strong>インプラント</strong>、<strong>ホワイトニング</strong>、<strong>矯正歯科</strong>専門で、<strong>延世大学歯科大学出身</strong>の院長が直接診療いたします。',
+        seo_intro_p2: '<strong>永宗島歯科</strong>や<strong>松島歯科</strong>をお探しの患者様に<strong>透明な価格</strong>と<strong>最先端3D CTデジタル機器</strong>による正確な診断を提供します。<strong>仁川空港歯科</strong>として外国人患者の診療経験が豊富で、<strong>無料カウンセリング</strong>と<strong>当日治療</strong>も可能です。',
+        seo_intro_p3: '<strong>仁川歯科（Incheon Dentist）</strong>をお探しなら<strong>延世ミダス歯科医院</strong>をお選びください。<strong>仁川市中区空港文化路127</strong> インスパイアホテル サンタワー3階に位置し、駐車可能で<strong>平日午前9時から午後6時</strong>まで診療しております。',
+        
         // Service Cards
         implant_card_title: 'インプラント',
         implant_card_desc: '失った歯を完璧に回復する最先端インプラント手術',
@@ -1201,6 +1216,11 @@ const translations = {
         services_tag: 'Our Services',
         services_title: '诊疗指南',
         services_subtitle: '提供专业且系统的治疗方案',
+        
+        // SEO Intro Section
+        seo_intro_p1: '<strong>仁川牙科 延世弥达斯牙科医院</strong>是在<strong>仁川国际机场附近</strong>提供<strong>英语·日语·中文诊疗</strong>服务的<strong>Incheon Dentist（仁川牙科）</strong>。专注于<strong>种植牙</strong>、<strong>牙齿美白</strong>、<strong>正畸</strong>，由<strong>延世大学牙科学院毕业</strong>的院长亲自诊疗。',
+        seo_intro_p2: '为寻找<strong>永宗岛牙科</strong>和<strong>松岛牙科</strong>的患者提供<strong>透明价格</strong>和<strong>最先进3D CT数字设备</strong>的精确诊断。作为<strong>仁川机场牙科</strong>，我们拥有丰富的外国患者诊疗经验，并提供<strong>免费咨询</strong>和<strong>当天治疗</strong>服务。',
+        seo_intro_p3: '如果您正在寻找<strong>仁川牙科（Incheon Dentist）</strong>，请选择<strong>延世弥达斯牙科医院</strong>。位于<strong>仁川市中区空港文化路127号</strong>韵斯派尔酒店太阳塔3楼，提供停车服务，<strong>工作日上午9点至下午6点</strong>营业。',
         
         // Service Cards
         implant_card_title: '种植牙',
