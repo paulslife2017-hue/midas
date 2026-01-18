@@ -7,32 +7,32 @@
     {
       "source": "/en",
       "destination": "/?lang=en",
-      "permanent": false
+      "permanent": true
     },
     {
       "source": "/en/",
       "destination": "/?lang=en",
-      "permanent": false
+      "permanent": true
     },
     {
       "source": "/ja",
       "destination": "/?lang=ja",
-      "permanent": false
+      "permanent": true
     },
     {
       "source": "/ja/",
       "destination": "/?lang=ja",
-      "permanent": false
+      "permanent": true
     },
     {
       "source": "/zh",
       "destination": "/?lang=zh",
-      "permanent": false
+      "permanent": true
     },
     {
       "source": "/zh/",
       "destination": "/?lang=zh",
-      "permanent": false
+      "permanent": true
     }
   ],
   "headers": [

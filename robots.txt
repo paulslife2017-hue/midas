@@ -6,6 +6,9 @@ Allow: /
 Disallow: /admin/
 Disallow: /private/
 Disallow: /_*
+Disallow: /en/
+Disallow: /ja/
+Disallow: /zh/
 
 # Sitemaps
 Sitemap: https://incheondentist.com/sitemap.xml
