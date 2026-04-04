@@ -314,7 +314,7 @@ const translations = {
         price_implant_cta: '자세히 보기 →',
         
         price_whitening_title: '✨ 치아 미백',
-        price_whitening_cost: '₩200,000~',
+        price_whitening_cost: '₩330,000',
         price_whitening_feat1: '✓ 전문가 미백 (In-Office)',
         price_whitening_feat2: '✓ 홈 미백 키트',
         price_whitening_feat3: '✓ 8단계 이상 미백',
@@ -704,7 +704,7 @@ const translations = {
         price_implant_cta: 'Learn More →',
         
         price_whitening_title: '✨ Teeth Whitening',
-        price_whitening_cost: '₩200,000~',
+        price_whitening_cost: '₩330,000',
         price_whitening_feat1: '✓ Professional in-office whitening',
         price_whitening_feat2: '✓ Take-home whitening kit',
         price_whitening_feat3: '✓ 8+ shades whiter',
@@ -1094,7 +1094,7 @@ const translations = {
         price_implant_cta: '詳細を見る →',
         
         price_whitening_title: '✨ 歯のホワイトニング',
-        price_whitening_cost: '₩200,000~',
+        price_whitening_cost: '₩330,000',
         price_whitening_feat1: '✓ 専門家によるオフィスホワイトニング',
         price_whitening_feat2: '✓ ホームホワイトニングキット',
         price_whitening_feat3: '✓ 8段階以上の美白',
@@ -1484,7 +1484,7 @@ const translations = {
         price_implant_cta: '了解详情 →',
         
         price_whitening_title: '✨ 牙齿美白',
-        price_whitening_cost: '₩200,000~',
+        price_whitening_cost: '₩330,000',
         price_whitening_feat1: '✓ 专业美白服务',
         price_whitening_feat2: '✓ 家用美白套装',
         price_whitening_feat3: '✓ 提升8个色阶',
